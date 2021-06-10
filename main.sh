@@ -5,6 +5,7 @@
 cd /home/emiliano/projects/def-cdesouza/Lab/MRNA_pipe/Pipe/rnaSeq/code
 git checkout Output
 git pull --all 
+git merge origin/Master
 
 if [ "$PREPROCESS" == "true" ]
 then 
