@@ -5,4 +5,4 @@
 
 module load r/4.0.0
 
-Rscript ../../rnaSeq/code/visualize/${VISUALIZEMETHOD}/${VISUALIZEMETHOD}.R --output_directory ../../rnaSeq/output/visualize/${VISUALIZEMETHOD}/${CLUSTERMETHOD}/${DATASET} --preprocessed_input_directory ../../rnaSeq/data/preprocessed/${DATASET}/ --trueCluster_input_directory ../../rnaSeq/data/raw/${DATASET}/ --cluster_input_directory ../../rnaSeq/output/cluster/${CLUSTERMETHOD}/${DATASET}/ --name_dataset ${DATASET}
+Rscript ../../rnaSeq/code/visualize/${VISUALIZEMETHOD}/${VISUALIZEMETHOD}.R --output_directory ../../rnaSeq/output/visualize/${VISUALIZEMETHOD}/${CLUSTERMETHOD}/${DATASET} --preprocessed_input_directory ~/projects/def-cdesouza/Lab/data/preprocessed/${DATASET}/ --trueCluster_input_directory ~/projects/def-cdesouza/Lab/data/raw/${DATASET}/ --cluster_input_directory ../../rnaSeq/output/cluster/${CLUSTERMETHOD}/${DATASET}/ --name_dataset ${DATASET}
