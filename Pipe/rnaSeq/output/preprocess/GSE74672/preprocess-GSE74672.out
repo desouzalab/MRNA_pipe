@@ -1,0 +1,19 @@
+$console_output_directory
+[1] "../../rnaSeq/output/preprocess/GSE74672"
+
+$data_output_directory
+[1] "../../rnaSeq/data/preprocessed/GSE74672"
+
+$input_directory
+[1] "../../rnaSeq/data/raw/GSE74672/"
+
+$name_dataset
+[1] "GSE74672"
+
+character(0)
+1Error in file(file, "rt") : cannot open the connection
+Calls: read.csv -> read.table -> file
+In addition: Warning message:
+In file(file, "rt") :
+  cannot open file '../../rnaSeq/data/raw/GSE74672//NA': No such file or directory
+Execution halted
