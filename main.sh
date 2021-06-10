@@ -2,7 +2,9 @@
 #!/bin/sh
 
 #obtain id of preprocess job
-cd /home/emiliano/projects/def-cdesouza/emiliano/Pipe/rnaSeq/code
+cd /home/emiliano/projects/def-cdesouza/Lab/MRNA_pipe/Pipe/rnaSeq/code
+git checkout Master
+git pull --all 
 
 ###################### PREPROCESS ######################
 Preprocess__id=$(sbatch --parsable --job-name=preprocess_${DATA_NAME} \
@@ -141,6 +143,8 @@ start_time=$(date +%M.%S)
 break_comp="False"
 break_viz="False"
 viz_pass="False"
+comp_pass="False"
+
 
 while [[ ! ( "$break_viz" == "true" &&"$break_comp" == "true" )  ]]
 
@@ -193,3 +197,4 @@ do
 
     echo "Job Pending time $elapsed "
 done 
+
