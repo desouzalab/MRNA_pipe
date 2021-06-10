@@ -20,7 +20,7 @@ When processing new data pipeline should be executed in sequential order, but wh
 
 <br>
 
-![Alt text](docs\Repo_structure.png "Title")
+![Alt text](https://github.com/desouzalab/MRNA_pipe/blob/Master/docs/Repo_structure.png "Title")
 
 <br>
 
@@ -40,7 +40,7 @@ Pipeline is Executed from Jenkins to have a history log of executed procedures:
 
 <br>
 
-![Alt text](docs\rna_jenkins.PNG "Title")
+![Alt text](https://github.com/desouzalab/MRNA_pipe/blob/Master/docs/rna_jenkins.PNG "Title")
 
 This task calls [main.sh](main.sh) using ssh to connect to sharcnet.
 
