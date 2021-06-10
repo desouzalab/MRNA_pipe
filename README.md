@@ -52,7 +52,10 @@ The Repo follows a Classic version control structure
 
 <br>
 
-Feature branches stem from Master and are merged back to master when all testing is complete.
-This allows for each featur eto be tested independantly of each other in order to not change any existing output.
+Feature branches stem from Master and are merged back when all testing is complete.
+
+<br>
+
+This allows each method to be tested independantly without affecting exisitng output/methods
 
 <br>
