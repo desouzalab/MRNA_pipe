@@ -1,0 +1,30 @@
+$name_dataset
+[1] "TEST"
+
+$output_directory
+[1] "rnaSeq/output/compare/regGenes/TEST"
+
+$preprocessed_input_directory
+[1] "rnaSeq/data/preprocessed/TEST/"
+
+$sc3_cluster_input_directory
+[1] "rnaSeq/output/cluster/sc3/TEST/"
+
+$seurat_cluster_input_directory
+[1] "rnaSeq/output/cluster/seurat/TEST/"
+
+$true_cluster_input_directory
+[1] "rnaSeq/data/raw/TEST/"
+
+[1] "preprocessed_1_TEST.csv"
+[1] "Levels_TEST.xlsx"
+[1] "clustersSC3_1_TEST.csv"
+[1] "clustersSeurat_1_TEST.csv"
+[1] 1
+[1] "  ...read"
+[1] "  ...read"
+Error in sort.int(x, na.last = na.last, decreasing = decreasing, ...) : 
+  'x' must be atomic
+Calls: boxplot ... boxplot.stats -> <Anonymous> -> sort -> sort.default -> sort.int
+In addition: There were 50 or more warnings (use warnings() to see the first 50)
+Execution halted

@@ -1,0 +1,40 @@
+$name_dataset
+[1] "TEST"
+
+$output_directory
+[1] "rnaSeq/output/compare/AIR+VM+Purity/TEST"
+
+$preprocessed_input_directory
+[1] "rnaSeq/data/preprocessed/TEST/"
+
+$sc3_cluster_input_directory
+[1] "rnaSeq/output/cluster/sc3/TEST/"
+
+$seurat_cluster_input_directory
+[1] "rnaSeq/output/cluster/seurat/TEST/"
+
+$true_cluster_input_directory
+[1] "rnaSeq/data/raw/TEST/"
+
+[1] "Levels_TEST.xlsx"
+[1] "clustersSC3_1_TEST.csv"
+[1] "clustersSeurat_1_TEST.csv"
+[1] 1
+[1] "  ...read"
+[1] "AIR SC3:"
+[1] 0.1292117
+[1] "AIR SEURAT:"
+[1] 0.1195742
+[1] "AIR SEURAT + SC3:"
+[1] 0.3693978
+[1] "V MEASURE SC3:"
+[1] 1
+[1] "V MEASURE SEURAT:"
+[1] 1
+[1] "PURITY SC3:"
+[1] 0.6035635
+[1] "\nPURITY SEURAT:"
+[1] 0.5879733
+[1] "  ...plot purity"
+There were 50 or more warnings (use warnings() to see the first 50)
+[1] "DONE"

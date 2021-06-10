@@ -1,0 +1,132 @@
+Attaching SeuratObject
+$console_output_directory
+[1] "rnaSeq/output/cluster/seurat/GSE74672"
+
+$data_output_directory
+[1] "rnaSeq/output/cluster/seurat/GSE74672"
+
+$input_directory
+[1] "rnaSeq/data/preprocessed/GSE74672"
+
+$name_dataset
+[1] "GSE74672"
+
+[1] "preprocessed_1_GSE74672.csv"
+[1] 1
+[1] "  ...read"
+Warning: Feature names cannot have underscores ('_'), replacing with dashes ('-')
+[1] "PBMC:"
+Performing log-normalization
+0%   10   20   30   40   50   60   70   80   90   100%
+[----|----|----|----|----|----|----|----|----|----|
+**************************************************|
+Calculating gene variances
+0%   10   20   30   40   50   60   70   80   90   100%
+[----|----|----|----|----|----|----|----|----|----|
+**************************************************|
+Calculating feature variances of standardized and clipped values
+0%   10   20   30   40   50   60   70   80   90   100%
+[----|----|----|----|----|----|----|----|----|----|
+**************************************************|
+[1] "20 MOST HIGHLY VARIABLE GENES:"
+ [1] "Npy"    "Trh"    "Avp"    "Igf2"   "Gal"    "Agrp"   "Dcn"    "Th"    
+ [9] "Acta2"  "Nts"    "Sst"    "Cartpt" "Tac2"   "Tac1"   "Ccl3"   "Hcrt"  
+[17] "Ccl4"   "Ctss"   "Vip"    "Tagln" 
+When using repel, set xnudge and ynudge to 0 for optimal results
+[1] "  ...plot variableFeaturesWithoutLabels"
+[1] "  ...plot variableFeaturesWithLabels"
+Centering and scaling data matrix
+  |                                                                              |                                                                      |   0%  |                                                                              |=====                                                                 |   7%  |                                                                              |==========                                                            |  14%  |                                                                              |===============                                                       |  21%  |                                                                              |====================                                                  |  29%  |                                                                              |=========================                                             |  36%  |                                                                              |==============================                                        |  43%  |                                                                              |===================================                                   |  50%  |                                                                              |========================================                              |  57%  |                                                                              |=============================================                         |  64%  |                                                                              |==================================================                    |  71%  |                                                                              |=======================================================               |  79%  |                                                                              |============================================================          |  86%  |                                                                              |=================================================================     |  93%  |                                                                              |======================================================================| 100%
+PC_ 1 
+Positive:  Pltp, Tm4sf1, Rarres2, Zfp36l1, Tmem212, Ccdc153, Cnn3, Vim, Slc2a1, Anxa2 
+	   Dynlrb2, Mia, Serpinh1, Fam216b, 1700094D03Rik, Aqp4, Enkur, Tctex1d4, Mlc1, Sntn 
+	   Gja1, Odf3b, Ak7, Slc38a3, Pcp4l1, S100b, Sox9, Foxj1, Mlf1, Apoe 
+Negative:  Ndrg4, Atp1a3, Syngr3, Nsg2, Caly, Gabrg2, Slc12a5, Kif5c, Chgb, Rab3c 
+	   Tmem59l, Tubb3, Syt1, Ptprn, Napb, Gabrb2, Rgs17, Prkar1b, Tmem179, Sult4a1 
+	   Ckmt1, Pcp4, Syp, Syngr1, Uchl1, Grm5, Fabp3, Nrsn2, Gabra1, Nrsn1 
+PC_ 2 
+Positive:  Slc38a1, Fam183b, Tmem212, Ccdc153, Enkur, Dynlrb2, Cd24a, Gas6, Rarres2, Mia 
+	   Riiad1, Rsph1, Fam216b, Tmem47, 1700094D03Rik, Ascc1, Tmem107, Mlf1, Lrrc48, Efcab10 
+	   Id4, Capsl, Sntn, Ak7, 1700009P17Rik, 1110017D15Rik, Odf3b, Ccdc37, Calml4, Fhl1 
+Negative:  Pllp, 2810468N07Rik, Arpc1b, Elovl7, Pdlim2, Elovl1, Gltp, Gjc2, Gjc3, Adamts4 
+	   Hhip, Gamt, Desi1, Zdhhc9, Phgdh, Fa2h, Dock10, Plekhh1, Tmbim1, Car14 
+	   Rap1a, Unc5b, Tmem125, Mcam, Aspa, Serinc5, Ado, Sema6a, Rnf122, Apod 
+PC_ 3 
+Positive:  Slco1a4, Ly6c1, Esam, Cldn5, Abcb1a, Itm2a, Flt1, Eltd1, Fn1, Slco1c1 
+	   Cd34, Gpr116, Car4, Cd93, Igfbp7, Apold1, Tmem204, Anxa3, Tek, Klf2 
+	   Ptprb, Kdr, Ctla2a, Ly6c2, Egfl7, Srgn, Epas1, Gimap6, Ly6e, Ly6a 
+Negative:  S100b, Dynlrb2, Tmem212, Ccdc153, Psat1, Foxj1, Enkur, Prdx6, Sntn, Gm10714 
+	   Mia, Fam216b, Hspa2, Rsph1, Phgdh, Lrrc48, Fam183b, Tspan15, Tctex1d4, Ccdc37 
+	   Ccdc108, Capsl, Slc22a23, 1700094D03Rik, Mlf1, Spag17, 2810468N07Rik, Dnali1, Riiad1, Hist1h2bc 
+PC_ 4 
+Positive:  Agt, Ntsr2, Gjb6, Slc6a11, Slc4a4, Cldn10, Slc1a2, Acsbg1, Slc1a3, Fgfr3 
+	   Ndrg2, Ednrb, Aldoc, Atp1a2, Pla2g7, Slc7a10, Atp1b2, Tril, Slc39a12, Apoe 
+	   Itih3, Id2, Fabp7, Atp13a4, Fam107a, Gja1, Cyp2j9, Ppap2b, F3, Sdc4 
+Negative:  Elovl7, Pllp, Pdlim2, 2810468N07Rik, Arpc1b, Elovl1, Slc22a23, Ypel2, Sema6a, Gjc2 
+	   Zdhhc9, Mcam, Nkain1, Unc5b, Gamt, Slain1, Serinc5, Ndrg1, Adamts4, Tmem125 
+	   Slc6a6, Rap1a, Dock10, Prom1, Plekhh1, Desi1, Eml1, Fa2h, Car14, Tmod1 
+PC_ 5 
+Positive:  C1qb, Tyrobp, Fcer1g, Csf1r, C1qa, Fcrls, Fcgr3, Ctss, C1qc, Laptm5 
+	   Aif1, C3ar1, Ccl2, Lyz2, Cd14, Ccl3, Ccl7, Mrc1, Pf4, Ly86 
+	   Emr1, Gpr183, Ms4a6b, F13a1, Hpgds, Cbr2, Cd86, Plek, C5ar1, Ccl12 
+Negative:  Mfge8, Ntsr2, Agt, Ppap2b, Slc6a11, Gjb6, Atp1b2, Slc1a2, Cldn10, Timp3 
+	   Ndrg2, Atp1a2, Slc4a4, Aldoc, Fgfr3, Mmd2, Gja1, Slc7a10, Itih3, Bcan 
+	   Mt2, Htra1, Acsbg1, Lrig1, Ntrk2, Nkain4, Id3, Mfsd2a, Epas1, Sorbs1 
+[1] "PCA RESULTS:"
+PC_ 1 
+Positive:  Pltp, Tm4sf1, Rarres2, Zfp36l1, Tmem212 
+Negative:  Ndrg4, Atp1a3, Syngr3, Nsg2, Caly 
+PC_ 2 
+Positive:  Slc38a1, Fam183b, Tmem212, Ccdc153, Enkur 
+Negative:  Pllp, 2810468N07Rik, Arpc1b, Elovl7, Pdlim2 
+PC_ 3 
+Positive:  Slco1a4, Ly6c1, Esam, Cldn5, Abcb1a 
+Negative:  S100b, Dynlrb2, Tmem212, Ccdc153, Psat1 
+PC_ 4 
+Positive:  Agt, Ntsr2, Gjb6, Slc6a11, Slc4a4 
+Negative:  Elovl7, Pllp, Pdlim2, 2810468N07Rik, Arpc1b 
+PC_ 5 
+Positive:  C1qb, Tyrobp, Fcer1g, Csf1r, C1qa 
+Negative:  Mfge8, Ntsr2, Agt, Ppap2b, Slc6a11 
+[1] "  ...plot elbow"
+Computing nearest neighbor graph
+Computing SNN
+Modularity Optimizer version 1.3.0 by Ludo Waltman and Nees Jan van Eck
+
+Number of nodes: 2881
+Number of edges: 81736
+
+Running Louvain algorithm...
+0%   10   20   30   40   50   60   70   80   90   100%
+[----|----|----|----|----|----|----|----|----|----|
+**************************************************|
+Maximum modularity in 10 random starts: 0.8728
+Number of communities: 18
+Elapsed time: 0 seconds
+[1] "  ...export to .csv"
+[1] "  ...plot PCA"
+Warning: The default method for RunUMAP has changed from calling Python UMAP via reticulate to the R-native UWOT using the cosine metric
+To use Python UMAP via reticulate, set umap.method to 'umap-learn' and metric to 'correlation'
+This message will be shown once per session
+17:39:26 UMAP embedding parameters a = 0.9922 b = 1.112
+17:39:26 Read 2881 rows and found 10 numeric columns
+17:39:26 Using Annoy for neighbor search, n_neighbors = 30
+17:39:26 Building Annoy index with metric = cosine, n_trees = 50
+0%   10   20   30   40   50   60   70   80   90   100%
+[----|----|----|----|----|----|----|----|----|----|
+**************************************************|
+17:39:26 Writing NN index file to temp file /tmp/RtmpiooJst/file18b5b3535d2
+17:39:26 Searching Annoy index using 1 thread, search_k = 3000
+17:39:27 Annoy recall = 100%
+17:39:28 Commencing smooth kNN distance calibration using 1 thread
+17:39:28 Initializing from normalized Laplacian + noise
+17:39:29 Commencing optimization for 500 epochs, with 115800 positive edges
+0%   10   20   30   40   50   60   70   80   90   100%
+[----|----|----|----|----|----|----|----|----|----|
+**************************************************|
+17:39:33 Optimization finished
+[1] "  ...plot UMAP"
+[1] "  ...plot TSNE"
+Warning message:
+CombinePlots is being deprecated. Plots should now be combined using the patchwork system. 
+[1] "done"
