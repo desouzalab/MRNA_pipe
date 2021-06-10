@@ -5,5 +5,5 @@
 
 module load r/4.0.0
 
-Rscript ../../rnaSeq/code/preprocess/preprocess.R --data_output_directory ../../rnaSeq/data/preprocessed/${DATASET} --console_output_directory ../../rnaSeq/output/preprocess/${DATASET} --input_directory ../../rnaSeq/data/raw/${DATASET}/ --name_dataset ${DATASET}
+Rscript ../../rnaSeq/code/preprocess/preprocess.R --data_output_directory ~/projects/def-cdesouza/Lab/data/preprocessed/${DATASET} --console_output_directory ../../rnaSeq/output/preprocess/${DATASET} --input_directory ~/projects/def-cdesouza/Lab/data/raw/${DATASET}/ --name_dataset ${DATASET}
 
