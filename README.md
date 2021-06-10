@@ -5,7 +5,7 @@
 ### Pipeline Structure 
 <br>
 
-![Alt text](docs\Pipeline_Diagram.png "Title")
+![Alt text]([docs\Pipeline_Diagram.png](https://github.com/desouzalab/MRNA_pipe/blob/Master/docs/Pipeline_Diagram.png) "Title")
 
 Task can be executed independantlly with 4 main tasks:
 
