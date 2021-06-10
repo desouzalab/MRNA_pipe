@@ -3,9 +3,8 @@
 
     #obtain id of preprocess job
     cd /home/emiliano/projects/def-cdesouza/Lab/MRNA_pipe/Pipe/rnaSeq/code
-    git checkout Output
+    git checkout ${BRANCH}
     git pull --all 
-    git merge origin/Master
 
     if [ "$PREPROCESS" == "true" ]
     then 
@@ -174,7 +173,7 @@
     do 
     #+++++++++++++ Vizualization Job finish check +++++++++++++#
         if [ "${viz_pass}" == "False" ]
-            then 
+            then ``
                 if [ $(sacct -j ${viz1_id} --format=State| tail -n1 | xargs) == "COMPLETED" ] 
                     then
                         if [ $(sacct -j ${viz2_id} --format=State| tail -n1 | xargs) == "COMPLETED" ] 
