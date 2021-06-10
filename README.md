@@ -2,6 +2,21 @@
 
 ## This Repository belongs to the RNA Sequence Pipeline for DR.Camila de Souza's Laboratory 
 
+<br>
+### Execution 
+<br>
+
+Pipeline is Executed from Jenkins to have a history log of executed procedures:
+
+<br>
+
+![Alt text](https://github.com/desouzalab/MRNA_pipe/blob/Master/docs/rna_jenkins.PNG "Title")
+
+This task calls [main.sh](main.sh) using ssh to connect to sharcnet.
+
+It is parameterized in order to be able to execute various tasks when desired as well as to specify desired method being worked on.
+
+<br>
 ### Pipeline Structure 
 <br>
 
@@ -33,15 +48,3 @@ This allows for each featur eto be tested independantly of each other in order t
 
 <br>
 
-### Execution 
-<br>
-
-Pipeline is Executed from Jenkins to have a history log of executed procedures:
-
-<br>
-
-![Alt text](https://github.com/desouzalab/MRNA_pipe/blob/Master/docs/rna_jenkins.PNG "Title")
-
-This task calls [main.sh](main.sh) using ssh to connect to sharcnet.
-
-It is parameterized in order to be able to execute various tasks when desired as well as to specify desired method being worked on.
