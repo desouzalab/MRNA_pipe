@@ -3,7 +3,7 @@
 
 #obtain id of preprocess job
 cd /home/emiliano/projects/def-cdesouza/Lab/MRNA_pipe/Pipe/rnaSeq/code
-git checkout Master
+git checkout Output
 git pull --all 
 
 if [ "$PREPROCESS" == "true" ]
@@ -221,4 +221,12 @@ do
 
     echo "Job Pending time $elapsed "
 done 
+
+git add --all
+git commit -m "Ran PREPROCESS : $PREPROCESS 
+> Ran CLUSTER : $CLUSTER 
+> Ran VISUALIZATION : $VISUALIZATION 
+> Ran COMPARISON : $COMPARISON"
+git push 
+
 
