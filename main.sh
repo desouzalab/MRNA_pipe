@@ -49,7 +49,7 @@ then
     echo "seurat job id $cluster2_id"
 
     start_time=$(date +%M.%S)
-    break="False"
+    break="false"
     while [ "$break" == "false" ]
 
     if [ $(sacct -j ${cluster1_id} --format=State| tail -n1 | xargs) == "COMPLETED" ] 
@@ -65,7 +65,7 @@ then
         end_time=$(date +%M.%S)
         elapsed=$(echo "scale=0; $end_time - $start_time" | bc)
 
-        echo "Job Pending time $elapsed "
+        echo "Cluster Job Pending time $elapsed "
     done 
 
     echo "====================== SC3 CONSOLE LOG ======================  " 
