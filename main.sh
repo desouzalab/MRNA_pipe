@@ -124,32 +124,32 @@
     then 
         comp_id1=$(sbatch --parsable \
                     --job-name=AIR+VM+Purity_${DATA_NAME} \
-                    --output=rnaSeq/output/cluster/AIR+VM+Purity/${DATA_NAME}/AIR+VM+Purity-${DATA_NAME}.out \
+                    --output=../../rnaSeq/output/cluster/AIR+VM+Purity/${DATA_NAME}/AIR+VM+Purity-${DATA_NAME}.out \
                     --export=DATASET=${DATA_NAME},CLUSTERMETHOD=AIR+VM+Purity ../../rnaSeq/code/cluster/cluster_job.sh)
         echo "Job id is $comp_id1 for method: AIR+VM+Purity"
 
 
         comp_id2=$(sbatch --parsable \
                     --job-name=chIndex_${DATA_NAME} \
-                    --output=rnaSeq/output/cluster/chIndex/${DATA_NAME}/chIndex-${DATA_NAME}.out \
+                    --output=../../rnaSeq/output/cluster/chIndex/${DATA_NAME}/chIndex-${DATA_NAME}.out \
                     --export=DATASET=${DATA_NAME},CLUSTERMETHOD=chIndex ../../rnaSeq/code/cluster/cluster_job.sh)
         echo "Job id is $comp_id2 for method: chIndex"
 
         comp_id3=$(sbatch --parsable \
                     --job-name=cMatrix_${DATA_NAME} \
-                    --output=rnaSeq/output/cluster/cMatrix/${DATA_NAME}/cMatrix-${DATA_NAME}.out \
+                    --output=../../rnaSeq/output/cluster/cMatrix/${DATA_NAME}/cMatrix-${DATA_NAME}.out \
                     --export=DATASET=${DATA_NAME},CLUSTERMETHOD=cMatrix ../../rnaSeq/code/cluster/cluster_job.sh)
         echo "Job id is $comp_id3 for method: cMatrix"
 
         comp_id4=$(sbatch --parsable \
                     --job-name=heatmap_${DATA_NAME} \
-                    --output=rnaSeq/output/cluster/heatmap/${DATA_NAME}/heatmap-${DATA_NAME}.out \
+                    --output=../../rnaSeq/output/cluster/heatmap/${DATA_NAME}/heatmap-${DATA_NAME}.out \
                     --export=DATASET=${DATA_NAME},CLUSTERMETHOD=heatmap ../../rnaSeq/code/cluster/cluster_job.sh)
         echo "Job id is $comp_id4 for method: heatmap"
 
         comp_id5=$(sbatch --parsable \
                     --job-name=regGenes_${DATA_NAME} \
-                    --output=rnaSeq/output/cluster/regGenes/${DATA_NAME}/regGenes-${DATA_NAME}.out \
+                    --output=../../rnaSeq/output/cluster/regGenes/${DATA_NAME}/regGenes-${DATA_NAME}.out \
                     --export=DATASET=${DATA_NAME},CLUSTERMETHOD=regGenes ../../rnaSeq/code/cluster/cluster_job.sh)
         echo "Job id is $comp_id5 for method: regGenes"
         comp_pass="False"
@@ -164,9 +164,6 @@
 
 
     start_time=$(date +%M.%S)
-
-
-
 
     while [[ ! ( "$break_viz" == "true" &&"$break_comp" == "true" )  ]]
 
@@ -219,6 +216,21 @@
 
         echo "Job Pending time $elapsed "
     done 
+
+    echo "====================== Comparison CONSOLE LOG ======================  " 
+    cat ../../rnaSeq/output/cluster/AIR+VM+Purity/${DATA_NAME}/AIR+VM+Purity-${DATA_NAME}.out
+    cat ../../rnaSeq/output/cluster/chIndex/${DATA_NAME}/chIndex-${DATA_NAME}.out
+    cat ../../rnaSeq/output/cluster/cMatrix/${DATA_NAME}/cMatrix-${DATA_NAME}.out
+    cat ../../rnaSeq/output/cluster/heatmap/${DATA_NAME}/heatmap-${DATA_NAME}.out
+    cat ../../rnaSeq/output/cluster/regGenes/${DATA_NAME}/regGenes-${DATA_NAME}.out
+
+    echo "====================== Visualization CONSOLE LOG ======================  " 
+    cat ../../rnaSeq/output/visualize/tSNE+PCA/seurat/${DATA_NAME}/tSNE+PCA-${DATA_NAME}.out
+    cat ../../rnaSeq/output/visualize/tSNE+PCA/sc3/${DATA_NAME}/tSNE+PCA-${DATA_NAME}.out
+    cat ../../rnaSeq/output/visualize/tSNE/seurat/${DATA_NAME}/tSNE-${DATA_NAME}.out
+    cat ../../rnaSeq/output/visualize/tSNE/seurat/${DATA_NAME}/tSNE-${DATA_NAME}.out
+
+
 
     git add --all
     git commit -m "Ran PREPROCESS : $PREPROCESS 
