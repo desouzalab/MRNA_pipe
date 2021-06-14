@@ -16,7 +16,7 @@ data2=pd.read_csv(p2,delimiter = "\t")
 data3=pd.read_csv(p3,delimiter = "\t")
 
 full=pd.concat([data,data2,data3],axis = 1)
-end_p = "/home/emiliano/projects/def-cdesouza/Lab/data/raw/"
+end_p = "/home/emiliano/projects/def-cdesouza/Lab/data/raw/GSE97930.csv"
 full = full.fillna(0)
 print(full.head())
 print(full.info())
