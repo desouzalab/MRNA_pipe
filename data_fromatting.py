@@ -1,5 +1,6 @@
-#!/usr/bin/python3
-## file: data_formatting.py
+import subprocess
+import sys
+
 import pandas as pd
 import numpy as np
 p1 = "/home/emiliano/projects/def-cdesouza/Lab/data/GSE97930_FrontalCortex_snDrop-seq_UMI_Count_Matrix_08-01-2017.txt"
