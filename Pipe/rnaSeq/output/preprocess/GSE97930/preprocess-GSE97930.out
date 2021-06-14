@@ -1,0 +1,15 @@
+$console_output_directory
+[1] "../../rnaSeq/output/preprocess/GSE97930"
+
+$data_output_directory
+[1] "/home/emiliano/projects/def-cdesouza/Lab/data/preprocessed/GSE97930"
+
+$input_directory
+[1] "/home/emiliano/projects/def-cdesouza/Lab/data/raw/GSE97930/"
+
+$name_dataset
+[1] "GSE97930"
+
+[1] "GSE97930.csv"
+1/var/spool/slurmd/job49145965/slurm_script: line 8:  5941 Killed                  Rscript ../../rnaSeq/code/preprocess/preprocess.R --data_output_directory ~/projects/def-cdesouza/Lab/data/preprocessed/${DATASET} --console_output_directory ../../rnaSeq/output/preprocess/${DATASET} --input_directory ~/projects/def-cdesouza/Lab/data/raw/${DATASET}/ --name_dataset ${DATASET}
+slurmstepd: error: Detected 1 oom-kill event(s) in step 49145965.batch cgroup. Some of your processes may have been killed by the cgroup out-of-memory handler.
