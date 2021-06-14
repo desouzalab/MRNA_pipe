@@ -13,12 +13,6 @@ $preprocessed_input_directory
 $trueCluster_input_directory
 [1] "/home/emiliano/projects/def-cdesouza/Lab/data/raw/GSE97930/"
 
+[1] "GSE97930.csv"
 character(0)
-character(0)
-[1] 1
-Error in file(file, "rt") : cannot open the connection
-Calls: read.csv -> read.table -> file
-In addition: Warning message:
-In file(file, "rt") :
-  cannot open file '/home/emiliano/projects/def-cdesouza/Lab/data/preprocessed/GSE97930//NA': No such file or directory
-Execution halted
+[1] "DONE"
