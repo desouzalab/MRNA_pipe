@@ -40,7 +40,7 @@ for (c in 1:length(all_raw_ssRNASeq_files)){
   dat=read.csv(file.path(args$input_directory, all_raw_ssRNASeq_files[c]))
   data=dat
   print("  ...read")
-
+  print(head(data))
   ### Set row names for the data frame. 
   row.names(data)=data[,1]
 
