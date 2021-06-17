@@ -1,0 +1,18 @@
+$cluster_input_directory
+[1] "../../rnaSeq/output/cluster/seurat/GSE98816/"
+
+$name_dataset
+[1] "GSE98816"
+
+$output_directory
+[1] "../../rnaSeq/output/visualize/tSNE/seurat/GSE98816/"
+
+$preprocessed_input_directory
+[1] "/home/emiliano/projects/def-cdesouza/Lab/data/preprocessed/GSE98816/"
+
+$trueCluster_input_directory
+[1] "/home/emiliano/projects/def-cdesouza/Lab/data/raw/GSE98816/"
+
+[1] "GSE98816.csv"                "preprocessed_1_GSE98816.csv"
+character(0)
+[1] "DONE"

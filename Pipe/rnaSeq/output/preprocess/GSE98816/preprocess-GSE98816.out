@@ -1,0 +1,17 @@
+$console_output_directory
+[1] "../../rnaSeq/output/preprocess/GSE98816"
+
+$data_output_directory
+[1] "/home/emiliano/projects/def-cdesouza/Lab/data/preprocessed/GSE98816"
+
+$input_directory
+[1] "/home/emiliano/projects/def-cdesouza/Lab/data/raw/GSE98816"
+
+$name_dataset
+[1] "GSE98816"
+
+[1] "GSE98816.csv"
+1[1] "  ...read"
+[1] "  ...preprocess"
+[1] "  ...export to .csv"
+[1] "DONE"
