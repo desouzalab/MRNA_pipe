@@ -13,7 +13,7 @@ $preprocessed_input_directory
 $trueCluster_input_directory
 [1] "/home/emiliano/projects/def-cdesouza/Lab/data/raw/GSE98816/"
 
-[1] "GSE98816.csv"                "preprocessed_1_GSE98816.csv"
+[1] "preprocessed_1_GSE98816.csv"
 character(0)
 character(0)
 [1] "DONE"
