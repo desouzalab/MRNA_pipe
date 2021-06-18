@@ -11,9 +11,11 @@ $input_directory
 $name_dataset
 [1] "GSE98816"
 
-[1] "GSE98816.csv"                "preprocessed_1_GSE98816.csv"
+character(0)
 [1] 1
-Error in read.table(file = file, header = header, sep = sep, quote = quote,  : 
-  no lines available in input
-Calls: read.csv -> read.table
+Error in file(file, "rt") : cannot open the connection
+Calls: read.csv -> read.table -> file
+In addition: Warning message:
+In file(file, "rt") :
+  cannot open file '/home/emiliano/projects/def-cdesouza/Lab/data/preprocessed/GSE98816/NA': No such file or directory
 Execution halted
