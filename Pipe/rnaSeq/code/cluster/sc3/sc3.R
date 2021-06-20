@@ -43,10 +43,8 @@ for (c in 1:length(all_preprocessed_ssRNASeq_files)){
   print(c)
   print(all_preprocessed_ssRNASeq_files)
   ### Create data frame
-  dat=read.csv(file.path(args$input_directory, all_preprocessed_ssRNASeq_files[c]))
-  data=dat
+  data=read.csv(file.path(args$input_directory, all_preprocessed_ssRNASeq_files[c]))
   print("  ...read")
-  print(head(data))
   ### Set row names for the data frame. Exclude the first column from the data frame.
   row.names(data)=data[,1]
 
@@ -84,7 +82,6 @@ for (c in 1:length(all_preprocessed_ssRNASeq_files)){
   write.table(sc3OUTPUT, file=paste0(data_outdir,"/clustersSC3_",c,"_",args$name_dataset,".csv"), sep="\t", row.names=T)
   print("  ...export to .csv")
 
-  rm(dat)
   rm(data)
   rm(plot1)
   rm(sce)

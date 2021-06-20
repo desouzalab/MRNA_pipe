@@ -49,8 +49,7 @@ if (length(all_preprocessed_ssRNASeq_files)==length(all_trueCluster_ssRNASeq_fil
     print(c)
     ### Create data frame
     # Read .csv file containing preprocessed data
-    dat=read.csv(file.path(args$preprocessed_input_directory, all_preprocessed_ssRNASeq_files[c]))
-    data=dat
+    data=read.csv(file.path(args$preprocessed_input_directory, all_preprocessed_ssRNASeq_files[c]))
     print("  ...read")
 
     ### Set row names for the data frame. Exclude the first column from the data frame.

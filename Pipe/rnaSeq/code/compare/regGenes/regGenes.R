@@ -53,8 +53,7 @@ if (length(all_preprocessed_ssRNASeq_files)==length(all_true_cluster_ssRNASeq_fi
     
     ### Create data frame
     # Read .csv file containing preprocessed data
-    dat=read.csv(file.path(args$preprocessed_input_directory, all_preprocessed_ssRNASeq_files[c]))
-    data=dat
+    data=read.csv(file.path(args$preprocessed_input_directory, all_preprocessed_ssRNASeq_files[c]))
     print("  ...read")
 
     ### Set row names for the data frame. Exclude the first column from the data frame.
@@ -70,9 +69,6 @@ if (length(all_preprocessed_ssRNASeq_files)==length(all_true_cluster_ssRNASeq_fi
     # Read .csv file containing seurat cluster data
     seurat=read.csv(file.path(args$seurat_cluster_input_directory, all_seurat_cluster_ssRNASeq_files[c]), sep="\t")
     print("  ...read")
-
-    true=as.vector(true)
-    true=true[2,-1]
     sc3=as.matrix(sc3)
     seurat=as.matrix(seurat)
 

@@ -39,8 +39,7 @@ print(all_preprocessed_ssRNASeq_files)
 for (c in 1:length(all_preprocessed_ssRNASeq_files)){
   print(c)
   ### Create data frame
-  dat=read.csv(file.path(args$input_directory, all_preprocessed_ssRNASeq_files[c]))
-  data=dat
+  data=read.csv(file.path(args$input_directory, all_preprocessed_ssRNASeq_files[c]))
   print("  ...read")
   print(head(data))
   ### Set row names for the data frame. Exclude the first column from the data frame.
@@ -149,7 +148,6 @@ for (c in 1:length(all_preprocessed_ssRNASeq_files)){
   print("  ...plot TSNE")
   dev.off()
 
-  rm(dat)
   rm(data)
   rm(outputString)
   rm(pbmc)
