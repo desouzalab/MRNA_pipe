@@ -5153,23 +5153,23 @@ Active assay: RNA (18842 features, 2000 variable features)
 Warning: The default method for RunUMAP has changed from calling Python UMAP via reticulate to the R-native UWOT using the cosine metric
 To use Python UMAP via reticulate, set umap.method to 'umap-learn' and metric to 'correlation'
 This message will be shown once per session
-14:49:19 UMAP embedding parameters a = 0.9922 b = 1.112
-14:49:19 Read 3186 rows and found 10 numeric columns
-14:49:19 Using Annoy for neighbor search, n_neighbors = 30
-14:49:19 Building Annoy index with metric = cosine, n_trees = 50
+19:43:21 UMAP embedding parameters a = 0.9922 b = 1.112
+19:43:21 Read 3186 rows and found 10 numeric columns
+19:43:21 Using Annoy for neighbor search, n_neighbors = 30
+19:43:21 Building Annoy index with metric = cosine, n_trees = 50
 0%   10   20   30   40   50   60   70   80   90   100%
 [----|----|----|----|----|----|----|----|----|----|
 **************************************************|
-14:49:20 Writing NN index file to temp file /tmp/RtmpCLXuDo/file484825ba1623
-14:49:20 Searching Annoy index using 1 thread, search_k = 3000
-14:49:21 Annoy recall = 100%
-14:49:21 Commencing smooth kNN distance calibration using 1 thread
-14:49:22 Initializing from normalized Laplacian + noise
-14:49:23 Commencing optimization for 500 epochs, with 131832 positive edges
+19:43:21 Writing NN index file to temp file /tmp/RtmprVfVOd/file8f0c91a584
+19:43:21 Searching Annoy index using 1 thread, search_k = 3000
+19:43:22 Annoy recall = 100%
+19:43:23 Commencing smooth kNN distance calibration using 1 thread
+19:43:23 Initializing from normalized Laplacian + noise
+19:43:24 Commencing optimization for 500 epochs, with 131832 positive edges
 0%   10   20   30   40   50   60   70   80   90   100%
 [----|----|----|----|----|----|----|----|----|----|
 **************************************************|
-14:49:28 Optimization finished
+19:43:28 Optimization finished
 [1] "  ...plot UMAP"
 [1] "  ...plot TSNE"
 Warning message:
