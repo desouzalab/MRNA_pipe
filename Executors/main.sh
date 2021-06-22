@@ -216,20 +216,23 @@
 
         echo "Job Pending time $elapsed "
     done 
-
-    echo "====================== Comparison CONSOLE LOG ======================  " 
-    cat ../../rnaSeq/output/comparison/AIR+VM+Purity/${DATA_NAME}/AIR+VM+Purity-${DATA_NAME}.out
-    cat ../../rnaSeq/output/comparison/chIndex/${DATA_NAME}/chIndex-${DATA_NAME}.out
-    cat ../../rnaSeq/output/comparison/cMatrix/${DATA_NAME}/cMatrix-${DATA_NAME}.out
-    cat ../../rnaSeq/output/comparison/heatmap/${DATA_NAME}/heatmap-${DATA_NAME}.out
-    cat ../../rnaSeq/output/comparison/regGenes/${DATA_NAME}/regGenes-${DATA_NAME}.out
-
-    echo "====================== Visualization CONSOLE LOG ======================  " 
-    cat ../../rnaSeq/output/visualize/tSNE+PCA/seurat/${DATA_NAME}/tSNE+PCA-${DATA_NAME}.out
-    cat ../../rnaSeq/output/visualize/tSNE+PCA/sc3/${DATA_NAME}/tSNE+PCA-${DATA_NAME}.out
-    cat ../../rnaSeq/output/visualize/tSNE/seurat/${DATA_NAME}/tSNE-${DATA_NAME}.out
-    cat ../../rnaSeq/output/visualize/tSNE/seurat/${DATA_NAME}/tSNE-${DATA_NAME}.out
-
+    if [ "$COMPARISON" == "true" ]
+    then 
+        echo "====================== Comparison CONSOLE LOG ======================  " 
+        cat ../../rnaSeq/output/comparison/AIR+VM+Purity/${DATA_NAME}/AIR+VM+Purity-${DATA_NAME}.out
+        cat ../../rnaSeq/output/comparison/chIndex/${DATA_NAME}/chIndex-${DATA_NAME}.out
+        cat ../../rnaSeq/output/comparison/cMatrix/${DATA_NAME}/cMatrix-${DATA_NAME}.out
+        cat ../../rnaSeq/output/comparison/heatmap/${DATA_NAME}/heatmap-${DATA_NAME}.out
+        cat ../../rnaSeq/output/comparison/regGenes/${DATA_NAME}/regGenes-${DATA_NAME}.out
+    fi
+    if [ "$VISUALIZATION" == "true" ]
+    then    
+        echo "====================== Visualization CONSOLE LOG ======================  " 
+        cat ../../rnaSeq/output/visualize/tSNE+PCA/seurat/${DATA_NAME}/tSNE+PCA-${DATA_NAME}.out
+        cat ../../rnaSeq/output/visualize/tSNE+PCA/sc3/${DATA_NAME}/tSNE+PCA-${DATA_NAME}.out
+        cat ../../rnaSeq/output/visualize/tSNE/seurat/${DATA_NAME}/tSNE-${DATA_NAME}.out
+        cat ../../rnaSeq/output/visualize/tSNE/seurat/${DATA_NAME}/tSNE-${DATA_NAME}.out
+    fi
 
 
     git add --all
