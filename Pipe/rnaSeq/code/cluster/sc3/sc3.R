@@ -76,10 +76,9 @@ for (c in 1:length(all_preprocessed_ssRNASeq_files)){
   sce <- sc3(sce, ks=optimal_K, biology=F)
 
   p_Data <- colData(sce)
-    col_name <- paste("sc3_", optimal_K, "_clusters", sep='')
-    sc3OUTPUT <- p_Data[, grep(col_name, colnames(p_Data))]
 
-  write.table(sc3OUTPUT, file=paste0(data_outdir,"/clustersSC3_",c,"_",args$name_dataset,".csv"), sep="\t", row.names=T)
+
+  write.csv(p_Data, file=paste0(data_outdir,"/clustersSC3_",c,"_",args$name_dataset,".csv"))
   print("  ...export to .csv")
 
   rm(data)

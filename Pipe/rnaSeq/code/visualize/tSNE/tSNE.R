@@ -54,7 +54,7 @@ if (length(all_preprocessed_ssRNASeq_files)==length(all_clustered_ssRNASeq_files
     ### TSNE
     # Read .csv file containing clusters
     
-    labels=read.csv(file.path(args$cluster_input_directory, all_clustered_ssRNASeq_files[c]),sep ="\t")
+    labels=read.csv(file.path(args$cluster_input_directory, all_clustered_ssRNASeq_files[c]))[,2]
     print(labels)
     labels=as.matrix(labels)
     # Plot tSNE

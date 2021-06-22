@@ -66,12 +66,11 @@ if (length(all_preprocessed_ssRNASeq_files)==length(all_trueCluster_ssRNASeq_fil
     tsneY=tsnepca$Y[,2]
 
     # colNames=F --> First row of data will not be used as column names. (If TRUE, the first row of data is used as column names)
-    TrueClusters=read.xlsx(file.path(args$trueCluster_input_directory, all_trueCluster_ssRNASeq_files[c]),colNames=F)
+    TrueClusters=read.csv(file.path(args$trueCluster_input_directory, all_trueCluster_ssRNASeq_files[c]))[,2]
     # Select Row 2 and exclude Column 1 from the data frame.
-    TrueClusters=TrueClusters[2,-1]
     TrueClusters=as.factor(TrueClusters)
 
-    clusters=read.csv(file.path(args$cluster_input_directory,all_clustered_ssRNASeq_files[c]), sep ="\t")
+    clusters=read.csv(file.path(args$cluster_input_directory,all_clustered_ssRNASeq_files[c]))[,2]
     clusters=t(as.vector(clusters))
 
     hommat=data.frame(tsneX,tsneY,TrueClusters,clusters)

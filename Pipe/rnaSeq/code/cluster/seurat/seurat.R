@@ -128,7 +128,8 @@ for (c in 1:length(all_preprocessed_ssRNASeq_files)){
 
   # Clusters
   pbmc <- FindClusters(pbmc, resolution = 1)
-  write.table(Idents(pbmc), file=paste0(data_outdir,"/clustersSeurat_",c,"_",args$name_dataset,".csv"),sep="\t", row.names=T)
+  print(pbmc)
+  write.csv(Idents(pbmc), file=paste0(data_outdir,"/clustersSeurat_",c,"_",args$name_dataset,".csv"))
   print("  ...export to .csv")
 
   # Plots
