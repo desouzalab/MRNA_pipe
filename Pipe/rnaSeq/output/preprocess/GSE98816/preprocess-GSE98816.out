@@ -5054,4 +5054,6 @@ $name_dataset
 6                 0                 0                 0                 0
 [1] "  ...preprocess"
 [1] "  ...export to .csv"
+Warning message:
+In rm(dat) : object 'dat' not found
 [1] "DONE"
