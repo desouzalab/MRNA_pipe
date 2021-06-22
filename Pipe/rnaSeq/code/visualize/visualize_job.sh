@@ -1,6 +1,7 @@
 #!/bin/bash
 #SBATCH --account=def-cdesouza
 #SBATCH --time=00:10:00
+#SBATCH --cpus-per-task=2
 #SBATCH --mem-per-cpu=8000M
 
 module load r/4.0.0
