@@ -14,9 +14,10 @@ $trueCluster_input_directory
 [1] "/home/emiliano/projects/def-cdesouza/Lab/data/true/GSE98816/"
 
 [1] "preprocessed_1_GSE98816.csv"
-character(0)
+[1] "true_GSE98816.csv"
 [1] "clustersSeurat_1_GSE98816.csv"
-Error in print.default(length(all_preprocessed_ssRNASeq_files), length(all_trueCluster_ssRNASeq_files),  : 
-  invalid 'na.print' specification
-Calls: print -> print.default
+[1] 1
+[1] 1
+[1] 1
+Error: unexpected ')' in "print(length(all_clustered_ssRNASeq_files)))"
 Execution halted
