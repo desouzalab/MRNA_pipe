@@ -16,5 +16,7 @@ $trueCluster_input_directory
 [1] "preprocessed_1_GSE98816.csv"
 character(0)
 [1] "clustersSeurat_1_GSE98816.csv"
-[1] FALSE
-[1] "DONE"
+Error in print.default(length(all_preprocessed_ssRNASeq_files), length(all_trueCluster_ssRNASeq_files),  : 
+  invalid 'na.print' specification
+Calls: print -> print.default
+Execution halted
