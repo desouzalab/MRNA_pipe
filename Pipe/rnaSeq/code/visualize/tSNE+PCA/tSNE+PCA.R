@@ -88,7 +88,7 @@ if (length(all_preprocessed_ssRNASeq_files)==length(all_trueCluster_ssRNASeq_fil
 
     hommat=data.frame(tsneX,tsneY,TrueClusters,clusters)
 
-    tsnepca=ggplot((hommat, aes(y=tsneY,x=tsneX))+theme(legend.position = "none")+expand_limits(x=c(0,50), y=c(0, 1))+ labs(x = "Number of Clusters", y = "Purity")+geom_text(aes(label=Method),hjust=0, vjust=2)+geom_vline(xintercept=7, linetype="dashed", color = "green"))
+    tsnepca=ggplot((hommat, aes(y=tsneY,x=tsneX)+theme(legend.position = "none")+expand_limits(x=c(0,50), y=c(0, 1))+ labs(x = "Number of Clusters", y = "Purity")+geom_text(aes(label=Method),hjust=0, vjust=2)+geom_vline(xintercept=7, linetype="dashed", color = "green"))
     save_plot(paste0(outdir,"/TSNE+PCA_",c,"_",args$name_dataset,".pdf"),tsnepca)
     print("  ...plot tSNE+PCA")
     dev.off()
