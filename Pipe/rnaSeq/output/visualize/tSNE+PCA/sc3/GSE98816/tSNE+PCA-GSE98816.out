@@ -16,4 +16,5 @@ $trueCluster_input_directory
 [1] "preprocessed_1_GSE98816.csv"
 character(0)
 [1] "clustersSC3_1_GSE98816.csv"
+[1] FALSE
 [1] "DONE"
