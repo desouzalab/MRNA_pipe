@@ -62,7 +62,7 @@ if (length(all_preprocessed_ssRNASeq_files)==length(all_true_cluster_ssRNASeq_fi
     data=data[,-1]
     ### Load data
     # Read .xlsx file containing true cluster data
-    true=read.csv(file.path(args$true_cluster_input_directory, all_true_cluster_ssRNASeq_files[c]))[,2]
+    true=read.csv(file.path(args$true_cluster_input_directory, all_true_cluster_ssRNASeq_files[c]))[,3]
     # Read .csv file containing sc3 cluster data
     sc3=read.csv(file.path(args$sc3_cluster_input_directory, all_sc3_cluster_ssRNASeq_files[c]))[,2]
     # Read .csv file containing seurat cluster data
