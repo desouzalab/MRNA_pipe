@@ -75,7 +75,15 @@ if (length(all_preprocessed_ssRNASeq_files)==length(all_trueCluster_ssRNASeq_fil
 
     clusters=read.csv(file.path(args$cluster_input_directory,all_clustered_ssRNASeq_files[c]))[,2]
     clusters=t(as.vector(clusters))
-    cat(length(tsneX),length(tsneY),length(TrueClusters),length(clusters))
+
+
+    ##############################DELETE ME #############################
+    TrueClusters=sample(TrueClusters,length(tsneX))
+    ##################################################################
+
+
+
+    
     hommat=data.frame(tsneX,tsneY,TrueClusters,clusters)
 
     print(head(hommat))
