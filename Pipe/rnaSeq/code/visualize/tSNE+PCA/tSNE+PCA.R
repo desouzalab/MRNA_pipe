@@ -37,7 +37,7 @@ dir.create(file.path(outdir), showWarnings=FALSE, recursive=TRUE)
 all_preprocessed_ssRNASeq_files <- list.files(args$preprocessed_input_directory, pattern = "*.csv*")
 print(all_preprocessed_ssRNASeq_files)
 
-all_trueCluster_ssRNASeq_files <- list.files(args$trueCluster_input_directory, pattern = "*.xlsx*")
+all_trueCluster_ssRNASeq_files <- list.files(args$trueCluster_input_directory, pattern = "*.csv*")
 print(all_trueCluster_ssRNASeq_files)
 
 all_clustered_ssRNASeq_files <- list.files(args$cluster_input_directory, pattern = "*.csv*")
@@ -74,7 +74,7 @@ if (length(all_preprocessed_ssRNASeq_files)==length(all_trueCluster_ssRNASeq_fil
     clusters=t(as.vector(clusters))
 
     hommat=data.frame(tsneX,tsneY,TrueClusters,clusters)
-    
+
     print(head(hommat))
     tsnepca = ggplot(hommat, aes(y=tsneY,x=tsneX, color=as.factor(clusters))) + geom_point(aes(shape=TrueClusters),size=1) + scale_shape_manual(values=c(0,1,2,3,4,5,6,8))
     save_plot(paste0(outdir,"/TSNE+PCA_Colour_",c,"_",args$name_dataset,".pdf"),tsnepca)
