@@ -43,7 +43,7 @@ print(all_trueCluster_ssRNASeq_files)
 all_clustered_ssRNASeq_files <- list.files(args$cluster_input_directory, pattern = "*.csv*")
 print(all_clustered_ssRNASeq_files)
 
-print(length(all_preprocessed_ssRNASeq_files)==length(all_trueCluster_ssRNASeq_files) & length(all_trueCluster_ssRNASeq_files)==length(all_clustered_ssRNASeq_files))
+print(length(all_preprocessed_ssRNASeq_files),length(all_trueCluster_ssRNASeq_files) , length(all_trueCluster_ssRNASeq_files),length(all_clustered_ssRNASeq_files))
 if (length(all_preprocessed_ssRNASeq_files)==length(all_trueCluster_ssRNASeq_files) & length(all_trueCluster_ssRNASeq_files)==length(all_clustered_ssRNASeq_files)) {
   for (c in 1:length(all_preprocessed_ssRNASeq_files)){
     print(c)
