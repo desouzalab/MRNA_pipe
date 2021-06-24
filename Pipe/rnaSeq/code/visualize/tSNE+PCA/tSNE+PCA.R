@@ -46,7 +46,7 @@ print(all_clustered_ssRNASeq_files)
 print(length(all_preprocessed_ssRNASeq_files))
 print(length(all_trueCluster_ssRNASeq_files) )
 print(length(all_trueCluster_ssRNASeq_files))
-print(length(all_clustered_ssRNASeq_files)))
+print(length(all_clustered_ssRNASeq_files))
 if (length(all_preprocessed_ssRNASeq_files)==length(all_trueCluster_ssRNASeq_files) & length(all_trueCluster_ssRNASeq_files)==length(all_clustered_ssRNASeq_files)) {
   for (c in 1:length(all_preprocessed_ssRNASeq_files)){
     print(c)
