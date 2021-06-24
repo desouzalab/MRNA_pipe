@@ -22,30 +22,5 @@ $trueCluster_input_directory
 [1] 1
 [1] 1
 [1] "  ...read"
-Error: Insufficient values in manual scale. 25 needed but only 8 provided.
-Backtrace:
-     █
-  1. └─cowplot::save_plot(...)
-  2.   ├─cowplot::ggsave2(...)
-  3.   │ └─base::do.call(ggplot2::ggsave, args, envir = parent.frame())
-  4.   └─(function (filename, plot = last_plot(), device = NULL, path = NULL, ...
-  5.     ├─grid::grid.draw(plot)
-  6.     └─ggplot2:::grid.draw.ggplot(plot)
-  7.       ├─base::print(x)
-  8.       └─ggplot2:::print.ggplot(x)
-  9.         ├─ggplot2::ggplot_build(x)
- 10.         └─ggplot2:::ggplot_build.ggplot(x)
- 11.           └─base::lapply(data, scales_map_df, scales = npscales)
- 12.             └─ggplot2:::FUN(X[[i]], ...)
- 13.               ├─base::unlist(...)
- 14.               └─base::lapply(scales$scales, function(scale) scale$map_df(df = df))
- 15.                 └─ggplot2:::FUN(X[[i]], ...)
- 16.                   └─scale$map_df(df = df)
- 17.                     └─ggplot2:::f(..., self = self)
- 18.                       └─base::lapply(aesthetics, function(j) self$map(df[[j]]))
- 19.                         └─ggplot2:::FUN(X[[i]], ...)
- 20.                           └─self$map(df[[j]])
- 21.                             └─ggplot2:::f(..., self = self)
- 22.                               └─self$palette(n)
- 23.                                 └─ggplot2:::f(...)
+Error: Continuous value supplied to discrete scale
 Execution halted
