@@ -22,5 +22,5 @@ $trueCluster_input_directory
 [1] 1
 Error: unexpected ',' in:
 "
-    tsnepca = ggplot((hommat,"
+    tsnepca=ggplot((hommat,"
 Execution halted
