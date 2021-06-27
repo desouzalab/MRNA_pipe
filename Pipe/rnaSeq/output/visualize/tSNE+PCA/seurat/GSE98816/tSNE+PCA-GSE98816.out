@@ -20,7 +20,8 @@ $trueCluster_input_directory
 [1] 1
 [1] 1
 [1] 1
-Error: unexpected ',' in:
-"
-    tsnepca=ggplot((hommat,"
+[1] 1
+[1] "  ...read"
+Error in FUN(X[[i]], ...) : object 'Method' not found
+Calls: save_plot ... <Anonymous> -> f -> scales_add_defaults -> lapply -> FUN
 Execution halted
