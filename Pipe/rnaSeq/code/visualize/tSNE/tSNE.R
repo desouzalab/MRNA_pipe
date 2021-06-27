@@ -53,11 +53,16 @@ if (length(all_preprocessed_ssRNASeq_files)==length(all_clustered_ssRNASeq_files
 
     ### TSNE
     # Read .csv file containing clusters
+    # colNames=F --> First row of data will not be used as column names. (If TRUE, the first row of data is used as column names)
+    TrueClusters=read.csv(file.path(args$trueCluster_input_directory, all_trueCluster_ssRNASeq_files[c]))[,3]
     
+    # Select Row 2 and exclude Column 1 from the data frame.
+    TrueClusters=as.factor(TrueClusters)
+
     labels=read.csv(file.path(args$cluster_input_directory, all_clustered_ssRNASeq_files[c]))[,2]
     labels=as.matrix(labels)
     # Plot tSNE
-    tsnePlot=tsne(data,labels=as.factor(labels),perplex=30 ,seed=123,dotsize=0.5,axistextsize=12, legendtextsize=2)
+    tsnePlot=tsne(data,labels=TrueClusters,perplex=30 ,seed=123,dotsize=0.5,axistextsize=12, legendtextsize=2)
     save_plot(paste0(outdir,"/tSNE_",c,"_",args$name_dataset,".pdf"),tsnePlot)
     dev.off()
     print("  ...tSNE")
