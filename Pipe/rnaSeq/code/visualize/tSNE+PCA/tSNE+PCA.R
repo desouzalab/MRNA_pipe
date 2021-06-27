@@ -43,10 +43,7 @@ print(all_trueCluster_ssRNASeq_files)
 all_clustered_ssRNASeq_files <- list.files(args$cluster_input_directory, pattern = "*.csv*")
 print(all_clustered_ssRNASeq_files)
 
-print(length(all_preprocessed_ssRNASeq_files))
-print(length(all_trueCluster_ssRNASeq_files) )
-print(length(all_trueCluster_ssRNASeq_files))
-print(length(all_clustered_ssRNASeq_files))
+
 if (length(all_preprocessed_ssRNASeq_files)==length(all_trueCluster_ssRNASeq_files) & length(all_trueCluster_ssRNASeq_files)==length(all_clustered_ssRNASeq_files)) {
   for (c in 1:length(all_preprocessed_ssRNASeq_files)){
     print(c)
@@ -77,14 +74,8 @@ if (length(all_preprocessed_ssRNASeq_files)==length(all_trueCluster_ssRNASeq_fil
     clusters=read.csv(file.path(args$cluster_input_directory,all_clustered_ssRNASeq_files[c]))[,2]
     clusters=t(as.vector(clusters))
 
-
-
-
-
-
-
     hommat=data.frame(tsneX,tsneY,TrueClusters,clusters)
-
+    Method=c("Seurat","SC3")
     tsnepca=ggplot(hommat, aes(y=tsneY,x=tsneX))+theme(legend.position = "none")+expand_limits(x=c(0,50), y=c(0, 1))+ labs(x = "Number of Clusters", y = "Purity")+geom_text(aes(label=Method),hjust=0, vjust=2)+geom_vline(xintercept=7, linetype="dashed", color = "green")
     save_plot(paste0(outdir,"/TSNE+PCA_",c,"_",args$name_dataset,".pdf"),tsnepca)
     print("  ...plot tSNE+PCA")
