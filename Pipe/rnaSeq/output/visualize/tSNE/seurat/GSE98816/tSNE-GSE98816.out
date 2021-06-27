@@ -14,10 +14,6 @@ $trueCluster_input_directory
 [1] "/home/emiliano/projects/def-cdesouza/Lab/data/true/GSE98816/"
 
 [1] "preprocessed_1_GSE98816.csv"
-[1] "clustersSeurat_1_GSE98816.csv"
-[1] 1
-[1] "  ...read"
-Error in file.path(args$trueCluster_input_directory, all_trueCluster_ssRNASeq_files[c]) : 
-  object 'all_trueCluster_ssRNASeq_files' not found
-Calls: read.csv -> read.table -> file.path
+Error in list.files(args$true_cluster_input_directory, pattern = "*.csv*") : 
+  invalid 'path' argument
 Execution halted

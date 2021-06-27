@@ -17,11 +17,23 @@ $trueCluster_input_directory
 [1] "true_GSE98816.csv"
 [1] "clustersSeurat_1_GSE98816.csv"
 [1] 1
-[1] 1
-[1] 1
-[1] 1
-[1] 1
 [1] "  ...read"
-Error in FUN(X[[i]], ...) : object 'Method' not found
-Calls: save_plot ... <Anonymous> -> f -> scales_add_defaults -> lapply -> FUN
+Error: Aesthetics must be either length 1 or the same as the data (3186): label
+Backtrace:
+     █
+  1. └─cowplot::save_plot(...)
+  2.   ├─cowplot::ggsave2(...)
+  3.   │ └─base::do.call(ggplot2::ggsave, args, envir = parent.frame())
+  4.   └─(function (filename, plot = last_plot(), device = NULL, path = NULL, ...
+  5.     ├─grid::grid.draw(plot)
+  6.     └─ggplot2:::grid.draw.ggplot(plot)
+  7.       ├─base::print(x)
+  8.       └─ggplot2:::print.ggplot(x)
+  9.         ├─ggplot2::ggplot_build(x)
+ 10.         └─ggplot2:::ggplot_build.ggplot(x)
+ 11.           └─ggplot2:::by_layer(function(l, d) l$compute_aesthetics(d, plot))
+ 12.             └─ggplot2:::f(l = layers[[i]], d = data[[i]])
+ 13.               └─l$compute_aesthetics(d, plot)
+ 14.                 └─ggplot2:::f(..., self = self)
+ 15.                   └─ggplot2:::check_aesthetics(evaled, n)
 Execution halted
