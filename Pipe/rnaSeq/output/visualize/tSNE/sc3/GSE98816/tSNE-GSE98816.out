@@ -17,8 +17,7 @@ $trueCluster_input_directory
 [1] "clustersSC3_1_GSE98816.csv"
 [1] 1
 [1] "  ...read"
-***t-SNE wrapper function***
-running...
-done.
-[1] "  ...tSNE"
-[1] "DONE"
+Error in file.path(args$trueCluster_input_directory, all_trueCluster_ssRNASeq_files[c]) : 
+  object 'all_trueCluster_ssRNASeq_files' not found
+Calls: read.csv -> read.table -> file.path
+Execution halted
