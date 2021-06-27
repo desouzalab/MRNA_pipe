@@ -35,6 +35,9 @@ dir.create(file.path(outdir), showWarnings=FALSE, recursive=TRUE)
 all_preprocessed_ssRNASeq_files <- list.files(args$preprocessed_input_directory, pattern = "*.csv*")
 print(all_preprocessed_ssRNASeq_files)
 
+all_true_cluster_ssRNASeq_files <- list.files(args$true_cluster_input_directory, pattern = "*.csv*")
+print(all_true_cluster_ssRNASeq_files)
+
 all_clustered_ssRNASeq_files <- list.files(args$cluster_input_directory, pattern = "*.csv*")
 print(all_clustered_ssRNASeq_files)
 
