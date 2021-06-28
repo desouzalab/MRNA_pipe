@@ -1,3 +1,3 @@
-Error in library(mclust) : there is no package called ‘mclust’
+Error in library(NMF) : there is no package called ‘NMF’
 Calls: suppressMessages -> withCallingHandlers -> library
 Execution halted
