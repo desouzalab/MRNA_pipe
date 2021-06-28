@@ -10,10 +10,16 @@ $output_directory
 $preprocessed_input_directory
 [1] "/home/emiliano/projects/def-cdesouza/Lab/data/preprocessed/GSE98816/"
 
-$trueCluster_input_directory
+$true_cluster_input_directory
 [1] "/home/emiliano/projects/def-cdesouza/Lab/data/true/GSE98816/"
 
 [1] "preprocessed_1_GSE98816.csv"
-Error in list.files(args$true_cluster_input_directory, pattern = "*.csv*") : 
-  invalid 'path' argument
-Execution halted
+[1] "true_GSE98816.csv"
+[1] "clustersSeurat_1_GSE98816.csv"
+[1] 1
+[1] "  ...read"
+***t-SNE wrapper function***
+running...
+done.
+[1] "  ...tSNE"
+[1] "DONE"
