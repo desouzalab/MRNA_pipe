@@ -57,7 +57,7 @@ if (length(all_preprocessed_ssRNASeq_files)==length(all_clustered_ssRNASeq_files
     ### TSNE
     # Read .csv file containing clusters
     # colNames=F --> First row of data will not be used as column names. (If TRUE, the first row of data is used as column names)
-    TrueClusters=read.csv(file.path(args$trueCluster_input_directory, all_trueCluster_ssRNASeq_files[c]))[,3]
+    TrueClusters=read.csv(file.path(args$true_cluster_input_directory, all_true_cluster_ssRNASeq_files[c]))[,3]
     
     # Select Row 2 and exclude Column 1 from the data frame.
     TrueClusters=as.factor(TrueClusters)
