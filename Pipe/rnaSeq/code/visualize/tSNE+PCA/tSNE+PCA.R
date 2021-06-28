@@ -76,17 +76,17 @@ if (length(all_preprocessed_ssRNASeq_files)==length(all_trueCluster_ssRNASeq_fil
 
     hommat=data.frame(tsneX,tsneY,TrueClusters,clusters)
     Method=c("Seurat","SC3")
-    tsnepca=ggplot(hommat, aes(y=tsneY,x=tsneX))+theme(legend.position = "none")+expand_limits(x=c(0,50), y=c(0, 1))+ labs(x = "Number of Clusters", y = "Purity")+geom_text(aes(label=Method),hjust=0, vjust=2)+geom_vline(xintercept=7, linetype="dashed", color = "green")
-    save_plot(paste0(outdir,"/TSNE+PCA_",c,"_",args$name_dataset,".pdf"),tsnepca)
-    print("  ...plot tSNE+PCA")
-    dev.off()
+    #tsnepca=ggplot(hommat, aes(y=tsneY,x=tsneX))+theme(legend.position = "none")+expand_limits(x=c(0,50), y=c(0, 1))+ labs(x = "Number of Clusters", y = "Purity")+geom_text(aes(label=Method),hjust=0, vjust=2)+geom_vline(xintercept=7, linetype="dashed", color = "green")
+    s#ave_plot(paste0(outdir,"/TSNE+PCA_",c,"_",args$name_dataset,".pdf"),tsnepca)
+    #print("  ...plot tSNE+PCA")
+    #dev.off()
 
-    tsnepca = ggplot(hommat, aes(y=tsneY,x=tsneX)) + geom_point(aes(shape=as.factor(clusters)),size=1) + scale_shape(solid = TRUE)  
+    tsnepca = ggplot(hommat, aes(y=tsneY,x=tsneX)) + geom_point(aes(shape=as.factor(TrueClusters)),size=1) + scale_shape(solid = TRUE)  
     save_plot(paste0(outdir,"/TSNE+PCA_Black_",c,"_",args$name_dataset,".pdf"),tsnepca)
     print("  ...plot tSNE+PCA black and white")
 
 
-    tsnepca = ggplot(hommat, aes(y=tsneY,x=tsneX, color=as.factor(clusters))) + geom_point(aes(shape=as.factor(clusters)),size=1) + scale_shape(solid = TRUE)
+    tsnepca = ggplot(hommat, aes(y=tsneY,x=tsneX, color=as.factor(TrueClusters))) + geom_point(aes(shape=as.factor(clusters)),size=1) + scale_shape(solid = TRUE)
     save_plot(paste0(outdir,"/TSNE+PCA_Colour_",c,"_",args$name_dataset,".pdf"),tsnepca)
     print("  ...plot tSNE+PCA colour")
 
