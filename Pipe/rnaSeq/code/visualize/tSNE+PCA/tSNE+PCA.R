@@ -24,7 +24,7 @@ parser <- ArgumentParser()
 
 parser$add_argument("--name_dataset", type="character", help="name of the dataset")
 parser$add_argument("--preprocessed_input_directory", default="None", type="character", help="path to directory containing preprocessed ssRNASeq data")
-parser$add_argument("--trueCluster_input_directory", default="None", type="character", help="path to directory containing true cluster ssRNASeq data")
+parser$add_argument("--true_cluster_input_directory", default="None", type="character", help="path to directory containing true cluster ssRNASeq data")
 parser$add_argument("--cluster_input_directory", default="None", type="character", help="path to directory containing clustered ssRNASeq data")
 parser$add_argument("--output_directory", type="character", help="Path to the output directory")
 
@@ -37,7 +37,7 @@ dir.create(file.path(outdir), showWarnings=FALSE, recursive=TRUE)
 all_preprocessed_ssRNASeq_files <- list.files(args$preprocessed_input_directory, pattern = "*.csv*")
 print(all_preprocessed_ssRNASeq_files)
 
-all_trueCluster_ssRNASeq_files <- list.files(args$trueCluster_input_directory, pattern = "*.csv*")
+all_trueCluster_ssRNASeq_files <- list.files(args$true_cluster_input_directory, pattern = "*.csv*")
 print(all_trueCluster_ssRNASeq_files)
 
 all_clustered_ssRNASeq_files <- list.files(args$cluster_input_directory, pattern = "*.csv*")
