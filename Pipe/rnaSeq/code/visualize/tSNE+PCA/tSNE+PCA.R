@@ -81,7 +81,7 @@ if (length(all_preprocessed_ssRNASeq_files)==length(all_true_cluster_ssRNASeq_fi
     #print("  ...plot tSNE+PCA")
     #dev.off()
 
-    tsnepca = ggplot(hommat, aes(y=tsneY,x=tsneX, color=as.factor(clusters))) + geom_point(aes(shape=TrueClusters),size=1) + scale_shape_manual(values=seq(0,length(labels(TrueClusters))))
+    tsnepca = ggplot(hommat, aes(y=tsneY,x=tsneX, color=as.factor(TrueClusters))) + geom_point(aes(shape=TrueClusters),size=1) + scale_shape_manual(values=seq(0,length(labels(TrueClusters))))
     save_plot(paste0(outdir,"/TSNE+PCA_Colour_",c,"_",args$name_dataset,".pdf"),tsnepca)
     print("  ...plot tSNE+PCA colour")
 
