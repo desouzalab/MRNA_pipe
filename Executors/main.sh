@@ -234,12 +234,10 @@
         cat ../../rnaSeq/output/visualize/tSNE/seurat/${DATA_NAME}/tSNE-${DATA_NAME}.out
     fi
 
-
+    rm Rplots.pdf 
     git add --all
     git commit -m "Ran PREPROCESS : $PREPROCESS 
     > Ran CLUSTER : $CLUSTER 
     > Ran VISUALIZATION : $VISUALIZATION 
     > Ran COMPARISON : $COMPARISON"
     git push 
-
-
