@@ -233,8 +233,8 @@
         cat ../../rnaSeq/output/visualize/tSNE/seurat/${DATA_NAME}/tSNE-${DATA_NAME}.out
         cat ../../rnaSeq/output/visualize/tSNE/seurat/${DATA_NAME}/tSNE-${DATA_NAME}.out
     fi
-
-    rm Rplots.pdf 
+    #re-direct plots created by R 
+    mv Rplots.pdf ~/projects/def-cdesouza/Lab/data
     git add --all
     git commit -m "Ran PREPROCESS : $PREPROCESS 
     > Ran CLUSTER : $CLUSTER 
