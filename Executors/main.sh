@@ -235,6 +235,7 @@
     fi
     #re-direct plots created by R 
     mv Rplots.pdf ~/projects/def-cdesouza/Lab/data
+    ls
     git add --all
     git commit -m "Ran PREPROCESS : $PREPROCESS 
     > Ran CLUSTER : $CLUSTER 
