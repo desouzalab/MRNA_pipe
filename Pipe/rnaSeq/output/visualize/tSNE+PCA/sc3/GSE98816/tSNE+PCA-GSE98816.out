@@ -14,12 +14,10 @@ $true_cluster_input_directory
 [1] "/home/emiliano/projects/def-cdesouza/Lab/data/true/GSE98816/"
 
 [1] "preprocessed_1_GSE98816.csv"
-[1] "true_GSE98816.csv"
+[1] "labels_GSE98816.csv"
 [1] "clustersSC3_1_GSE98816.csv"
 [1] 1
 [1] "  ...read"
-[1] "  ...plot tSNE+PCA colour"
-[1] "  ...plot tSNE+PCA black and white"
-Warning message:
-In rm(dat) : object 'dat' not found
-[1] "DONE"
+Error in colMeans(x, na.rm = TRUE) : 'x' must be numeric
+Calls: Rtsne ... prcomp.default -> scale -> scale.default -> colMeans
+Execution halted

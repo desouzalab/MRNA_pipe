@@ -17,15 +17,12 @@ $true_cluster_input_directory
 [1] "/home/emiliano/projects/def-cdesouza/Lab/data/true/GSE98816/"
 
 [1] "preprocessed_1_GSE98816.csv"
-[1] "true_GSE98816.csv"
+[1] "labels_GSE98816.csv"
 [1] "clustersSC3_1_GSE98816.csv"
 [1] "clustersSeurat_1_GSE98816.csv"
 [1] 1
 [1] "  ...read"
 [1] "  ...read"
-[1] "  ...plot heatmapTrueFirst"
-[1] "  ...plot heatmapSeuratFirst"
-Warning messages:
-1: In rm(dat) : object 'dat' not found
-2: In rm(data1) : object 'data1' not found
-[1] "DONE"
+Error in `.rowNamesDF<-`(x, value = value) : invalid 'row.names' length
+Calls: rownames<- ... row.names<- -> row.names<-.data.frame -> .rowNamesDF<-
+Execution halted

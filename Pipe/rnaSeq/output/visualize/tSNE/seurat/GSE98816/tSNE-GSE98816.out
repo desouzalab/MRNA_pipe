@@ -14,12 +14,11 @@ $true_cluster_input_directory
 [1] "/home/emiliano/projects/def-cdesouza/Lab/data/true/GSE98816/"
 
 [1] "preprocessed_1_GSE98816.csv"
-[1] "true_GSE98816.csv"
+[1] "labels_GSE98816.csv"
 [1] "clustersSeurat_1_GSE98816.csv"
 [1] 1
 [1] "  ...read"
-***t-SNE wrapper function***
-running...
-done.
-[1] "  ...tSNE"
-[1] "DONE"
+Error in `[.data.frame`(read.csv(file.path(args$true_cluster_input_directory,  : 
+  undefined columns selected
+Calls: [ -> [.data.frame
+Execution halted

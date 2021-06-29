@@ -16,27 +16,11 @@ $seurat_cluster_input_directory
 $true_cluster_input_directory
 [1] "/home/emiliano/projects/def-cdesouza/Lab/data/true/GSE98816/"
 
-[1] "true_GSE98816.csv"
+[1] "labels_GSE98816.csv"
 [1] "clustersSC3_1_GSE98816.csv"
 [1] "clustersSeurat_1_GSE98816.csv"
 [1] 1
-[1] "  ...read"
-[1] "AIR SC3:"
-[1] 0.3994677
-[1] "AIR SEURAT:"
-[1] 0.4242677
-[1] "AIR SEURAT + SC3:"
-[1] 0.2823269
-[1] "V MEASURE SC3:"
-[1] 1
-[1] "V MEASURE SEURAT:"
-[1] 1
-[1] "PURITY SC3:"
-[1] 0.5838041
-[1] "\nPURITY SEURAT:"
-[1] 0.579096
-[1] "  ...plot purity"
-Warning messages:
-1: In contingency_table_clusters(true, pred) : NAs introduced by coercion
-2: In contingency_table_clusters(true, pred) : NAs introduced by coercion
-[1] "DONE"
+Error in `[.data.frame`(read.csv(file.path(args$true_cluster_input_directory,  : 
+  undefined columns selected
+Calls: [ -> [.data.frame
+Execution halted
