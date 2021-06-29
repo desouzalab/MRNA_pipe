@@ -52,16 +52,9 @@ if (length(all_preprocessed_ssRNASeq_files)==length(all_true_cluster_ssRNASeq_fi
     # Read .csv file containing preprocessed data
     data=read.csv(file.path(args$preprocessed_input_directory, all_preprocessed_ssRNASeq_files[c]))
     print("  ...read")
-    ### Set row names for the data frame. Exclude the first column from the data frame.
-    row.names(data)=data[,1]
-
-    ### Exclude the first column from the data frame.
-    data=data[,-1]
-
-
     ### Load data
     # Read .xlsx file containing true cluster data
-    true=read.csv(file.path(args$true_cluster_input_directory, all_true_cluster_ssRNASeq_files[c]))[,3]
+    true=read.csv(file.path(args$true_cluster_input_directory, all_true_cluster_ssRNASeq_files[c]))[,2]
     # Read .csv file containing sc3 cluster data
     sc3=read.csv(file.path(args$sc3_cluster_input_directory, all_sc3_cluster_ssRNASeq_files[c]))[,2]
     # Read .csv file containing seurat cluster data

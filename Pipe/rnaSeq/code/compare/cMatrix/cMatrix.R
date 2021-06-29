@@ -48,7 +48,7 @@ if (length(all_true_cluster_ssRNASeq_files)==length(all_sc3_cluster_ssRNASeq_fil
     print(c)
 
     ### Load data
-    true=read.csv(file.path(args$true_cluster_input_directory, all_true_cluster_ssRNASeq_files[c]))[,3]
+    true=read.csv(file.path(args$true_cluster_input_directory, all_true_cluster_ssRNASeq_files[c]))[,2]
     sc3=read.csv(file.path(args$sc3_cluster_input_directory, all_sc3_cluster_ssRNASeq_files[c]))[,2]
     seurat=read.csv(file.path(args$seurat_cluster_input_directory, all_seurat_cluster_ssRNASeq_files[c]))[,2]
     print("  ...read")
@@ -59,11 +59,11 @@ if (length(all_true_cluster_ssRNASeq_files)==length(all_sc3_cluster_ssRNASeq_fil
     ### Plots
     my_palette <- colorRampPalette(c("white","green"))(n = 299)
 
-    Hmcstr=pheatmap( crosstab(true ,sc3[,1],prop.r=T)$prop.r ,cluster_rows=F,cluster_cols=F,show_rownames=T,labels_row=labels(true), show_colnames=T,color =my_palette) 
+    Hmcstr=pheatmap( crosstab(true ,sc3[,1],prop.r=T)$prop.r ,cluster_rows=F,cluster_cols=F,show_rownames=T,labels_row=levels(true), show_colnames=T,color =my_palette) 
     save_plot(paste0(outdir,"/heatmapscrtrue_",c,"_",args$name_dataset,".jpg"),Hmcstr)
     print("  ...plot heatmapscrtrue")
 
-    Hmsetr=pheatmap( crosstab(true ,seurat[,1],prop.r=T)$prop.r ,cluster_rows=F,cluster_cols=F,show_rownames=T,labels_row=labels(true),show_colnames=T,color =my_palette) 
+    Hmsetr=pheatmap( crosstab(true ,seurat[,1],prop.r=T)$prop.r ,cluster_rows=F,cluster_cols=F,show_rownames=T,labels_row=levels(true),show_colnames=T,color =my_palette) 
     save_plot(paste0(outdir,"/heatmapseutrue_",c,"_",args$name_dataset,".jpg"),Hmsetr)
     print("  ...plot heatmapseutrue")
     dev.off()
