@@ -18,6 +18,12 @@ $true_cluster_input_directory
 [1] "clustersSeurat_1_GSE98816.csv"
 [1] 1
 [1] "  ...read"
-Error in colMeans(x, na.rm = TRUE) : 'x' must be numeric
-Calls: Rtsne ... prcomp.default -> scale -> scale.default -> colMeans
-Execution halted
+[1] "  ...plot tSNE+PCA colour"
+[1] "  ...plot tSNE+PCA black and white"
+***t-SNE wrapper function***
+running...
+done.
+[1] "  ...tSNE"
+Warning message:
+In rm(dat) : object 'dat' not found
+[1] "DONE"
