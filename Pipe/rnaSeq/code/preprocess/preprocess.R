@@ -10,7 +10,7 @@ suppressMessages(library(argparse))
 library(dplyr)
 library(Seurat)
 library(patchwork)
-
+suppressMessages(library(cowplot))
 RSCRIPT <- "Rscript"
 
 
