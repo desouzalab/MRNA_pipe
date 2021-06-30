@@ -50,7 +50,7 @@ if (length(all_preprocessed_ssRNASeq_files)==length(all_true_cluster_ssRNASeq_fi
     
     ### Create data frame
     # Read .csv file containing preprocessed data
-    data=read.csv(file.path(args$preprocessed_input_directory, all_preprocessed_ssRNASeq_files[c]))
+    data=read.csv(file.path(args$preprocessed_input_directory, all_preprocessed_ssRNASeq_files[c]),,row.names = 1)
     print("  ...read")
     ### Load data
     # Read .xlsx file containing true cluster data

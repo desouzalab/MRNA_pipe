@@ -43,13 +43,8 @@ for (c in 1:length(all_preprocessed_ssRNASeq_files)){
   print(c)
   print(all_preprocessed_ssRNASeq_files)
   ### Create data frame
-  data=read.csv(file.path(args$input_directory, all_preprocessed_ssRNASeq_files[c]))
+  data=read.csv(file.path(args$input_directory, all_preprocessed_ssRNASeq_files[c]),row.names = 1)
   print("  ...read")
-  ### Set row names for the data frame. Exclude the first column from the data frame.
-  row.names(data)=data[,1]
-
-  ### Exclude the first column from the data frame.
-  data=data[,-1]
 
   ### Cluster
   sce <- SingleCellExperiment(
