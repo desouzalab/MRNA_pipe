@@ -57,7 +57,7 @@ if (length(all_preprocessed_ssRNASeq_files)==length(all_true_cluster_ssRNASeq_fi
     clusters=read.csv(file.path(args$cluster_input_directory,all_clustered_ssRNASeq_files[c]))[,2]
     clusters=as.factor(clusters)
     print("  ...read")
-
+    print(head(data[,1:10]))
     data=as.matrix(data)
     #=====================FORMAT DATA=====================#
     set.seed(123)
