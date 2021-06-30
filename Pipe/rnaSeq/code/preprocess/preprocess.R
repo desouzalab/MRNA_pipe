@@ -49,17 +49,17 @@ for (c in 1:length(all_raw_ssRNASeq_files)){
   seurat_object[["percent.mt"]] <- PercentageFeatureSet(seurat_object, pattern = "^MT-")
   # Visualize QC metrics as a violin plot
   vlnplot <- VlnPlot(seurat_object, features = c("nFeature_RNA", "nCount_RNA", "percent.mt"), ncol = 3)
-  save_plot(paste0(outdir,"/VlnPlot",c,"_",args$name_dataset,".pdf"),vlnplot)
+  save_plot(paste0(data_outdir,"/VlnPlot",c,"_",args$name_dataset,".pdf"),vlnplot)
   print("  ...plot tSNE+PCA colour")
   dev.off()
   # FeatureScatter to visualize feature-feature relationships
   plot1 <- FeatureScatter(seurat_object, feature1 = "nCount_RNA", feature2 = "percent.mt")
   plot2 <- FeatureScatter(seurat_object, feature1 = "nCount_RNA", feature2 = "nFeature_RNA")
   plot1 + plot2
-  save_plot(paste0(outdir,"/FeatureScatter",c,"_",args$name_dataset,".pdf"),plot1)
+  save_plot(paste0(data_outdir,"/FeatureScatter",c,"_",args$name_dataset,".pdf"),plot1)
   print("  ...plot tSNE+PCA colour")
   dev.off()
-  save_plot(paste0(outdir,"/FeatureScatter",c,"_",args$name_dataset,".pdf"),plot2)
+  save_plot(paste0(data_outdir,"/FeatureScatter",c,"_",args$name_dataset,".pdf"),plot2)
   print("  ...plot tSNE+PCA colour")
   dev.off()
   # based on figures, filtering (choose the threshold based on plots)
