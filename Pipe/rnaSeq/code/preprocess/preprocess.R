@@ -39,12 +39,27 @@ for (c in 1:length(all_raw_ssRNASeq_files)){
   ### Create data frame
   data=read.csv(file.path(args$input_directory, all_raw_ssRNASeq_files[c]))
   print("  ...read")
-  print(head(data))
-  ### Set row names for the data frame. 
-  row.names(data)=data[,1]
+  seurat_object <- CreateSeuratObject(counts = data, project = "data3k", min.cells = 3, min.features = 200)
+  seurat_object
+  # focus on MT features: Low-quality / dying cells often exhibit extensive mitochondrial contamination
+  seurat_object[["percent.mt"]] <- PercentageFeatureSet(seurat_object, pattern = "^MT-")
+  # Visualize QC metrics as a violin plot
+  VlnPlot(seurat_object, features = c("nFeature_RNA", "nCount_RNA", "percent.mt"), ncol = 3)
+  save_plot(paste0(outdir,"/VlnPlot",c,"_",args$name_dataset,".pdf"),tsnepca)
+  print("  ...plot tSNE+PCA colour")
+  dev.off()
+  # FeatureScatter to visualize feature-feature relationships
+  plot1 <- FeatureScatter(seurat_object, feature1 = "nCount_RNA", feature2 = "percent.mt")
+  plot2 <- FeatureScatter(seurat_object, feature1 = "nCount_RNA", feature2 = "nFeature_RNA")
+  plot1 + plot2
+  save_plot(paste0(outdir,"/FeatureScatter",c,"_",args$name_dataset,".pdf"),tsnepca)
+  print("  ...plot tSNE+PCA colour")
+  dev.off()
+  # based on figures, filtering (choose the threshold based on plots)
+  seurat_object <- subset(seurat_object, subset = nFeature_RNA > 200 & nFeature_RNA < 2500 & percent.mt < 5)
+  #Normalization
+  pbmc <- NormalizeData(seurat_object, normalization.method = "LogNormalize", scale.factor = 10000)
 
-  ### Exclude the first column from the data frame.
-  data=data[,-1]
 
   ### Exclude records where rowsum is less than 50
   data=data[!rowSums(data)<50,]
