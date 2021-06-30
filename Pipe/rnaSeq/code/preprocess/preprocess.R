@@ -59,7 +59,7 @@ for (c in 1:length(all_raw_ssRNASeq_files)){
   save_plot(paste0(args$console_output_directory,"/FeatureScatter",c,"_",args$name_dataset,".pdf"),plot1)
   print("  ...plot tSNE+PCA colour")
   dev.off()
-  save_plot(paste0(args$console_output_directory,"/FeatureScatter",c,"_",args$name_dataset,".pdf"),plot2)
+  save_plot(paste0(args$console_output_directory,"/FeatureScatter_2",c,"_",args$name_dataset,".pdf"),plot2)
   print("  ...plot tSNE+PCA colour")
   dev.off()
   # based on figures, filtering (choose the threshold based on plots)
