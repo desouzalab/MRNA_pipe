@@ -1,3 +1,15 @@
+
+Attaching package: ‘dplyr’
+
+The following objects are masked from ‘package:stats’:
+
+    filter, lag
+
+The following objects are masked from ‘package:base’:
+
+    intersect, setdiff, setequal, union
+
+Attaching SeuratObject
 $console_output_directory
 [1] "../../rnaSeq/output/preprocess/GSE98816"
 
@@ -12,6 +24,10 @@ $name_dataset
 
 [1] "GSE98816_filtered.csv"
 1[1] "  ...read"
-Error in CreateSeuratObject(counts = data, project = "data3k", min.cells = 3,  : 
-  could not find function "CreateSeuratObject"
+Error in save_plot(paste0(outdir, "/VlnPlot", c, "_", args$name_dataset,  : 
+  could not find function "save_plot"
+In addition: Warning messages:
+1: In storage.mode(from) <- "double" : NAs introduced by coercion
+2: In SingleExIPlot(type = type, data = data[, x, drop = FALSE], idents = idents,  :
+  All cells have the same value of percent.mt.
 Execution halted
