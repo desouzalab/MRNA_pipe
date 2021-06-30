@@ -6,6 +6,10 @@
 # libraries
 #======================
 suppressMessages(library(argparse))
+suppressMessages(library(argparse))
+library(dplyr)
+library(Seurat)
+library(patchwork)
 
 RSCRIPT <- "Rscript"
 
