@@ -1,0 +1,31 @@
+
+Attaching package: ‘dplyr’
+
+The following objects are masked from ‘package:stats’:
+
+    filter, lag
+
+The following objects are masked from ‘package:base’:
+
+    intersect, setdiff, setequal, union
+
+Attaching SeuratObject
+$console_output_directory
+[1] "../../rnaSeq/output/preprocess/GSE99058+16"
+
+$data_output_directory
+[1] "/home/emiliano/projects/def-cdesouza/Lab/data/preprocessed/GSE99058+16"
+
+$input_directory
+[1] "/home/emiliano/projects/def-cdesouza/Lab/data/raw/GSE99058+16"
+
+$name_dataset
+[1] "GSE99058+16"
+
+character(0)
+1Error in file(file, "rt") : cannot open the connection
+Calls: read.csv -> read.table -> file
+In addition: Warning message:
+In file(file, "rt") :
+  cannot open file '/home/emiliano/projects/def-cdesouza/Lab/data/raw/GSE99058+16/NA': No such file or directory
+Execution halted
