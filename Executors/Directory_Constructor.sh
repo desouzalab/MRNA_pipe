@@ -14,5 +14,3 @@ mkdir MRNA_pipe/Pipe/rnaSeq/output/visualize/tSNE/seurat/$DATA_NAME
 mkdir MRNA_pipe/Pipe/rnaSeq/output/visualize/tSNE/sc3/$DATA_NAME
 mkdir MRNA_pipe/Pipe/rnaSeq/output/visualize/tSNE+PCA/seurat/$DATA_NAME
 mkdir MRNA_pipe/Pipe/rnaSeq/output/visualize/tSNE+PCA/sc3/$DATA_NAME
-
-touch data/preprocessed/$DATA_NAME/$DATA_NAME.csv
