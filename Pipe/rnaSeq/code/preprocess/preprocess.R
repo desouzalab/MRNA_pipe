@@ -71,7 +71,7 @@ for (c in 1:length(all_raw_ssRNASeq_files)){
 
   ### Export preprocessed data frame to CSV file
   outFilename <- paste0(data_outdir,"/preprocessed_",c,"_",args$name_dataset,".csv")
-  write.csv(data, file=outFilename,row.names=TRUE)
+  #write.csv(data, file=outFilename,row.names=TRUE)
   print("  ...export to .csv")
 
   rm(dat)

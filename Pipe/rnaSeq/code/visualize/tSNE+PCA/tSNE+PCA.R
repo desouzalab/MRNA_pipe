@@ -58,8 +58,10 @@ if (length(all_preprocessed_ssRNASeq_files)==length(all_true_cluster_ssRNASeq_fi
     clusters=as.factor(clusters)
     print("  ...read")
     data=as.matrix(data)
-    print(head(data[,1:10]))
-    print(head(t(as.matrix(data[,1:10]))))
+    data=data[!rowSums(data)<50,]
+
+    ### Exclude records that have less than or equal to 864 zero's
+    data=data[!apply(data==0, 1, sum) <= 864, ]
     #=====================FORMAT DATA=====================#
     set.seed(123)
     tsnepca=Rtsne(X=t(data), dims=2, perplexity=30, theta=0, check_duplicates=F, pca=TRUE, partial_pca=FALSE, max_iter=1000, verbose=F, is_distance=FALSE, Y_init=NULL, pca_center=TRUE, pca_scale=F, normalize=F) 
