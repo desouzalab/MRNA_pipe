@@ -57,11 +57,12 @@ if (length(all_preprocessed_ssRNASeq_files)==length(all_true_cluster_ssRNASeq_fi
     clusters=read.csv(file.path(args$cluster_input_directory,all_clustered_ssRNASeq_files[c]))[,2]
     clusters=as.factor(clusters)
     print("  ...read")
-    data=as.matrix(data)
     data=data[!rowSums(data)<50,]
 
     ### Exclude records that have less than or equal to 864 zero's
     data=data[!apply(data==0, 1, sum) <= 864, ]
+    data=as.matrix(data)
+
     #=====================FORMAT DATA=====================#
     set.seed(123)
     tsnepca=Rtsne(X=t(data), dims=2, perplexity=30, theta=0, check_duplicates=F, pca=TRUE, partial_pca=FALSE, max_iter=1000, verbose=F, is_distance=FALSE, Y_init=NULL, pca_center=TRUE, pca_scale=F, normalize=F) 
