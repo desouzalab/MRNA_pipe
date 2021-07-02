@@ -24,6 +24,20 @@ $name_dataset
 
 [1] "filtered_GSE99058+16.csv"
 1[1] "  ...read"
+       GSM2631429 GSM2631430 GSM2631431 GSM2631432 GSM2631433 GSM2631434
+Adora1        135        107          2        114          0        683
+Sntg1          19          0          0          0          0          0
+Prim2           0          0          0          0          0          0
+Bai3            0          0        359          0         32          0
+Cflar           0          0          0          0          0          0
+Gpr39           0          0          0          0          0          0
+       GSM2631435 GSM2631436 GSM2631437 GSM2631438
+Adora1         46        211          0          0
+Sntg1           0          0          0          0
+Prim2           0          0          0          0
+Bai3            4          6          0          0
+Cflar           0          0          0          0
+Gpr39           0          0          0          0
 [1] "  ...plot tSNE+PCA colour"
 [1] "  ...plot tSNE+PCA colour"
 [1] "  ...plot tSNE+PCA colour"
