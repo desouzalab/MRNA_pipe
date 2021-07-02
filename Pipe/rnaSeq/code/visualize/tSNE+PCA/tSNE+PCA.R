@@ -58,7 +58,7 @@ if (length(all_preprocessed_ssRNASeq_files)==length(all_true_cluster_ssRNASeq_fi
     clusters=as.factor(clusters)
     print("  ...read")
     data=data[!rowSums(data)<50,]
-
+    data = na.omit(data)
     ### Exclude records that have less than or equal to 864 zero's
     data=data[!apply(data==0, 1, sum) <= 864, ]
     data=as.matrix(data)
