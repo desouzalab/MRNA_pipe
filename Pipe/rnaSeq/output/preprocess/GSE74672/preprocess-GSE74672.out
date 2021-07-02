@@ -24,27 +24,27 @@ $name_dataset
 
 [1] "GSE74672.csv"
 1[1] "  ...read"
-       X.1772058147_F02 X.1772096158_E08 X.1772096144_A05 X.1772092004_A05
-Xkr4                  0                0                0                0
-Rp1                   0                0                0                0
-Sox17                 0                0                0                0
-Mrpl15                0                0                0                0
-Lypla1                0                0                0                0
-Tcea1                 0                1                0                2
-       X.1772092004_B06 X.1772096173_F02 X.1772092004_B11 X.1772078030_A08
-Xkr4                  0                0                0                0
-Rp1                   0                0                0                0
-Sox17                 0                0                0                0
-Mrpl15                3                0                0                1
-Lypla1                0                0                0                0
-Tcea1                 0                0                0                0
-       X.1772092004_B08 X.1772092009_B06
-Xkr4                  0                0
-Rp1                   0                0
-Sox17                 0                0
-Mrpl15                2                1
-Lypla1                0                0
-Tcea1                 1                1
+       GSM1772058147 GSM1772096158 GSM1772096144 GSM1772092004 GSM1772092004.1
+Xkr4               0             0             0             0               0
+Rp1                0             0             0             0               0
+Sox17              0             0             0             0               0
+Mrpl15             0             0             0             0               3
+Lypla1             0             0             0             0               0
+Tcea1              0             1             0             2               0
+       GSM1772096173 GSM1772092004.2 GSM1772078030 GSM1772092004.3
+Xkr4               0               0             0               0
+Rp1                0               0             0               0
+Sox17              0               0             0               0
+Mrpl15             0               0             1               2
+Lypla1             0               0             0               0
+Tcea1              0               0             0               1
+       GSM1772092009
+Xkr4               0
+Rp1                0
+Sox17              0
+Mrpl15             1
+Lypla1             0
+Tcea1              1
 Warning: Feature names cannot have underscores ('_'), replacing with dashes ('-')
 [1] "  ...plot tSNE+PCA colour"
 [1] "  ...plot tSNE+PCA colour"

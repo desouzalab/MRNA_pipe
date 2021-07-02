@@ -46,10 +46,3 @@ Performing log-normalization
 [----|----|----|----|----|----|----|----|----|----|
 **************************************************|
 [1] "  ...preprocess"
-[1] "  ...export to .csv"
-Warning messages:
-1: In SingleExIPlot(type = type, data = data[, x, drop = FALSE], idents = idents,  :
-  All cells have the same value of percent.mt.
-2: In cor(x = data[, 1], y = data[, 2]) : the standard deviation is zero
-3: In rm(dat) : object 'dat' not found
-[1] "DONE"
