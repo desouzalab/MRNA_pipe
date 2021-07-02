@@ -65,7 +65,7 @@ if (length(all_preprocessed_ssRNASeq_files)==length(all_true_cluster_ssRNASeq_fi
 
     #=====================FORMAT DATA=====================#
     set.seed(123)
-    tsnepca=Rtsne(X=t(data), dims=2, perplexity=30, theta=0, check_duplicates=F, pca=TRUE, partial_pca=FALSE, max_iter=1000, verbose=F, is_distance=FALSE, Y_init=NULL, pca_center=TRUE, pca_scale=F, normalize=F) 
+    tsnepca=Rtsne(X=t(data), dims=2, perplexity=30, theta=0, check_duplicates=F, pca=TRUE, partial_pca=FALSE, max_iter=1000, verbose=T, is_distance=FALSE, Y_init=NULL, pca_center=TRUE, pca_scale=F, normalize=F) 
     tsneX=tsnepca$Y[,1]
     tsneY=tsnepca$Y[,2]
     hommat=data.frame(tsneX,tsneY,TrueClusters,clusters)
