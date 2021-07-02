@@ -1,0 +1,19 @@
+Attaching SeuratObject
+$console_output_directory
+[1] "../../rnaSeq/output/cluster/seurat/GSE98816+58"
+
+$data_output_directory
+[1] "../../rnaSeq/output/cluster/seurat/GSE98816+58"
+
+$input_directory
+[1] "/home/emiliano/projects/def-cdesouza/Lab/data/preprocessed/GSE98816+58"
+
+$name_dataset
+[1] "GSE98816+58"
+
+[1] "preprocessed_1_GSE98816+58.csv"
+[1] 1
+Error in read.table(file = file, header = header, sep = sep, quote = quote,  : 
+  missing values in 'row.names' are not allowed
+Calls: read.csv -> read.table
+Execution halted
