@@ -45,9 +45,6 @@ for (c in 1:length(all_raw_ssRNASeq_files)){
   print("  ...read")
   print(head(data[,1:10]))
 
-
-
-
   seurat_object <- CreateSeuratObject(counts = data, project = "data3k", min.cells = 3, min.features = 200)
   seurat_object
   # focus on MT features: Low-quality / dying cells often exhibit extensive mitochondrial contamination
@@ -71,14 +68,6 @@ for (c in 1:length(all_raw_ssRNASeq_files)){
   seurat_object <- subset(seurat_object, subset = nFeature_RNA > 200 & nFeature_RNA < 2500 & percent.mt < 5)
   #Normalization
   pbmc <- NormalizeData(seurat_object, normalization.method = "LogNormalize", scale.factor = 10000)
-  
-
-  ### Exclude records where rowsum is less than 50
-  data=data[!rowSums(data)<50,]
-
-  ### Exclude records that have less than or equal to 864 zero's
-  data=data[!apply(data==0, 1, sum) <= 864, ]
-  print("  ...preprocess")
 
   ### Export preprocessed data frame to CSV file
   outFilename <- paste0(data_outdir,"/preprocessed_",c,"_",args$name_dataset,".csv")
