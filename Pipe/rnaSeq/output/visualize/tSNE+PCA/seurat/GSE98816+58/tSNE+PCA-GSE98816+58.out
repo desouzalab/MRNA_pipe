@@ -18,6 +18,35 @@ $true_cluster_input_directory
 [1] "clustersSeurat_1_GSE98816+58.csv"
 [1] 1
 [1] "  ...read"
-Error in na.fail.default(X) : missing values in object
-Calls: Rtsne -> Rtsne.default -> na.fail -> na.fail.default
+Performing PCA
+Read the 3436 x 50 data matrix successfully!
+OpenMP is working. 1 threads.
+Using no_dims = 2, perplexity = 30.000000, and theta = 0.000000
+Computing input similarities...
+Symmetrizing...
+Done in 6.42 seconds!
+Learning embedding...
+Iteration 50: error is 81.393365 (50 iterations in 7.46 seconds)
+Iteration 100: error is 79.343694 (50 iterations in 7.43 seconds)
+Iteration 150: error is 79.162202 (50 iterations in 7.46 seconds)
+Iteration 200: error is 79.152477 (50 iterations in 7.44 seconds)
+Iteration 250: error is 79.146430 (50 iterations in 7.43 seconds)
+Iteration 300: error is 2.626795 (50 iterations in 7.48 seconds)
+Iteration 350: error is 2.380528 (50 iterations in 7.52 seconds)
+Iteration 400: error is 2.260745 (50 iterations in 7.83 seconds)
+Iteration 450: error is 2.189173 (50 iterations in 8.14 seconds)
+Iteration 500: error is 2.141165 (50 iterations in 8.11 seconds)
+Iteration 550: error is 2.107113 (50 iterations in 8.11 seconds)
+Iteration 600: error is 2.081685 (50 iterations in 8.16 seconds)
+Iteration 650: error is 2.062002 (50 iterations in 8.19 seconds)
+Iteration 700: error is 2.046517 (50 iterations in 8.15 seconds)
+Iteration 750: error is 2.034201 (50 iterations in 8.15 seconds)
+Iteration 800: error is 2.024154 (50 iterations in 8.15 seconds)
+Iteration 850: error is 2.015824 (50 iterations in 8.32 seconds)
+Iteration 900: error is 2.008924 (50 iterations in 8.47 seconds)
+Iteration 950: error is 2.003125 (50 iterations in 8.46 seconds)
+Iteration 1000: error is 1.998089 (50 iterations in 8.46 seconds)
+Fitting performed in 158.91 seconds.
+Error in data.frame(tsneX, tsneY, TrueClusters, clusters) : 
+  arguments imply differing number of rows: 3436, 237
 Execution halted
