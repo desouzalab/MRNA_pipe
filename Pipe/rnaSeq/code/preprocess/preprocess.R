@@ -43,6 +43,11 @@ for (c in 1:length(all_raw_ssRNASeq_files)){
   ### Create data frame
   data=read.csv(file.path(args$input_directory, all_raw_ssRNASeq_files[c]),row.names = 1)
   print("  ...read")
+  print(head(data[,1:10]))
+
+
+
+
   seurat_object <- CreateSeuratObject(counts = data, project = "data3k", min.cells = 3, min.features = 200)
   seurat_object
   # focus on MT features: Low-quality / dying cells often exhibit extensive mitochondrial contamination
