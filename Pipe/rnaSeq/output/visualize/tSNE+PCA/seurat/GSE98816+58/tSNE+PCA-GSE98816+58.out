@@ -15,5 +15,9 @@ $true_cluster_input_directory
 
 [1] "preprocessed_1_GSE98816+58.csv"
 [1] "true_GSE98816+58.csv"
-character(0)
-[1] "DONE"
+[1] "clustersSeurat_1_GSE98816+58.csv"
+[1] 1
+[1] "  ...read"
+Error in na.fail.default(X) : missing values in object
+Calls: Rtsne -> Rtsne.default -> na.fail -> na.fail.default
+Execution halted
