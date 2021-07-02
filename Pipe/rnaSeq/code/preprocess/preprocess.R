@@ -71,7 +71,7 @@ for (c in 1:length(all_raw_ssRNASeq_files)){
   seurat_object <- subset(seurat_object, subset = nFeature_RNA > 200 & nFeature_RNA < 2500 & percent.mt < 5)
   #Normalization
   pbmc <- NormalizeData(seurat_object, normalization.method = "LogNormalize", scale.factor = 10000)
-
+  
 
   ### Exclude records where rowsum is less than 50
   data=data[!rowSums(data)<50,]

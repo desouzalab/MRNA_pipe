@@ -46,11 +46,13 @@ for (c in 1:length(all_preprocessed_ssRNASeq_files)){
 
 
   ### Run Seurat
-  pbmc <- CreateSeuratObject(counts=data, project="pbmc3k", min.cells=3, min.features=200)
+  pbmc <- CreateSeuratObject(counts = data, project = "data3k", min.cells = 3, min.features = 200)
 
-  outputString <- "PBMC:"
-  print(outputString)
-  pbmc
+  # focus on MT features: Low-quality / dying cells often exhibit extensive mitochondrial contamination
+  pbmc[["percent.mt"]] <- PercentageFeatureSet(pbmc, pattern = "^MT-")
+
+  # based on figures, filtering (choose the threshold based on plots)
+  pbmc <- subset(seurat_object, subset = nFeature_RNA>2000 & nFeature_RNA <3500 & nCount_RNA>49800)
 
   # Normalize the data
   pbmc <- NormalizeData(pbmc, normalization.method="LogNormalize", scale.factor=10000)
