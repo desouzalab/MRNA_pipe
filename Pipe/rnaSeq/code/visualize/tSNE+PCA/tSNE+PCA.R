@@ -58,6 +58,8 @@ if (length(all_preprocessed_ssRNASeq_files)==length(all_true_cluster_ssRNASeq_fi
     clusters=as.factor(clusters)
     print("  ...read")
     data=as.matrix(data)
+    print(head(data[,1:10]))
+    print(head(t(as.matrix(data[,1:10]))))
     #=====================FORMAT DATA=====================#
     set.seed(123)
     tsnepca=Rtsne(X=t(data), dims=2, perplexity=30, theta=0, check_duplicates=F, pca=TRUE, partial_pca=FALSE, max_iter=1000, verbose=F, is_distance=FALSE, Y_init=NULL, pca_center=TRUE, pca_scale=F, normalize=F) 
