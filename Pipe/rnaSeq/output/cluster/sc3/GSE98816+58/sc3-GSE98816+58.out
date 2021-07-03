@@ -13,7 +13,10 @@ $name_dataset
 [1] "preprocessed_1_GSE98816+58.csv"
 [1] 1
 [1] "preprocessed_1_GSE98816+58.csv"
-Error in read.table(file = file, header = header, sep = sep, quote = quote,  : 
-  missing values in 'row.names' are not allowed
-Calls: read.csv -> read.table
+[1] "  ...read"
+[1] "  ...plot PCA"
+Estimating k...
+Error in eigen(sigmaHatNaive, symmetric = TRUE, only.values = TRUE) : 
+  infinite or missing values in 'x'
+Calls: sc3_estimate_k -> sc3_estimate_k -> estkTW -> eigen
 Execution halted
