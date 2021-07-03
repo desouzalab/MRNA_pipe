@@ -18,6 +18,8 @@ $true_cluster_input_directory
 [1] "clustersSeurat_1_GSE98816+58.csv"
 [1] 1
 [1] "  ...read"
-Error in data.frame(tsneX, tsneY, TrueClusters, clusters) : 
-  arguments imply differing number of rows: 3436, 237
+Performing PCA
+Consider setting partial_pca=TRUE for large matrices
+Error in colMeans(x, na.rm = TRUE) : 'x' must be numeric
+Calls: Rtsne ... prcomp.default -> scale -> scale.default -> colMeans
 Execution halted
