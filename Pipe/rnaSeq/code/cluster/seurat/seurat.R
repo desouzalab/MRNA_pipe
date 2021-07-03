@@ -67,7 +67,7 @@ for (c in 1:length(all_preprocessed_ssRNASeq_files)){
   # based on figures, filtering (choose the threshold based on plots)
   pbmc <- subset(pbmc, subset = nFeature_RNA>2000 & nFeature_RNA <3500 & nCount_RNA>500000)
   cat("pbmc\n")
-  print(head(pbmc[,1:10])))
+  print(head(pbmc[,1:10]))
   # Normalize the data
   pbmc <- NormalizeData(pbmc, normalization.method="LogNormalize", scale.factor=10000)
 
