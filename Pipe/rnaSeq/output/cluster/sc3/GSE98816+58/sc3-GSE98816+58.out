@@ -10,13 +10,12 @@ $input_directory
 $name_dataset
 [1] "GSE98816+58"
 
-[1] "preprocessed_1_GSE98816+58.csv"
+character(0)
 [1] 1
-[1] "preprocessed_1_GSE98816+58.csv"
-[1] "  ...read"
-[1] "  ...plot PCA"
-Estimating k...
-Error in eigen(sigmaHatNaive, symmetric = TRUE, only.values = TRUE) : 
-  infinite or missing values in 'x'
-Calls: sc3_estimate_k -> sc3_estimate_k -> estkTW -> eigen
+character(0)
+Error in file(file, "rt") : cannot open the connection
+Calls: read.csv -> read.table -> file
+In addition: Warning message:
+In file(file, "rt") :
+  cannot open file '/home/emiliano/projects/def-cdesouza/Lab/data/preprocessed/GSE98816+58/NA': No such file or directory
 Execution halted

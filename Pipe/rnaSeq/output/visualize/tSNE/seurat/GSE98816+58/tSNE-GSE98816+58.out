@@ -13,13 +13,7 @@ $preprocessed_input_directory
 $true_cluster_input_directory
 [1] "/home/emiliano/projects/def-cdesouza/Lab/data/true/GSE98816+58/"
 
-[1] "filtered_GSE99058+16.csv"
+character(0)
 [1] "true_GSE98816+58.csv"
 [1] "clustersSeurat_1_GSE98816+58.csv"
-[1] 1
-[1] "  ...read"
-***t-SNE wrapper function***
-running...
-Error in na.fail.default(X) : missing values in object
-Calls: tsne ... <Anonymous> -> Rtsne.default -> na.fail -> na.fail.default
-Execution halted
+[1] "DONE"

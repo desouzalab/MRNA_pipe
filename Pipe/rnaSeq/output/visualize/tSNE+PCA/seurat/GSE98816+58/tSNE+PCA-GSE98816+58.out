@@ -13,11 +13,7 @@ $preprocessed_input_directory
 $true_cluster_input_directory
 [1] "/home/emiliano/projects/def-cdesouza/Lab/data/true/GSE98816+58/"
 
-[1] "filtered_GSE99058+16.csv"
+character(0)
 [1] "true_GSE98816+58.csv"
 [1] "clustersSeurat_1_GSE98816+58.csv"
-[1] 1
-[1] "  ...read"
-Error in data.frame(tsneX, tsneY, TrueClusters, clusters) : 
-  arguments imply differing number of rows: 3436, 237
-Execution halted
+[1] "DONE"
