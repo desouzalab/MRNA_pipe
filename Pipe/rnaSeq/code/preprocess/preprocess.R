@@ -69,7 +69,7 @@ for (c in 1:length(all_raw_ssRNASeq_files)){
   #Normalization
   pbmc <- NormalizeData(seurat_object, normalization.method = "LogNormalize", scale.factor = 10000)
   ### Set row names for the data frame. 
-  row.names(data)=data[,1]
+  #row.names(data)=data[,1]
 
   ### Exclude the first column from the data frame.
   data=data[,-1]
