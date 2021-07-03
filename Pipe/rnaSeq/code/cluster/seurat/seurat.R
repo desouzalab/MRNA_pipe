@@ -50,7 +50,7 @@ for (c in 1:length(all_preprocessed_ssRNASeq_files)){
 
   # focus on MT features: Low-quality / dying cells often exhibit extensive mitochondrial contamination
   pbmc[["percent.mt"]] <- PercentageFeatureSet(pbmc, pattern = "^MT-")
-  print(head(pbmc[,1:10]))
+  print(head(length(columns(pbmc))) )
   vlnplot <- VlnPlot(pbmc, features = c("nFeature_RNA", "nCount_RNA", "percent.mt"), ncol = 3)
   save_plot(paste0(args$console_output_directory,"/VlnPlot",c,"_",args$name_dataset,".pdf"),vlnplot)
   print("  ...plot tSNE+PCA colour")
@@ -65,11 +65,11 @@ for (c in 1:length(all_preprocessed_ssRNASeq_files)){
   save_plot(paste0(args$console_output_directory,"/FeatureScatter_2",c,"_",args$name_dataset,".pdf"),plot2)
   print("  ...plot tSNE+PCA colour")
   dev.off()
-  print(head(pbmc[,1:10]))
+  print(head(length(columns(pbmc))) )
   # based on figures, filtering (choose the threshold based on plots)
-  pbmc <- subset(pbmc, subset = nFeature_RNA>2000 & nFeature_RNA <3500 & nCount_RNA>500000)
+  pbmc <- subset(pbmc, subset = nFeature_RNA>2000 & nFeature_RNA <3500 & nCount_RNA>498000)
   cat("pbmc\n")
-  print(head(pbmc[,1:10]))
+  print(head(length(columns(pbmc))) )
   # Normalize the data
   pbmc <- NormalizeData(pbmc, normalization.method="LogNormalize", scale.factor=10000)
 
