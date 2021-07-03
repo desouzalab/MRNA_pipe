@@ -12,7 +12,147 @@ $name_dataset
 [1] "GSE98816+58"
 
 [1] "preprocessed_1_GSE98816+58.csv"
-Error: unexpected symbol in:
-"  # based on figures, filtering (choose the threshold based on plots)
-  pbmc"
-Execution halted
+[1] 1
+[1] "  ...read"
+       GSM2631429 GSM2631430 GSM2631431 GSM2631432 GSM2631433 GSM2631434
+Adora1        135        107          2        114          0        683
+Sntg1          19          0          0          0          0          0
+Prim2           0          0          0          0          0          0
+Bai3            0          0        359          0         32          0
+Cflar           0          0          0          0          0          0
+Gpr39           0          0          0          0          0          0
+       GSM2631435 GSM2631436 GSM2631437 GSM2631438
+Adora1         46        211          0          0
+Sntg1           0          0          0          0
+Prim2           0          0          0          0
+Bai3            4          6          0          0
+Cflar           0          0          0          0
+Gpr39           0          0          0          0
+pbmc
+[1] 13765
+[1] "  ...plot tSNE+PCA colour"
+[1] "  ...plot tSNE+PCA colour"
+[1] "  ...plot tSNE+PCA colour"
+pbmc
+[1] 13765
+pbmc
+[1] 13765
+Performing log-normalization
+0%   10   20   30   40   50   60   70   80   90   100%
+[----|----|----|----|----|----|----|----|----|----|
+**************************************************|
+Calculating gene variances
+0%   10   20   30   40   50   60   70   80   90   100%
+[----|----|----|----|----|----|----|----|----|----|
+**************************************************|
+Calculating feature variances of standardized and clipped values
+0%   10   20   30   40   50   60   70   80   90   100%
+[----|----|----|----|----|----|----|----|----|----|
+**************************************************|
+[1] "20 MOST HIGHLY VARIABLE GENES:"
+ [1] "Itih3"   "Igsf1"   "Zfp35"   "Fbln5"   "Nnat"    "Chrna3"  "Zscan22"
+ [8] "Mtbp"    "Malat1"  "Cep128"  "Rbm43"   "Rdh12"   "Adcy1"   "Rasgrp1"
+[15] "Ptprt"   "Ptpro"   "Efemp1"  "Gpr158"  "Zfp365"  "Ccnj"   
+When using repel, set xnudge and ynudge to 0 for optimal results
+[1] "  ...plot variableFeaturesWithoutLabels"
+[1] "  ...plot variableFeaturesWithLabels"
+Centering and scaling data matrix
+  |                                                                              |                                                                      |   0%  |                                                                              |=====                                                                 |   7%  |                                                                              |==========                                                            |  14%  |                                                                              |===============                                                       |  21%  |                                                                              |====================                                                  |  29%  |                                                                              |=========================                                             |  36%  |                                                                              |==============================                                        |  43%  |                                                                              |===================================                                   |  50%  |                                                                              |========================================                              |  57%  |                                                                              |=============================================                         |  64%  |                                                                              |==================================================                    |  71%  |                                                                              |=======================================================               |  79%  |                                                                              |============================================================          |  86%  |                                                                              |=================================================================     |  93%  |                                                                              |======================================================================| 100%
+PC_ 1 
+Positive:  Igfbp2, Car2, Hsd11b1, Adamtsl5, Aldh1a1, Malat1, Gcnt4, Pmp22, Ocrl, Dmp1 
+	   9230114K14Rik, Ndrg4, Snap25, Pfkp, Cacna1e, Pcdhb11, Amhr2, Grm5, Aifm2, Apln 
+	   Slco1c1, B3galt5, Gpd1, Med18, Mfsd2a, Neat1, Ptchd2, Sntg1, Celrr, Egfem1 
+Negative:  Nnat, Agt, Slc1a3, Sparc, Pcolce2, Prelp, Chrna3, Cpe, 1810041L15Rik, Cd82 
+	   Itih3, Wdr90, Gpr85, Plat, Slc7a11, Ggta1, Amigo2, Prep, C2cd3, Fam126a 
+	   Birc3, Klhl25, Gm11992, Herc3, Atp7b, Emp2, Jak2, Dcun1d3, Slc39a8, Scara3 
+PC_ 2 
+Positive:  Itih3, Sparc, Igsf1, Nus1, Slc1a3, Senp8, Gorab, Ripk1, Mgme1, Prps1l3 
+	   Cdc27, Wdr78, Ephb6, Osbp, Appbp2, Mrps35, Six3os1, Zfp108, D10Wsu102e, St7 
+	   Oxsr1, Flrt2, Frmd4b, Fam69a, Ptpro, Fgf14, Uso1, 1110057K04Rik, Tgfbr2, Plp1 
+Negative:  Efna5, Nxf1, Cask, Smoc1, Slc38a1, Chrna3, Ppp2r3d, Ano1, Zfp945, Igfbp5 
+	   Mad2l1bp, Tdp2, Slc5a6, Mospd1, Tmtc1, Gab3, Sephs1, Rhpn2, Chrdl1, Erv3 
+	   Tbc1d4, Cep128, Cd82, Gemin4, Hmbox1, Pds5b, Ccser2, Usp51, Dmp1, Prelp 
+PC_ 3 
+Positive:  Ipp, Aqp9, Cyb5rl, Dnajb3, Rabif, Phf13, Fam118b, Ippk, Ncstn, Itih3 
+	   Palm2, Jak2, Rfx5, Birc3, Sgpl1, Tbck, Slc26a2, Coq3, Thnsl2, Atp7b 
+	   Ano1, Etnppl, Ints2, Smad9, Pomk, 5930412G12Rik, Tspan33, Wdr11, Lgr6, Ezh1 
+Negative:  Igfbp5, Cep128, Tgds, Hmgcs2, Zc2hc1a, Tbc1d4, Cpe, Slc6a6, Rmdn2, Zfp612 
+	   Ube2n, Pqlc1, Mfge8, Slc25a47, Oxsr1, Kras, Lphn2, Slc38a1, 1110057K04Rik, Hsdl1 
+	   Cmpk2, Ccdc25, St3gal1, Krcc1, Ccdc3, Ttc26, Ggta1, Fancc, Scara3, Pde10a 
+PC_ 4 
+Positive:  Lrrn3, Cep128, Tti2, AW046200, Tigd5, Slc6a6, Dcaf11, Lphn2, Tspo, Fem1b 
+	   Efna4, Ranbp3l, Nup205, Unc5c, Plxna2, Zfp3, Dach1, 1500015A07Rik, Alkbh8, Rab43 
+	   Hapln1, Gpr63, Acox1, Zfp87, Dgat2, D630045J12Rik, Ttn, Ahnak, 1110057K04Rik, Hspa12a 
+Negative:  Rnf169, Zfp518b, Astn2, Plxna3, Ankrd42, Sirt1, Ttc39c, Rmdn2, Ppapdc2, Mgat4a 
+	   Nrxn3, Stard5, Rin2, Tceb3, Zscan21, Tmem184c, Fbxw7, Mettl25, Kdm1b, Pnck 
+	   Stt3a, Copg2, Fuca2, Cdc14b, Cep85, Agt, Ndrg3, Lims2, Vps13b, Fastkd5 
+PC_ 5 
+Positive:  Dand5, Herc3, Ipp, Taf12, Gemin4, Tipin, Casq1, Urb2, Sybu, Mospd1 
+	   9530051G07Rik, Aqp9, Tmem241, Birc3, Miat, Fam126a, Fam185a, Ano1, Hmgcs2, Zfp51 
+	   Galm, Pcolce2, Chrdl1, Cyb5rl, Efemp1, Ndc1, Coq3, Wdr11, Dclre1c, Med18 
+Negative:  Thumpd3, Ust, Zfp472, Tfrc, Ptpn4, Mgat4a, Zfp937, Spcs3, Igsf1, Slc38a1 
+	   Rimkla, Cd109, Pank3, Smim13, Lamc1, Klf10, Zfp704, Slc16a2, Slc12a6, Prss35 
+	   Sorcs1, Dnaja2, Maob, F8, Nnat, Eaf1, Tap1, Slc30a5, Zfp619, Apba1 
+[1] "PCA RESULTS:"
+PC_ 1 
+Positive:  Igfbp2, Car2, Hsd11b1, Adamtsl5, Aldh1a1 
+Negative:  Nnat, Agt, Slc1a3, Sparc, Pcolce2 
+PC_ 2 
+Positive:  Itih3, Sparc, Igsf1, Nus1, Slc1a3 
+Negative:  Efna5, Nxf1, Cask, Smoc1, Slc38a1 
+PC_ 3 
+Positive:  Ipp, Aqp9, Cyb5rl, Dnajb3, Rabif 
+Negative:  Igfbp5, Cep128, Tgds, Hmgcs2, Zc2hc1a 
+PC_ 4 
+Positive:  Lrrn3, Cep128, Tti2, AW046200, Tigd5 
+Negative:  Rnf169, Zfp518b, Astn2, Plxna3, Ankrd42 
+PC_ 5 
+Positive:  Dand5, Herc3, Ipp, Taf12, Gemin4 
+Negative:  Thumpd3, Ust, Zfp472, Tfrc, Ptpn4 
+[1] "  ...plot elbow"
+Computing nearest neighbor graph
+Computing SNN
+Modularity Optimizer version 1.3.0 by Ludo Waltman and Nees Jan van Eck
+
+Number of nodes: 230
+Number of edges: 10021
+
+Running Louvain algorithm...
+0%   10   20   30   40   50   60   70   80   90   100%
+[----|----|----|----|----|----|----|----|----|----|
+**************************************************|
+Maximum modularity in 10 random starts: 0.3034
+Number of communities: 5
+Elapsed time: 0 seconds
+[1] "  ...export to .csv"
+[1] "  ...plot PCA"
+Warning: The default method for RunUMAP has changed from calling Python UMAP via reticulate to the R-native UWOT using the cosine metric
+To use Python UMAP via reticulate, set umap.method to 'umap-learn' and metric to 'correlation'
+This message will be shown once per session
+16:45:02 UMAP embedding parameters a = 0.9922 b = 1.112
+16:45:02 Read 230 rows and found 10 numeric columns
+16:45:02 Using Annoy for neighbor search, n_neighbors = 30
+16:45:02 Building Annoy index with metric = cosine, n_trees = 50
+0%   10   20   30   40   50   60   70   80   90   100%
+[----|----|----|----|----|----|----|----|----|----|
+**************************************************|
+16:45:03 Writing NN index file to temp file /tmp/RtmpgjLWEk/filefd151f2fbdb
+16:45:03 Searching Annoy index using 1 thread, search_k = 3000
+16:45:03 Annoy recall = 100%
+16:45:03 Commencing smooth kNN distance calibration using 1 thread
+16:45:04 Initializing from normalized Laplacian + noise
+16:45:04 Commencing optimization for 500 epochs, with 7278 positive edges
+0%   10   20   30   40   50   60   70   80   90   100%
+[----|----|----|----|----|----|----|----|----|----|
+**************************************************|
+16:45:04 Optimization finished
+[1] "  ...plot UMAP"
+[1] "  ...plot TSNE"
+Warning messages:
+1: In SingleExIPlot(type = type, data = data[, x, drop = FALSE], idents = idents,  :
+  All cells have the same value of percent.mt.
+2: In cor(x = data[, 1], y = data[, 2]) : the standard deviation is zero
+3: CombinePlots is being deprecated. Plots should now be combined using the patchwork system. 
+4: Transformation introduced infinite values in continuous x-axis 
+5: Transformation introduced infinite values in continuous x-axis 
+[1] "done"
