@@ -50,13 +50,13 @@ for (c in 1:length(all_preprocessed_ssRNASeq_files)){
 
   # focus on MT features: Low-quality / dying cells often exhibit extensive mitochondrial contamination
   pbmc[["percent.mt"]] <- PercentageFeatureSet(pbmc, pattern = "^MT-")
-  vlnplot <- VlnPlot(seurat_object, features = c("nFeature_RNA", "nCount_RNA", "percent.mt"), ncol = 3)
+  vlnplot <- VlnPlot(pbmc, features = c("nFeature_RNA", "nCount_RNA", "percent.mt"), ncol = 3)
   save_plot(paste0(args$console_output_directory,"/VlnPlot",c,"_",args$name_dataset,".pdf"),vlnplot)
   print("  ...plot tSNE+PCA colour")
   dev.off()
   # FeatureScatter to visualize feature-feature relationships
-  plot1 <- FeatureScatter(seurat_object, feature1 = "nCount_RNA", feature2 = "percent.mt")
-  plot2 <- FeatureScatter(seurat_object, feature1 = "nCount_RNA", feature2 = "nFeature_RNA")
+  plot1 <- FeatureScatter(pbmc, feature1 = "nCount_RNA", feature2 = "percent.mt")
+  plot2 <- FeatureScatter(pbmc, feature1 = "nCount_RNA", feature2 = "nFeature_RNA")
   plot1 + plot2
   save_plot(paste0(args$console_output_directory,"/FeatureScatter",c,"_",args$name_dataset,".pdf"),plot1)
   print("  ...plot tSNE+PCA colour")
