@@ -72,13 +72,13 @@ for (c in 1:length(all_raw_ssRNASeq_files)){
   #row.names(data)=data[,1]
 
   ### Exclude the first column from the data frame.
-  data=data[,-1]
+  #data=data[,-1]
 
   ### Exclude records where rowsum is less than 50
-  data=data[!rowSums(data)<50,]
+  #data=data[!rowSums(data)<50,]
 
   ### Exclude records that have less than or equal to 864 zero's
-  data=data[!apply(data==0, 1, sum) <= 864, ]
+  #data=data[!apply(data==0, 1, sum) <= 864, ]
   ### Export preprocessed data frame to CSV file
   outFilename <- paste0(data_outdir,"/preprocessed_",c,"_",args$name_dataset,".csv")
   write.csv(data, file=outFilename,row.names=TRUE)
