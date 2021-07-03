@@ -39,7 +39,7 @@ print(all_preprocessed_ssRNASeq_files)
 for (c in 1:length(all_preprocessed_ssRNASeq_files)){
   print(c)
   ### Create data frame
-  data=read.csv(file.path(args$input_directory, all_preprocessed_ssRNASeq_files[c]),row.names = 1)
+  data=read.csv(file.path(args$input_directory, all_preprocessed_ssRNASeq_files[c]))
   print("  ...read")
   print(head(data))
   ### Set row names for the data frame. Exclude the first column from the data frame.
