@@ -3451,9 +3451,124 @@ $name_dataset
 4          0          0          0          0          0          0          0
 5         40          0          0          0          0        288          0
 6          0          0          0          0          0          0          0
-Error in VlnPlot(seurat_object, features = c("nFeature_RNA", "nCount_RNA",  : 
-  object 'seurat_object' not found
-Calls: VlnPlot -> ExIPlot -> %||% -> DefaultAssay
-In addition: Warning message:
-In storage.mode(from) <- "double" : NAs introduced by coercion
-Execution halted
+[1] "  ...plot tSNE+PCA colour"
+[1] "  ...plot tSNE+PCA colour"
+[1] "  ...plot tSNE+PCA colour"
+Performing log-normalization
+0%   10   20   30   40   50   60   70   80   90   100%
+[----|----|----|----|----|----|----|----|----|----|
+**************************************************|
+Calculating gene variances
+0%   10   20   30   40   50   60   70   80   90   100%
+[----|----|----|----|----|----|----|----|----|----|
+**************************************************|
+Calculating feature variances of standardized and clipped values
+0%   10   20   30   40   50   60   70   80   90   100%
+[----|----|----|----|----|----|----|----|----|----|
+**************************************************|
+[1] "20 MOST HIGHLY VARIABLE GENES:"
+ [1] "19669" "23346" "13909" "18185" "3093"  "2903"  "12829" "9197"  "20252"
+[10] "15842" "18133" "17614" "2178"  "1628"  "1405"  "6022"  "16222" "14833"
+[19] "1438"  "18053"
+When using repel, set xnudge and ynudge to 0 for optimal results
+[1] "  ...plot variableFeaturesWithoutLabels"
+[1] "  ...plot variableFeaturesWithLabels"
+Centering and scaling data matrix
+  |                                                                              |                                                                      |   0%  |                                                                              |=====                                                                 |   7%  |                                                                              |==========                                                            |  14%  |                                                                              |===============                                                       |  21%  |                                                                              |====================                                                  |  29%  |                                                                              |=========================                                             |  36%  |                                                                              |==============================                                        |  43%  |                                                                              |===================================                                   |  50%  |                                                                              |========================================                              |  57%  |                                                                              |=============================================                         |  64%  |                                                                              |==================================================                    |  71%  |                                                                              |=======================================================               |  79%  |                                                                              |============================================================          |  86%  |                                                                              |=================================================================     |  93%  |                                                                              |======================================================================| 100%
+PC_ 1 
+Positive:  12008, 16422, 20281, 3093, 22799, 10036, 949, 3786, 13383, 11000 
+	   3885, 12257, 2029, 4348, 14651, 11446, 13909, 11299, 18546, 646 
+	   7709, 12829, 18549, 20391, 1588, 6091, 16963, 20248, 23708, 23116 
+Negative:  1501, 9051, 69, 16658, 21895, 20464, 15500, 24399, 3787, 14869 
+	   24386, 16853, 12434, 21612, 6315, 3024, 23441, 14741, 14061, 3968 
+	   7941, 297, 10173, 20399, 9632, 15842, 15656, 22790, 8961, 12029 
+PC_ 2 
+Positive:  3093, 20281, 11000, 297, 12257, 12008, 16116, 15941, 19669, 21019 
+	   12434, 7553, 949, 16484, 6234, 12829, 14867, 3787, 21612, 16422 
+	   1530, 21631, 1588, 10173, 7941, 2115, 20391, 4772, 22384, 3024 
+Negative:  647, 3393, 1328, 3682, 24180, 14827, 19213, 16551, 5500, 13894 
+	   6831, 23432, 23927, 21018, 306, 23923, 20458, 19386, 8071, 18640 
+	   9708, 13895, 11928, 8974, 14787, 16859, 17301, 2151, 21095, 10514 
+PC_ 3 
+Positive:  24386, 17848, 23441, 14741, 22790, 20399, 23411, 10702, 18037, 8173 
+	   12029, 3733, 14833, 3968, 19104, 20464, 7210, 7865, 7986, 22104 
+	   1901, 14061, 19780, 8961, 3547, 10646, 12156, 22629, 20817, 714 
+Negative:  16853, 9632, 21612, 9900, 10541, 7941, 12434, 3024, 4547, 7553 
+	   6234, 21019, 3787, 10913, 4772, 6315, 21631, 10173, 297, 24309 
+	   17716, 17756, 16116, 22673, 12931, 16590, 22591, 14703, 11691, 12950 
+PC_ 4 
+Positive:  19669, 16422, 18168, 20281, 13909, 4768, 23411, 5310, 17959, 14350 
+	   3534, 17232, 19117, 17328, 23040, 16505, 24282, 14432, 3978, 1988 
+	   24444, 14220, 7278, 24095, 12891, 23804, 21161, 14264, 3888, 8961 
+Negative:  646, 20419, 11000, 22055, 12829, 17725, 19506, 12257, 17614, 13480 
+	   24008, 13382, 7662, 6486, 19467, 18257, 3682, 8788, 1806, 1588 
+	   19419, 14104, 22264, 13569, 17756, 2739, 5633, 14097, 2631, 8716 
+PC_ 5 
+Positive:  3010, 16964, 13250, 14818, 9204, 16505, 19177, 281, 24037, 21091 
+	   6488, 12812, 22047, 14069, 8255, 20259, 19283, 3301, 7515, 7523 
+	   2903, 8976, 20237, 440, 18095, 19719, 10162, 21895, 6025, 7441 
+Negative:  5633, 8975, 12131, 5917, 4117, 16859, 7925, 18939, 23075, 7226 
+	   767, 23432, 4533, 960, 10526, 12090, 23235, 12253, 4798, 16381 
+	   15999, 12973, 1513, 16689, 3440, 5333, 5068, 8060, 14662, 6882 
+[1] "PCA RESULTS:"
+PC_ 1 
+Positive:  12008, 16422, 20281, 3093, 22799 
+Negative:  1501, 9051, 69, 16658, 21895 
+PC_ 2 
+Positive:  3093, 20281, 11000, 297, 12257 
+Negative:  647, 3393, 1328, 3682, 24180 
+PC_ 3 
+Positive:  24386, 17848, 23441, 14741, 22790 
+Negative:  16853, 9632, 21612, 9900, 10541 
+PC_ 4 
+Positive:  19669, 16422, 18168, 20281, 13909 
+Negative:  646, 20419, 11000, 22055, 12829 
+PC_ 5 
+Positive:  3010, 16964, 13250, 14818, 9204 
+Negative:  5633, 8975, 12131, 5917, 4117 
+[1] "  ...plot elbow"
+Computing nearest neighbor graph
+Computing SNN
+Modularity Optimizer version 1.3.0 by Ludo Waltman and Nees Jan van Eck
+
+Number of nodes: 237
+Number of edges: 9673
+
+Running Louvain algorithm...
+0%   10   20   30   40   50   60   70   80   90   100%
+[----|----|----|----|----|----|----|----|----|----|
+**************************************************|
+Maximum modularity in 10 random starts: 0.3419
+Number of communities: 5
+Elapsed time: 0 seconds
+[1] "  ...export to .csv"
+[1] "  ...plot PCA"
+Warning: The default method for RunUMAP has changed from calling Python UMAP via reticulate to the R-native UWOT using the cosine metric
+To use Python UMAP via reticulate, set umap.method to 'umap-learn' and metric to 'correlation'
+This message will be shown once per session
+15:32:17 UMAP embedding parameters a = 0.9922 b = 1.112
+15:32:17 Read 237 rows and found 10 numeric columns
+15:32:17 Using Annoy for neighbor search, n_neighbors = 30
+15:32:17 Building Annoy index with metric = cosine, n_trees = 50
+0%   10   20   30   40   50   60   70   80   90   100%
+[----|----|----|----|----|----|----|----|----|----|
+**************************************************|
+15:32:18 Writing NN index file to temp file /tmp/Rtmp2jq2S1/fileda41563d8e3a
+15:32:18 Searching Annoy index using 1 thread, search_k = 3000
+15:32:18 Annoy recall = 100%
+15:32:18 Commencing smooth kNN distance calibration using 1 thread
+15:32:19 Initializing from normalized Laplacian + noise
+15:32:19 Commencing optimization for 500 epochs, with 7656 positive edges
+0%   10   20   30   40   50   60   70   80   90   100%
+[----|----|----|----|----|----|----|----|----|----|
+**************************************************|
+15:32:20 Optimization finished
+[1] "  ...plot UMAP"
+[1] "  ...plot TSNE"
+Warning messages:
+1: In storage.mode(from) <- "double" : NAs introduced by coercion
+2: In SingleExIPlot(type = type, data = data[, x, drop = FALSE], idents = idents,  :
+  All cells have the same value of percent.mt.
+3: In cor(x = data[, 1], y = data[, 2]) : the standard deviation is zero
+4: CombinePlots is being deprecated. Plots should now be combined using the patchwork system. 
+[1] "done"
