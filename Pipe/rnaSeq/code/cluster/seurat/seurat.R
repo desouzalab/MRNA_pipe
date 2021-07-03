@@ -65,7 +65,7 @@ for (c in 1:length(all_preprocessed_ssRNASeq_files)){
   print("  ...plot tSNE+PCA colour")
   dev.off()
   # based on figures, filtering (choose the threshold based on plots)
-  pbmc <- subset(pbmc, subset = nFeature_RNA>2000 & nFeature_RNA <3500 & nCount_RNA>49800)
+  pbmc <- subset(pbmc, subset = nFeature_RNA>2000 & nFeature_RNA <3500 & nCount_RNA>500000)
 
   # Normalize the data
   pbmc <- NormalizeData(pbmc, normalization.method="LogNormalize", scale.factor=10000)
