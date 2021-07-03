@@ -12,7 +12,65 @@ $name_dataset
 [1] "GSE98816+58"
 
 [1] "preprocessed_1_GSE98816+58.csv"
-Error: unexpected ')' in:
-"  cat("pbmc\n")
-  print(head(pbmc[,1:10])))"
+[1] 1
+[1] "  ...read"
+       GSM2631429 GSM2631430 GSM2631431 GSM2631432 GSM2631433 GSM2631434
+Adora1        135        107          2        114          0        683
+Sntg1          19          0          0          0          0          0
+Prim2           0          0          0          0          0          0
+Bai3            0          0        359          0         32          0
+Cflar           0          0          0          0          0          0
+Gpr39           0          0          0          0          0          0
+       GSM2631435 GSM2631436 GSM2631437 GSM2631438
+Adora1         46        211          0          0
+Sntg1           0          0          0          0
+Prim2           0          0          0          0
+Bai3            4          6          0          0
+Cflar           0          0          0          0
+Gpr39           0          0          0          0
+[1] "  ...plot tSNE+PCA colour"
+[1] "  ...plot tSNE+PCA colour"
+[1] "  ...plot tSNE+PCA colour"
+pbmc
+           orig.ident nCount_RNA nFeature_RNA percent.mt
+GSM2631438     data3k     500036         2721          0
+GSM2631449     data3k     500059         2854          0
+GSM2631451     data3k     500041         2965          0
+GSM2631506     data3k     500034         2874          0
+GSM2631510     data3k     500082         2952          0
+GSM2631532     data3k     500018         2945          0
+GSM2631582     data3k     500017         2522          0
+GSM2631620     data3k     500149         2633          0
+GSM2631677     data3k     500064         2969          0
+Performing log-normalization
+0%   10   20   30   40   50   60   70   80   90   100%
+[----|----|----|----|----|----|----|----|----|----|
+**************************************************|
+Calculating gene variances
+0%   10   20   30   40   50   60   70   80   90   100%
+[----|----|----|----|----|----|----|----|----|----|
+**************************************************|
+Calculating feature variances of standardized and clipped values
+0%   10   20   30   40   50   60   70   80   90   100%
+[----|----|----|----|----|----|----|----|----|----|
+**************************************************|
+[1] "20 MOST HIGHLY VARIABLE GENES:"
+ [1] "Nnat"    "Malat1"  "Nckap1"  "Igsf1"   "Pitpnc1" "Cst3"    "Clu"    
+ [8] "Calu"    "Cyp2j9"  "Slc7a11" "Cct3"    "Gna13"   "Sucla2"  "Tmem129"
+[15] "Pla2g7"  "Pfkm"    "Sdhd"    "Slc38a3" "Id3"     "Fez1"   
+When using repel, set xnudge and ynudge to 0 for optimal results
+[1] "  ...plot variableFeaturesWithoutLabels"
+[1] "  ...plot variableFeaturesWithLabels"
+Centering and scaling data matrix
+  |                                                                              |                                                                      |   0%  |                                                                              |=====                                                                 |   7%  |                                                                              |==========                                                            |  14%  |                                                                              |===============                                                       |  21%  |                                                                              |====================                                                  |  29%  |                                                                              |=========================                                             |  36%  |                                                                              |==============================                                        |  43%  |                                                                              |===================================                                   |  50%  |                                                                              |========================================                              |  57%  |                                                                              |=============================================                         |  64%  |                                                                              |==================================================                    |  71%  |                                                                              |=======================================================               |  79%  |                                                                              |============================================================          |  86%  |                                                                              |=================================================================     |  93%  |                                                                              |======================================================================| 100%
+Error in irlba(A = t(x = object), nv = npcs, ...) : 
+  max(nu, nv) must be strictly less than min(nrow(A), ncol(A))
+Calls: RunPCA ... RunPCA -> RunPCA.Assay -> RunPCA -> RunPCA.default -> irlba
+In addition: Warning messages:
+1: In SingleExIPlot(type = type, data = data[, x, drop = FALSE], idents = idents,  :
+  All cells have the same value of percent.mt.
+2: In cor(x = data[, 1], y = data[, 2]) : the standard deviation is zero
+3: CombinePlots is being deprecated. Plots should now be combined using the patchwork system. 
+4: Transformation introduced infinite values in continuous x-axis 
+5: Transformation introduced infinite values in continuous x-axis 
 Execution halted
