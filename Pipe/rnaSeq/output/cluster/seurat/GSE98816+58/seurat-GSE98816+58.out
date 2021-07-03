@@ -12,22 +12,7 @@ $name_dataset
 [1] "GSE98816+58"
 
 [1] "preprocessed_1_GSE98816+58.csv"
-[1] 1
-[1] "  ...read"
-       GSM2631429 GSM2631430 GSM2631431 GSM2631432 GSM2631433 GSM2631434
-Adora1        135        107          2        114          0        683
-Sntg1          19          0          0          0          0          0
-Prim2           0          0          0          0          0          0
-Bai3            0          0        359          0         32          0
-Cflar           0          0          0          0          0          0
-Gpr39           0          0          0          0          0          0
-       GSM2631435 GSM2631436 GSM2631437 GSM2631438
-Adora1         46        211          0          0
-Sntg1           0          0          0          0
-Prim2           0          0          0          0
-Bai3            4          6          0          0
-Cflar           0          0          0          0
-Gpr39           0          0          0          0
-Error in columns(pbmc) : could not find function "columns"
-Calls: print -> head
+Error: unexpected symbol in:
+"  # based on figures, filtering (choose the threshold based on plots)
+  pbmc"
 Execution halted
