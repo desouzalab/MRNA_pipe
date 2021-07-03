@@ -28,9 +28,31 @@ Prim2           0          0          0          0
 Bai3            4          6          0          0
 Cflar           0          0          0          0
 Gpr39           0          0          0          0
+           orig.ident nCount_RNA nFeature_RNA percent.mt
+GSM2631429     data3k     499541         2809          0
+GSM2631430     data3k     499711         2665          0
+GSM2631431     data3k     499951         2730          0
+GSM2631432     data3k     499367         3263          0
+GSM2631433     data3k     499256         3007          0
+GSM2631434     data3k     499713         2933          0
+GSM2631435     data3k     499618         2897          0
+GSM2631436     data3k     499799         2391          0
+GSM2631437     data3k     499719         1587          0
+GSM2631438     data3k     500036         2721          0
 [1] "  ...plot tSNE+PCA colour"
 [1] "  ...plot tSNE+PCA colour"
 [1] "  ...plot tSNE+PCA colour"
+           orig.ident nCount_RNA nFeature_RNA percent.mt
+GSM2631429     data3k     499541         2809          0
+GSM2631430     data3k     499711         2665          0
+GSM2631431     data3k     499951         2730          0
+GSM2631432     data3k     499367         3263          0
+GSM2631433     data3k     499256         3007          0
+GSM2631434     data3k     499713         2933          0
+GSM2631435     data3k     499618         2897          0
+GSM2631436     data3k     499799         2391          0
+GSM2631437     data3k     499719         1587          0
+GSM2631438     data3k     500036         2721          0
 pbmc
            orig.ident nCount_RNA nFeature_RNA percent.mt
 GSM2631438     data3k     500036         2721          0
