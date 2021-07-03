@@ -10,12 +10,10 @@ $input_directory
 $name_dataset
 [1] "GSE98816+58"
 
-character(0)
+[1] "preprocessed_1_GSE98816+58.csv"
 [1] 1
-character(0)
-Error in file(file, "rt") : cannot open the connection
-Calls: read.csv -> read.table -> file
-In addition: Warning message:
-In file(file, "rt") :
-  cannot open file '/home/emiliano/projects/def-cdesouza/Lab/data/preprocessed/GSE98816+58/NA': No such file or directory
+[1] "preprocessed_1_GSE98816+58.csv"
+Error in read.table(file = file, header = header, sep = sep, quote = quote,  : 
+  missing values in 'row.names' are not allowed
+Calls: read.csv -> read.table
 Execution halted
