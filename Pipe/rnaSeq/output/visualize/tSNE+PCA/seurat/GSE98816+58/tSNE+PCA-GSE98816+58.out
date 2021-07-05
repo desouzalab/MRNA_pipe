@@ -17,6 +17,5 @@ $true_cluster_input_directory
 [1] "true_GSE98816+58.csv"
 [1] "clustersSeurat_1_GSE98816+58.csv"
 [1] 1
-Error in setDT(true) : could not find function "setDT"
-Calls: as.data.frame
+Error: Cannot find symbol true
 Execution halted
