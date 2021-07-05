@@ -25,29 +25,29 @@ OpenMP is working. 1 threads.
 Using no_dims = 2, perplexity = 30.000000, and theta = 0.000000
 Computing input similarities...
 Symmetrizing...
-Done in 7.44 seconds!
+Done in 7.55 seconds!
 Learning embedding...
-Iteration 50: error is 82.946068 (50 iterations in 6.55 seconds)
-Iteration 100: error is 71.420194 (50 iterations in 6.55 seconds)
-Iteration 150: error is 70.326137 (50 iterations in 6.56 seconds)
-Iteration 200: error is 69.913108 (50 iterations in 6.55 seconds)
-Iteration 250: error is 69.685038 (50 iterations in 6.62 seconds)
-Iteration 300: error is 2.114954 (50 iterations in 6.59 seconds)
-Iteration 350: error is 1.790115 (50 iterations in 6.54 seconds)
-Iteration 400: error is 1.641635 (50 iterations in 6.55 seconds)
-Iteration 450: error is 1.554570 (50 iterations in 6.56 seconds)
-Iteration 500: error is 1.496950 (50 iterations in 6.55 seconds)
-Iteration 550: error is 1.456240 (50 iterations in 6.60 seconds)
-Iteration 600: error is 1.425911 (50 iterations in 6.56 seconds)
-Iteration 650: error is 1.402682 (50 iterations in 6.54 seconds)
-Iteration 700: error is 1.383913 (50 iterations in 6.58 seconds)
-Iteration 750: error is 1.368830 (50 iterations in 6.57 seconds)
-Iteration 800: error is 1.357042 (50 iterations in 6.55 seconds)
-Iteration 850: error is 1.347088 (50 iterations in 6.54 seconds)
-Iteration 900: error is 1.338602 (50 iterations in 6.62 seconds)
-Iteration 950: error is 1.331248 (50 iterations in 6.55 seconds)
-Iteration 1000: error is 1.324848 (50 iterations in 6.55 seconds)
-Fitting performed in 131.27 seconds.
+Iteration 50: error is 82.946068 (50 iterations in 10.82 seconds)
+Iteration 100: error is 71.420194 (50 iterations in 10.83 seconds)
+Iteration 150: error is 70.326137 (50 iterations in 10.84 seconds)
+Iteration 200: error is 69.913108 (50 iterations in 10.57 seconds)
+Iteration 250: error is 69.685038 (50 iterations in 10.64 seconds)
+Iteration 300: error is 2.114954 (50 iterations in 10.68 seconds)
+Iteration 350: error is 1.790115 (50 iterations in 10.69 seconds)
+Iteration 400: error is 1.641635 (50 iterations in 10.77 seconds)
+Iteration 450: error is 1.554570 (50 iterations in 10.84 seconds)
+Iteration 500: error is 1.496950 (50 iterations in 10.96 seconds)
+Iteration 550: error is 1.456240 (50 iterations in 10.94 seconds)
+Iteration 600: error is 1.425911 (50 iterations in 10.67 seconds)
+Iteration 650: error is 1.402682 (50 iterations in 10.63 seconds)
+Iteration 700: error is 1.383913 (50 iterations in 10.61 seconds)
+Iteration 750: error is 1.368830 (50 iterations in 10.67 seconds)
+Iteration 800: error is 1.357042 (50 iterations in 10.70 seconds)
+Iteration 850: error is 1.347088 (50 iterations in 10.82 seconds)
+Iteration 900: error is 1.338602 (50 iterations in 10.94 seconds)
+Iteration 950: error is 1.331248 (50 iterations in 10.83 seconds)
+Iteration 1000: error is 1.324848 (50 iterations in 10.61 seconds)
+Fitting performed in 215.05 seconds.
 Error in data.frame(tsneX, tsneY, TrueClusters, clusters) : 
   arguments imply differing number of rows: 3436, 3079
 Execution halted
