@@ -54,7 +54,9 @@ if (length(all_preprocessed_ssRNASeq_files)==length(all_true_cluster_ssRNASeq_fi
     data=read.csv(file.path(args$preprocessed_input_directory, all_preprocessed_ssRNASeq_files[c]),row.names=1)
     data=na.omit(data)
     TrueClusters=read.csv(file.path(args$true_cluster_input_directory, all_true_cluster_ssRNASeq_files[c]))[,2]
+    TrueClusters=as.data.frame(setDT(true)[true$GSM_ID %chin% colnames(data)])[,2]
     TrueClusters=as.factor(TrueClusters)
+    print(colnames(TrueClusters))
     clusters=read.csv(file.path(args$cluster_input_directory,all_clustered_ssRNASeq_files[c]))[,2]
     clusters=as.factor(clusters)
     print("  ...read")
