@@ -43,6 +43,7 @@ for (c in 1:length(all_preprocessed_ssRNASeq_files)){
   print("  ...read")
   
   print(head(data[,1:10]))
+  print(ncol(data))
   ### Set row names for the data frame. Exclude the first column from the data frame.
 
 
@@ -52,6 +53,7 @@ for (c in 1:length(all_preprocessed_ssRNASeq_files)){
   # focus on MT features: Low-quality / dying cells often exhibit extensive mitochondrial contamination
   pbmc[["percent.mt"]] <- PercentageFeatureSet(pbmc, pattern = "^MT-")
   cat("pbmc\n")
+  print(head(pbmc[,1:10]))  
   print(nrow(pbmc))
   vlnplot <- VlnPlot(pbmc, features = c("nFeature_RNA", "nCount_RNA", "percent.mt"), ncol = 3)
   save_plot(paste0(args$console_output_directory,"/VlnPlot",c,"_",args$name_dataset,".pdf"),vlnplot)
