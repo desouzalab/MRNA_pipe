@@ -13,7 +13,7 @@ suppressMessages(library(ggplot2))
 suppressMessages(library(cowplot))
 suppressMessages(library(openxlsx))
 suppressMessages(library(M3C))
-
+library(data.table)
 
 
 RSCRIPT <- "Rscript"
