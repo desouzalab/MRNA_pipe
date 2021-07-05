@@ -8,7 +8,7 @@
 suppressMessages(library(argparse))
 library(Seurat)
 library(cowplot)
-
+library(data.table)
 RSCRIPT <- "Rscript"
 
 #======================
