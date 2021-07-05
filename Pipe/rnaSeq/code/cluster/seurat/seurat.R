@@ -41,7 +41,14 @@ for (c in 1:length(all_preprocessed_ssRNASeq_files)){
   ### Create data frame
   data=read.csv(file.path(args$input_directory, all_preprocessed_ssRNASeq_files[c]),row.names=1)
   print("  ...read")
-  
+   ### Exclude the first column from the data frame.
+  #data=data[,-1]
+
+  ### Exclude records where rowsum is less than 50
+#data=data[!rowSums(data)<50,]
+
+  ### Exclude records that have less than or equal to 864 zero's
+  data=data[!apply(data==0, 1, sum) <= 864, ]
   print(head(data[,1:10]))
   print(ncol(data))
   ### Set row names for the data frame. Exclude the first column from the data frame.
@@ -112,6 +119,7 @@ for (c in 1:length(all_preprocessed_ssRNASeq_files)){
   
   # Scaling the data
   all.genes <- rownames(pbmc)
+  len()
   pbmc <- ScaleData(pbmc, features = all.genes)
   
   # Perform linear dimensional reduction
