@@ -14,20 +14,163 @@ $name_dataset
 [1] "preprocessed_1_GSE98816+58.csv"
 [1] 1
 [1] "  ...read"
-       GSM2631429 GSM2631430 GSM2631431 GSM2631432 GSM2631433 GSM2631434
-Adora1        135        107          2        114          0        683
-Sntg1          19          0          0          0          0          0
-Prim2           0          0          0          0          0          0
-Bai3            0          0        359          0         32          0
-Cflar           0          0          0          0          0          0
-Gpr39           0          0          0          0          0          0
-       GSM2631435 GSM2631436 GSM2631437 GSM2631438
-Adora1         46        211          0          0
-Sntg1           0          0          0          0
-Prim2           0          0          0          0
-Bai3            4          6          0          0
-Cflar           0          0          0          0
-Gpr39           0          0          0          0
-[1] 3436
-Error: Cannot find 'nCount_RNA' in this Seurat object
-Execution halted
+pbmc
+           orig.ident nCount_RNA nFeature_RNA percent.mt
+GSM2631429     data3k     499691         2816          0
+GSM2631430     data3k     500005         2672          0
+GSM2631431     data3k     499856         2738          0
+GSM2631432     data3k     499967         3280          0
+GSM2631433     data3k     500109         3025          0
+GSM2631434     data3k     500014         2939          0
+GSM2631435     data3k     499877         2912          0
+GSM2631436     data3k     499906         2394          0
+GSM2631437     data3k     500152         1594          0
+GSM2631438     data3k     500012         2723          0
+[1] 19925
+[1] "  ...plot tSNE+PCA colour"
+[1] "  ...plot tSNE+PCA colour"
+[1] "  ...plot tSNE+PCA colour"
+pbmc
+[1] 19925
+pbmc
+[1] 19925
+Performing log-normalization
+0%   10   20   30   40   50   60   70   80   90   100%
+[----|----|----|----|----|----|----|----|----|----|
+**************************************************|
+pbmc
+[1] 19925
+           orig.ident nCount_RNA nFeature_RNA percent.mt
+GSM2631429     data3k     499691         2816          0
+GSM2631430     data3k     500005         2672          0
+GSM2631431     data3k     499856         2738          0
+GSM2631432     data3k     499967         3280          0
+GSM2631433     data3k     500109         3025          0
+GSM2631434     data3k     500014         2939          0
+GSM2631435     data3k     499877         2912          0
+GSM2631436     data3k     499906         2394          0
+GSM2631438     data3k     500012         2723          0
+GSM2631439     data3k     499559         2217          0
+Calculating gene variances
+0%   10   20   30   40   50   60   70   80   90   100%
+[----|----|----|----|----|----|----|----|----|----|
+**************************************************|
+Calculating feature variances of standardized and clipped values
+0%   10   20   30   40   50   60   70   80   90   100%
+[----|----|----|----|----|----|----|----|----|----|
+**************************************************|
+pbmc
+[1] 19925
+[1] "20 MOST HIGHLY VARIABLE GENES:"
+ [1] "Plp1"          "Ptgds"         "Apod"          "Dcn"          
+ [5] "Spp1"          "Acta2"         "Mbp"           "Trf"          
+ [9] "Tubb4a"        "Fos"           "Gkn3"          "Cldn11"       
+[13] "Atf3"          "Cnp"           "Itih3"         "Lum"          
+[17] "Vcam1"         "Mag"           "Hbb-b2+Hbb-bt" "Alas2"        
+When using repel, set xnudge and ynudge to 0 for optimal results
+[1] "  ...plot variableFeaturesWithoutLabels"
+[1] "  ...plot variableFeaturesWithLabels"
+Centering and scaling data matrix
+  |                                                                              |                                                                      |   0%  |                                                                              |====                                                                  |   5%  |                                                                              |=======                                                               |  10%  |                                                                              |==========                                                            |  15%  |                                                                              |==============                                                        |  20%  |                                                                              |==================                                                    |  25%  |                                                                              |=====================                                                 |  30%  |                                                                              |========================                                              |  35%  |                                                                              |============================                                          |  40%  |                                                                              |================================                                      |  45%  |                                                                              |===================================                                   |  50%  |                                                                              |======================================                                |  55%  |                                                                              |==========================================                            |  60%  |                                                                              |==============================================                        |  65%  |                                                                              |=================================================                     |  70%  |                                                                              |====================================================                  |  75%  |                                                                              |========================================================              |  80%  |                                                                              |============================================================          |  85%  |                                                                              |===============================================================       |  90%  |                                                                              |==================================================================    |  95%  |                                                                              |======================================================================| 100%
+PC_ 1 
+Positive:  Slc6a1, Gpr37l1, Ntsr2, Slc6a11, Ttyh1, Bcan, Cldn10, Slc7a10, Aldoc, Slc1a2 
+	   Mmd2, Agt, Ncam1, Slc4a4, Slc39a12, Aqp4, Ntrk2, Ptprz1, Gjb6, Nkain4 
+	   F3, Itih3, Clu, Fgfr3, Mlc1, Acsbg1, Pla2g7, Acsl6, Gpm6a, Hepacam 
+Negative:  Apold1, Myl9, Flna, Tpm1, Rgs4, Dusp1, Bgn, P2ry14, S1pr3, Kcnj8 
+	   Art3, Abcc9, Prom1, Enpep, Atp13a5, Slc6a6, Mylk, Hspa1a, Perp, Slc40a1 
+	   Btg2, Crip1, Fn1, Mcam, Ano1, Ctla2a, Zfp36, Pcdh18, Colec12, Jun 
+PC_ 2 
+Positive:  Mog, Mag, Mobp, Ermn, Stmn4, Fa2h, Cldn11, Ugt8a, Edil3, Opalin 
+	   Cntn2, Tmem151a, Myrf, Tmeff2, Efnb3, Tmem88b, Lgi3, Mbp, Hapln2, Evi2a 
+	   Plp1, Faim2, Pls1, S1pr5, Sez6l2, Aspa, Gjc3, Ephb1, Kcna1, Trim59 
+Negative:  Cst3, Sod3, Myl9, Serpine2, Ntsr2, Slc6a11, Bcan, Gpr37l1, Atp13a5, Slc7a10 
+	   Ednrb, Cldn10, Slc4a4, Slc39a12, Sdc4, Pla2g7, Ptprz1, Fgfr3, Rgs4, Aqp4 
+	   Ntrk2, Slc1a2, Agt, Nkain4, Gjb6, F3, Acsl6, Mlc1, Acsbg1, Gpm6a 
+PC_ 3 
+Positive:  Slc6a6, Prom1, Slc40a1, Fn1, Ctla2a, Mfsd2a, Hmgcs2, Acer2, Plk2, Slc16a1 
+	   AW112010, Hmcn1, Tfrc, Clec14a, Gbp4, Slc19a3, Slc1a1, Ivns1abp, Mal, Vwf 
+	   Oasl2, Slc38a5, Pllp, Akr1c14, Ifi47, Trim30a, Igtp, Ifit1, Sgk1, Rad54b 
+Negative:  Myl9, Rgs4, Bgn, Mcam, Sod3, S1pr3, Atp13a5, P2ry14, Mylk, Kcnj8 
+	   Enpep, Ano1, Perp, Art3, Flna, Abcc9, Tpm2, Colec12, Pcdh18, Prelp 
+	   Aspn, Filip1l, Slc30a10, Ifi30, Trpc3, Pth1r, Myh11, Ggt1, Gpc3, Angptl2 
+PC_ 4 
+Positive:  Tagln, Acta2, Pln, Palld, Sncg, Pdlim3, Myh11, Crip1, Atp1b1, Fosb 
+	   Kcnab1, Fos, Cnn1, Gpr20, Susd5, Ltbp1, Ccdc3, Mustn1, Sorbs2, Rcan2 
+	   Map1b, Nrip2, Csrp1, Errfi1, Trp53i11, Scn4b, Tpm2, Junb, Crispld2, Atf3 
+Negative:  Atp13a5, Kcnj8, Abcc9, Sod3, Art3, Ggt1, Slc30a10, Colec12, P2ry14, Ifi30 
+	   Enpep, Trpc3, Angptl2, Slc16a12, Nodal, Grm3, Gng2, Pth1r, Lin7a, Tmem45a 
+	   Gpc3, Igf2, Sfrp2, S1pr3, Slc6a13, Pcdh18, Ace2, Ddit4l, Glrb, Vstm4 
+PC_ 5 
+Positive:  Col1a1, Serpinf1, Lum, Dcn, Efemp1, Col6a1, Snhg11, Olfml3, Inmt, Lama1 
+	   Pdgfra, Igfbp2, Cyp1b1, Cxcl16, Bmp7, Col15a1, Enpp1, Col3a1, Mafb, Cemip 
+	   Tgfbi, Mfap4, S100a6, Csf1r, Laptm5, Igfbp4, C1qc, C1qb, Igfbp5, Emp1 
+Negative:  Myh11, Nrip2, Acta2, Sncg, Mcam, Ackr3, Atp1b1, Tpm2, Tagln, Olfr558 
+	   Pdlim3, Pln, Mustn1, Crip1, Tpm1, Gpr20, Rcan2, Ano1, Myl9, Mylk 
+	   Rgs4, Perp, Olfr78, Casq2, Serpini1, Scn4b, Npy1r, Dstn, Kcnmb1, Sorbs2 
+[1] "PCA RESULTS:"
+PC_ 1 
+Positive:  Slc6a1, Gpr37l1, Ntsr2, Slc6a11, Ttyh1 
+Negative:  Apold1, Myl9, Flna, Tpm1, Rgs4 
+PC_ 2 
+Positive:  Mog, Mag, Mobp, Ermn, Stmn4 
+Negative:  Cst3, Sod3, Myl9, Serpine2, Ntsr2 
+PC_ 3 
+Positive:  Slc6a6, Prom1, Slc40a1, Fn1, Ctla2a 
+Negative:  Myl9, Rgs4, Bgn, Mcam, Sod3 
+PC_ 4 
+Positive:  Tagln, Acta2, Pln, Palld, Sncg 
+Negative:  Atp13a5, Kcnj8, Abcc9, Sod3, Art3 
+PC_ 5 
+Positive:  Col1a1, Serpinf1, Lum, Dcn, Efemp1 
+Negative:  Myh11, Nrip2, Acta2, Sncg, Mcam 
+[1] "  ...plot elbow"
+Computing nearest neighbor graph
+Computing SNN
+Modularity Optimizer version 1.3.0 by Ludo Waltman and Nees Jan van Eck
+
+Number of nodes: 3079
+Number of edges: 138387
+
+Running Louvain algorithm...
+0%   10   20   30   40   50   60   70   80   90   100%
+[----|----|----|----|----|----|----|----|----|----|
+**************************************************|
+Maximum modularity in 10 random starts: 0.7789
+Number of communities: 10
+Elapsed time: 0 seconds
+An object of class Seurat 
+19925 features across 3079 samples within 1 assay 
+Active assay: RNA (19925 features, 2000 variable features)
+ 1 dimensional reduction calculated: pca
+[1] "  ...export to .csv"
+[1] "  ...plot PCA"
+Warning: The default method for RunUMAP has changed from calling Python UMAP via reticulate to the R-native UWOT using the cosine metric
+To use Python UMAP via reticulate, set umap.method to 'umap-learn' and metric to 'correlation'
+This message will be shown once per session
+16:49:05 UMAP embedding parameters a = 0.9922 b = 1.112
+16:49:05 Read 3079 rows and found 30 numeric columns
+16:49:05 Using Annoy for neighbor search, n_neighbors = 30
+16:49:05 Building Annoy index with metric = cosine, n_trees = 50
+0%   10   20   30   40   50   60   70   80   90   100%
+[----|----|----|----|----|----|----|----|----|----|
+**************************************************|
+16:49:06 Writing NN index file to temp file /tmp/Rtmp51G9bK/file8d4475dd012c
+16:49:06 Searching Annoy index using 1 thread, search_k = 3000
+16:49:07 Annoy recall = 100%
+16:49:07 Commencing smooth kNN distance calibration using 1 thread
+16:49:08 Initializing from normalized Laplacian + noise
+16:49:08 Commencing optimization for 500 epochs, with 132378 positive edges
+0%   10   20   30   40   50   60   70   80   90   100%
+[----|----|----|----|----|----|----|----|----|----|
+**************************************************|
+16:49:18 Optimization finished
+[1] "  ...plot UMAP"
+[1] "  ...plot TSNE"
+Warning messages:
+1: In SingleExIPlot(type = type, data = data[, x, drop = FALSE], idents = idents,  :
+  All cells have the same value of percent.mt.
+2: In cor(x = data[, 1], y = data[, 2]) : the standard deviation is zero
+3: CombinePlots is being deprecated. Plots should now be combined using the patchwork system. 
+4: Transformation introduced infinite values in continuous x-axis 
+5: Transformation introduced infinite values in continuous x-axis 
+[1] "done"
