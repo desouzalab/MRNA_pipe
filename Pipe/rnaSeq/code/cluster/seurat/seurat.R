@@ -39,9 +39,9 @@ print(all_preprocessed_ssRNASeq_files)
 for (c in 1:length(all_preprocessed_ssRNASeq_files)){
   print(c)
   ### Create data frame
-  data=read.csv(file.path(args$input_directory, all_preprocessed_ssRNASeq_files[c]))
+  data=read.csv(file.path(args$input_directory, all_preprocessed_ssRNASeq_files[c]),row.names=1)
   print("  ...read")
-  print(head(data))
+  
   print(head(data[,1:10]))
   ### Set row names for the data frame. Exclude the first column from the data frame.
 
@@ -70,7 +70,7 @@ for (c in 1:length(all_preprocessed_ssRNASeq_files)){
   cat("pbmc\n")
   print(nrow(pbmc))
   # based on figures, filtering (choose the threshold based on plots)
-  #pbmc <- subset(pbmc, subset = nFeature_RNA>2000 & nFeature_RNA <3500 & nCount_RNA>498000)
+  pbmc <- subset(pbmc, subset = nFeature_RNA>2000 & nFeature_RNA <3500 & nCount_RNA>498000)
   cat("pbmc\n")
   print(nrow(pbmc))
   # Normalize the data
