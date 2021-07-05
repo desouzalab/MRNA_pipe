@@ -28,7 +28,19 @@ Prim2           0          0          0          0
 Bai3            4          6          0          0
 Cflar           0          0          0          0
 Gpr39           0          0          0          0
+[1] 3436
 pbmc
+           orig.ident nCount_RNA nFeature_RNA percent.mt
+GSM2631429     data3k     499541         2809          0
+GSM2631430     data3k     499711         2665          0
+GSM2631431     data3k     499951         2730          0
+GSM2631432     data3k     499367         3263          0
+GSM2631433     data3k     499256         3007          0
+GSM2631434     data3k     499713         2933          0
+GSM2631435     data3k     499618         2897          0
+GSM2631436     data3k     499799         2391          0
+GSM2631437     data3k     499719         1587          0
+GSM2631438     data3k     500036         2721          0
 [1] 13765
 [1] "  ...plot tSNE+PCA colour"
 [1] "  ...plot tSNE+PCA colour"
@@ -148,23 +160,23 @@ Active assay: RNA (13765 features, 2000 variable features)
 Warning: The default method for RunUMAP has changed from calling Python UMAP via reticulate to the R-native UWOT using the cosine metric
 To use Python UMAP via reticulate, set umap.method to 'umap-learn' and metric to 'correlation'
 This message will be shown once per session
-14:44:16 UMAP embedding parameters a = 0.9922 b = 1.112
-14:44:16 Read 246 rows and found 30 numeric columns
-14:44:16 Using Annoy for neighbor search, n_neighbors = 30
-14:44:16 Building Annoy index with metric = cosine, n_trees = 50
+14:52:03 UMAP embedding parameters a = 0.9922 b = 1.112
+14:52:03 Read 246 rows and found 30 numeric columns
+14:52:03 Using Annoy for neighbor search, n_neighbors = 30
+14:52:03 Building Annoy index with metric = cosine, n_trees = 50
 0%   10   20   30   40   50   60   70   80   90   100%
 [----|----|----|----|----|----|----|----|----|----|
 **************************************************|
-14:44:16 Writing NN index file to temp file /tmp/RtmpDe1Buc/file32e22a5a3f5f
-14:44:16 Searching Annoy index using 1 thread, search_k = 3000
-14:44:16 Annoy recall = 100%
-14:44:17 Commencing smooth kNN distance calibration using 1 thread
-14:44:18 Initializing from normalized Laplacian + noise
-14:44:18 Commencing optimization for 500 epochs, with 7878 positive edges
+14:52:03 Writing NN index file to temp file /tmp/Rtmp2t9RP6/file391443110848
+14:52:03 Searching Annoy index using 1 thread, search_k = 3000
+14:52:03 Annoy recall = 100%
+14:52:04 Commencing smooth kNN distance calibration using 1 thread
+14:52:05 Initializing from normalized Laplacian + noise
+14:52:05 Commencing optimization for 500 epochs, with 7878 positive edges
 0%   10   20   30   40   50   60   70   80   90   100%
 [----|----|----|----|----|----|----|----|----|----|
 **************************************************|
-14:44:19 Optimization finished
+14:52:05 Optimization finished
 [1] "  ...plot UMAP"
 [1] "  ...plot TSNE"
 Warning messages:
