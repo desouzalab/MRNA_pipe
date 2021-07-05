@@ -35,20 +35,8 @@ pbmc
 [1] "  ...plot tSNE+PCA colour"
 pbmc
 [1] 13765
-pbmc
-[1] 13765
-Performing log-normalization
-0%   10   20   30   40   50   60   70   80   90   100%
-[----|----|----|----|----|----|----|----|----|----|
-**************************************************|
-Warning: The following arguments are not used: nfeatures
-Calculating gene variances
-0%   10   20   30   40   50   60   70   80   90   100%
-[----|----|----|----|----|----|----|----|----|----|
-**************************************************|
-Error in hvf.info$variance.expected[not.const] <- 10^fit$fitted : 
-  NAs are not allowed in subscripted assignments
-Calls: FindVariableFeatures -> FindVariableFeatures.default
+Error in subset(seurat_object, subset = nFeature_RNA > 1700 & nFeature_RNA <  : 
+  object 'seurat_object' not found
 In addition: Warning messages:
 1: In SingleExIPlot(type = type, data = data[, x, drop = FALSE], idents = idents,  :
   All cells have the same value of percent.mt.
