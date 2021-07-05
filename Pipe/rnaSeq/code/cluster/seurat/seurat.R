@@ -75,12 +75,15 @@ for (c in 1:length(all_preprocessed_ssRNASeq_files)){
   print(nrow(pbmc))
   # Normalize the data
   pbmc <- NormalizeData(pbmc, normalization.method="LogNormalize", scale.factor=10000)
-
+  cat("pbmc\n")
+  print(nrow(pbmc))
 
 
   print(head(pbmc[,1:10]))  
   # Identification of highly variable features (feature selection)
   pbmc <- FindVariableFeatures(pbmc, selection.method="vst", nfeatures=2000)
+  cat("pbmc\n")
+  print(nrow(pbmc))
   # Identify the 20 most highly variable genes
   top20 <- head(VariableFeatures(pbmc), 20)
   
