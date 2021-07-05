@@ -17,7 +17,38 @@ $true_cluster_input_directory
 [1] "true_GSE98816+58.csv"
 [1] "clustersSeurat_1_GSE98816+58.csv"
 [1] 1
-Error in setDT(TrueClusters) : 
-  Argument 'x' to 'setDT' should be a 'list', 'data.frame' or 'data.table'
-Calls: as.data.frame -> setDT
+NULL
+[1] "  ...read"
+Performing PCA
+Consider setting partial_pca=TRUE for large matrices
+Read the 3079 x 50 data matrix successfully!
+OpenMP is working. 1 threads.
+Using no_dims = 2, perplexity = 30.000000, and theta = 0.000000
+Computing input similarities...
+Symmetrizing...
+Done in 5.99 seconds!
+Learning embedding...
+Iteration 50: error is 81.483637 (50 iterations in 8.68 seconds)
+Iteration 100: error is 70.389832 (50 iterations in 8.71 seconds)
+Iteration 150: error is 69.131777 (50 iterations in 8.68 seconds)
+Iteration 200: error is 68.740975 (50 iterations in 8.69 seconds)
+Iteration 250: error is 68.545010 (50 iterations in 8.68 seconds)
+Iteration 300: error is 2.038027 (50 iterations in 8.70 seconds)
+Iteration 350: error is 1.737891 (50 iterations in 8.70 seconds)
+Iteration 400: error is 1.598959 (50 iterations in 8.72 seconds)
+Iteration 450: error is 1.519476 (50 iterations in 8.67 seconds)
+Iteration 500: error is 1.467074 (50 iterations in 8.70 seconds)
+Iteration 550: error is 1.430256 (50 iterations in 8.71 seconds)
+Iteration 600: error is 1.403094 (50 iterations in 8.67 seconds)
+Iteration 650: error is 1.382248 (50 iterations in 8.70 seconds)
+Iteration 700: error is 1.365909 (50 iterations in 8.69 seconds)
+Iteration 750: error is 1.352704 (50 iterations in 8.70 seconds)
+Iteration 800: error is 1.341824 (50 iterations in 8.71 seconds)
+Iteration 850: error is 1.332705 (50 iterations in 8.69 seconds)
+Iteration 900: error is 1.325037 (50 iterations in 8.70 seconds)
+Iteration 950: error is 1.318527 (50 iterations in 8.71 seconds)
+Iteration 1000: error is 1.312788 (50 iterations in 8.69 seconds)
+Fitting performed in 173.90 seconds.
+Error in data.frame(tsneX, tsneY, TrueClusters, clusters) : 
+  arguments imply differing number of rows: 3079, 0
 Execution halted
