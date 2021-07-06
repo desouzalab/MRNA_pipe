@@ -1,5 +1,3 @@
-Iteration 200: error is 68.740975 (50 iterations in 7.22 seconds)
-Iteration 150: error is 69.131777 (50 iterations in 7.42 seconds)
 $cluster_input_directory
 [1] "../../rnaSeq/output/cluster/seurat/GSE98816+58/"
 
@@ -19,79 +17,38 @@ $true_cluster_input_directory
 [1] "true_GSE98816+58.csv"
 [1] "clustersSeurat_1_GSE98816+58.csv"
 [1] 1
-Iteration 250: error is 68.545010 (50 iterations in 7.18 seconds)
-Iteration 200: error is 68.740975 (50 iterations in 7.32 seconds)
-Iteration 250: error is 68.545010 (50 iterations in 7.28 seconds)
-Iteration 300: error is 2.038027 (50 iterations in 7.84 seconds)
-Iteration 300: error is 2.038027 (50 iterations in 7.34 seconds)
-Iteration 350: error is 1.737891 (50 iterations in 8.69 seconds)
 NULL
 [1] "  ...read"
 Performing PCA
 Consider setting partial_pca=TRUE for large matrices
-Iteration 350: error is 1.737891 (50 iterations in 7.39 seconds)
-Iteration 400: error is 1.598959 (50 iterations in 8.06 seconds)
-Iteration 400: error is 1.598959 (50 iterations in 7.55 seconds)
-Iteration 450: error is 1.519476 (50 iterations in 7.45 seconds)
-Iteration 450: error is 1.519476 (50 iterations in 7.53 seconds)
-Iteration 500: error is 1.467074 (50 iterations in 7.50 seconds)
-Iteration 500: error is 1.467074 (50 iterations in 7.52 seconds)
-Iteration 550: error is 1.430256 (50 iterations in 7.51 seconds)
-Iteration 550: error is 1.430256 (50 iterations in 7.47 seconds)
-Iteration 600: error is 1.403094 (50 iterations in 7.43 seconds)
-Iteration 600: error is 1.403094 (50 iterations in 7.52 seconds)
-Iteration 650: error is 1.382248 (50 iterations in 7.46 seconds)
-Iteration 650: error is 1.382248 (50 iterations in 7.47 seconds)
-Iteration 700: error is 1.365909 (50 iterations in 7.47 seconds)
-Iteration 700: error is 1.365909 (50 iterations in 7.49 seconds)
-Iteration 750: error is 1.352704 (50 iterations in 7.74 seconds)
-Iteration 750: error is 1.352704 (50 iterations in 7.55 seconds)
-Iteration 800: error is 1.341824 (50 iterations in 7.33 seconds)
-Iteration 800: error is 1.341824 (50 iterations in 7.96 seconds)
-Iteration 850: error is 1.332705 (50 iterations in 7.24 seconds)
-Iteration 850: error is 1.332705 (50 iterations in 8.06 seconds)
-Iteration 900: error is 1.325037 (50 iterations in 7.36 seconds)
-Iteration 950: error is 1.318527 (50 iterations in 7.35 seconds)
-Iteration 900: error is 1.325037 (50 iterations in 8.15 seconds)
-Iteration 1000: error is 1.312788 (50 iterations in 7.36 seconds)
-Fitting performed in 149.75 seconds.
-Error in data.frame(tsneX, tsneY, TrueClusters, clusters) : 
-  arguments imply differing number of rows: 3079, 0
-Execution halted
-Iteration 950: error is 1.318527 (50 iterations in 8.14 seconds)
-Iteration 1000: error is 1.312788 (50 iterations in 8.16 seconds)
-Fitting performed in 152.09 seconds.
-Error in data.frame(tsneX, tsneY, TrueClusters, clusters) : 
-  arguments imply differing number of rows: 3079, 0
-Execution halted
 Read the 3079 x 50 data matrix successfully!
 OpenMP is working. 1 threads.
 Using no_dims = 2, perplexity = 30.000000, and theta = 0.000000
 Computing input similarities...
 Symmetrizing...
-Done in 6.00 seconds!
+Done in 6.02 seconds!
 Learning embedding...
-Iteration 50: error is 81.483637 (50 iterations in 8.46 seconds)
-Iteration 100: error is 70.389832 (50 iterations in 8.47 seconds)
-Iteration 150: error is 69.131777 (50 iterations in 8.46 seconds)
-Iteration 200: error is 68.740975 (50 iterations in 8.47 seconds)
-Iteration 250: error is 68.545010 (50 iterations in 8.45 seconds)
-Iteration 300: error is 2.038027 (50 iterations in 8.51 seconds)
-Iteration 350: error is 1.737891 (50 iterations in 8.49 seconds)
-Iteration 400: error is 1.598959 (50 iterations in 8.45 seconds)
-Iteration 450: error is 1.519476 (50 iterations in 8.49 seconds)
-Iteration 500: error is 1.467074 (50 iterations in 8.49 seconds)
-Iteration 550: error is 1.430256 (50 iterations in 8.47 seconds)
-Iteration 600: error is 1.403094 (50 iterations in 8.49 seconds)
-Iteration 650: error is 1.382248 (50 iterations in 8.49 seconds)
-Iteration 700: error is 1.365909 (50 iterations in 8.48 seconds)
-Iteration 750: error is 1.352704 (50 iterations in 8.52 seconds)
-Iteration 800: error is 1.341824 (50 iterations in 8.85 seconds)
-Iteration 850: error is 1.332705 (50 iterations in 8.85 seconds)
-Iteration 900: error is 1.325037 (50 iterations in 8.84 seconds)
-Iteration 950: error is 1.318527 (50 iterations in 8.76 seconds)
-Iteration 1000: error is 1.312788 (50 iterations in 8.78 seconds)
-Fitting performed in 171.25 seconds.
+Iteration 50: error is 81.483637 (50 iterations in 5.94 seconds)
+Iteration 100: error is 70.389832 (50 iterations in 5.94 seconds)
+Iteration 150: error is 69.131777 (50 iterations in 5.94 seconds)
+Iteration 200: error is 68.740975 (50 iterations in 5.93 seconds)
+Iteration 250: error is 68.545010 (50 iterations in 5.95 seconds)
+Iteration 300: error is 2.038027 (50 iterations in 5.96 seconds)
+Iteration 350: error is 1.737891 (50 iterations in 5.94 seconds)
+Iteration 400: error is 1.598959 (50 iterations in 5.94 seconds)
+Iteration 450: error is 1.519476 (50 iterations in 5.94 seconds)
+Iteration 500: error is 1.467074 (50 iterations in 5.94 seconds)
+Iteration 550: error is 1.430256 (50 iterations in 5.93 seconds)
+Iteration 600: error is 1.403094 (50 iterations in 5.94 seconds)
+Iteration 650: error is 1.382248 (50 iterations in 5.96 seconds)
+Iteration 700: error is 1.365909 (50 iterations in 5.94 seconds)
+Iteration 750: error is 1.352704 (50 iterations in 5.94 seconds)
+Iteration 800: error is 1.341824 (50 iterations in 5.94 seconds)
+Iteration 850: error is 1.332705 (50 iterations in 5.96 seconds)
+Iteration 900: error is 1.325037 (50 iterations in 5.94 seconds)
+Iteration 950: error is 1.318527 (50 iterations in 5.93 seconds)
+Iteration 1000: error is 1.312788 (50 iterations in 5.96 seconds)
+Fitting performed in 118.85 seconds.
 Error in data.frame(tsneX, tsneY, TrueClusters, clusters) : 
   arguments imply differing number of rows: 3079, 0
 Execution halted
