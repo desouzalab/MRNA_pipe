@@ -33,13 +33,8 @@ Cflar           0          0          0        619
 Gpr39           0          0          0          0
 [1] "GSM2631429" "GSM2631430" "GSM2631431" "GSM2631432" "GSM2631433"
 [6] "GSM2631434"
-     X     GSM.ID annoated.cell.types
-1 3186 GSM2631429                  AC
-2 3187 GSM2631430                  AC
-3 3188 GSM2631431                  AC
-4 3189 GSM2631432                  AC
-5 3190 GSM2631433                  AC
-6 3191 GSM2631434                  AC
+[1] "GSM2631429" "GSM2631430" "GSM2631431" "GSM2631432" "GSM2631433"
+[6] "GSM2631434"
 NULL
 [1] "  ...read"
 Performing PCA
@@ -49,29 +44,28 @@ OpenMP is working. 1 threads.
 Using no_dims = 2, perplexity = 30.000000, and theta = 0.000000
 Computing input similarities...
 Symmetrizing...
-Done in 6.01 seconds!
+Done in 6.09 seconds!
 Learning embedding...
-Iteration 50: error is 81.483637 (50 iterations in 8.82 seconds)
-Iteration 100: error is 70.389832 (50 iterations in 8.82 seconds)
-Iteration 150: error is 69.131777 (50 iterations in 8.84 seconds)
-Iteration 200: error is 68.740975 (50 iterations in 8.84 seconds)
-Iteration 250: error is 68.545010 (50 iterations in 8.82 seconds)
-Iteration 300: error is 2.038027 (50 iterations in 8.85 seconds)
-Iteration 350: error is 1.737891 (50 iterations in 8.83 seconds)
-Iteration 400: error is 1.598959 (50 iterations in 8.83 seconds)
-Iteration 450: error is 1.519476 (50 iterations in 8.85 seconds)
-Iteration 500: error is 1.467074 (50 iterations in 8.82 seconds)
-Iteration 550: error is 1.430256 (50 iterations in 8.83 seconds)
-Iteration 600: error is 1.403094 (50 iterations in 8.87 seconds)
-Iteration 650: error is 1.382248 (50 iterations in 8.83 seconds)
-Iteration 700: error is 1.365909 (50 iterations in 8.85 seconds)
-Iteration 750: error is 1.352704 (50 iterations in 8.82 seconds)
-Iteration 800: error is 1.341824 (50 iterations in 8.82 seconds)
-Iteration 850: error is 1.332705 (50 iterations in 8.83 seconds)
-Iteration 900: error is 1.325037 (50 iterations in 8.83 seconds)
-Iteration 950: error is 1.318527 (50 iterations in 8.83 seconds)
-Iteration 1000: error is 1.312788 (50 iterations in 8.85 seconds)
-Fitting performed in 176.68 seconds.
-Error in data.frame(tsneX, tsneY, TrueClusters, clusters) : 
-  arguments imply differing number of rows: 3079, 3
+Iteration 50: error is 81.483637 (50 iterations in 8.58 seconds)
+Iteration 100: error is 70.389832 (50 iterations in 8.65 seconds)
+Iteration 150: error is 69.131777 (50 iterations in 8.60 seconds)
+Iteration 200: error is 68.740975 (50 iterations in 8.60 seconds)
+Iteration 250: error is 68.545010 (50 iterations in 8.62 seconds)
+Iteration 300: error is 2.038027 (50 iterations in 8.59 seconds)
+Iteration 350: error is 1.737891 (50 iterations in 8.61 seconds)
+Iteration 400: error is 1.598959 (50 iterations in 8.57 seconds)
+Iteration 450: error is 1.519476 (50 iterations in 8.75 seconds)
+Iteration 500: error is 1.467074 (50 iterations in 8.76 seconds)
+Iteration 550: error is 1.430256 (50 iterations in 8.75 seconds)
+Iteration 600: error is 1.403094 (50 iterations in 8.75 seconds)
+Iteration 650: error is 1.382248 (50 iterations in 8.71 seconds)
+Iteration 700: error is 1.365909 (50 iterations in 8.71 seconds)
+Iteration 750: error is 1.352704 (50 iterations in 8.71 seconds)
+Iteration 800: error is 1.341824 (50 iterations in 8.56 seconds)
+Iteration 850: error is 1.332705 (50 iterations in 8.69 seconds)
+Iteration 900: error is 1.325037 (50 iterations in 8.70 seconds)
+Iteration 950: error is 1.318527 (50 iterations in 8.71 seconds)
+Iteration 1000: error is 1.312788 (50 iterations in 8.73 seconds)
+Fitting performed in 173.35 seconds.
+Error: Discrete value supplied to continuous scale
 Execution halted
