@@ -5,6 +5,7 @@
 #======================
 # argparse library
 #======================
+"
 suppressMessages(library(argparse))
 suppressMessages(library(scater))
 suppressMessages(library(cowplot))
@@ -24,7 +25,8 @@ suppressMessages(library(reshape))
 suppressMessages(library(abind))
 suppressMessages(library(drc))
 ​
-RSCRIPT <- "Rscript"
+
+"
 ​"
 ​
 #======================
