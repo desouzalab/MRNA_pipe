@@ -57,19 +57,13 @@ if (length(all_preprocessed_ssRNASeq_files)==length(all_true_cluster_ssRNASeq_fi
     data=read.csv(file.path(args$preprocessed_input_directory, all_preprocessed_ssRNASeq_files[c]),row.names=1)
     data=na.omit(data)
     data = data[,clusters_filtered]
-    print(head(data[,1:10]))
-    TrueClusters=read.csv(file.path(args$true_cluster_input_directory, all_true_cluster_ssRNASeq_files[c]))
-    print(head(TrueClusters$GSM.ID))    
+    TrueClusters=read.csv(file.path(args$true_cluster_input_directory, all_true_cluster_ssRNASeq_files[c]))  
     TrueClusters=as.data.frame(setDT(TrueClusters)[TrueClusters$GSM.ID %chin% colnames(data)])[,3]
     print(head(TrueClusters))
     TrueClusters=as.factor(TrueClusters)
-  
-
     print("  ...read")
     data = na.omit(data)
-
     data=as.matrix(data)
-
     #=====================FORMAT DATA=====================#
     set.seed(123)
     tsnepca=Rtsne(X=t(data), dims=2, perplexity=30, theta=0, check_duplicates=F, pca=TRUE, partial_pca=FALSE, max_iter=1000, verbose=T, is_distance=FALSE, Y_init=NULL, pca_center=TRUE, pca_scale=F, normalize=F) 
@@ -90,7 +84,7 @@ if (length(all_preprocessed_ssRNASeq_files)==length(all_true_cluster_ssRNASeq_fi
     print("  ...plot tSNE+PCA black and white")
     dev.off()
 '
-    tsnepca=ggplot(hommat, aes(y=tsneY,x=tsneX, color=TrueClusters)) 
+    tsnepca=ggplot(hommat, aes(y=tsneY,x=tsneX, color=factor(TrueClusters)) ) 
     save_plot(paste0(outdir,"/TSNE+PCA_Colour_noShapes_",c,"_",args$name_dataset,".pdf"),tsnepca)
     print("  ...plot tSNE+PCA colour")
     dev.off()
