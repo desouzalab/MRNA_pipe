@@ -71,6 +71,10 @@ for (c in 1:length(all_preprocessed_ssRNASeq_files)){
   cat("pbmc\n")
   print(nrow(pbmc))
   # based on figures, filtering (choose the threshold based on plots)
+  if(args$name_dataset == "GSE74672"){
+    print("worked")
+    pbmc <- subset(pbmc, subset = nFeature_RNA <7250 & nCount_RNA>30000)
+    }
   pbmc <- subset(pbmc, subset = nFeature_RNA>1700 & nFeature_RNA <3600 & nCount_RNA>49700)
   cat("pbmc\n")
   print(nrow(pbmc))
