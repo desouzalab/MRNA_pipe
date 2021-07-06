@@ -60,7 +60,7 @@ if (length(all_preprocessed_ssRNASeq_files)==length(all_true_cluster_ssRNASeq_fi
     print(head(data[,1:10]))
     TrueClusters=read.csv(file.path(args$true_cluster_input_directory, all_true_cluster_ssRNASeq_files[c]))
     print(head(TrueClusters$GSM.ID))    
-    TrueClusters=as.data.frame(setDT(TrueClusters)[TrueClusters$GSM.ID %chin% colnames(data)])[,2]
+    TrueClusters=as.data.frame(setDT(TrueClusters)[TrueClusters$GSM.ID %chin% colnames(data)])[,3]
     print(head(TrueClusters))
     TrueClusters=as.factor(TrueClusters)
     print(colnames(TrueClusters))
@@ -69,7 +69,7 @@ if (length(all_preprocessed_ssRNASeq_files)==length(all_true_cluster_ssRNASeq_fi
     data = na.omit(data)
 
     data=as.matrix(data)
-
+'
     #=====================FORMAT DATA=====================#
     set.seed(123)
     tsnepca=Rtsne(X=t(data), dims=2, perplexity=30, theta=0, check_duplicates=F, pca=TRUE, partial_pca=FALSE, max_iter=1000, verbose=T, is_distance=FALSE, Y_init=NULL, pca_center=TRUE, pca_scale=F, normalize=F) 
@@ -107,7 +107,7 @@ if (length(all_preprocessed_ssRNASeq_files)==length(all_true_cluster_ssRNASeq_fi
     rm(TrueClusters)
     rm(clusters)
     rm(hommat)
-    rm(tsnepca)
+    rm(tsnepca)'
   }
 }
 
