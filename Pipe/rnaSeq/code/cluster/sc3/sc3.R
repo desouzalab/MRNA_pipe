@@ -53,18 +53,18 @@ for (c in 1:length(all_preprocessed_ssRNASeq_files)){
   print("  ...read")
   
   #parameters
-  Gini.pvalue_cutoff   = 0.0001                                           # fiting, Pvalue, control how many gene finally used.
-  Norm.Gini.cutoff     = 1                                                # fiting, NomGini, control how many gene finally used, 1 means not used.
-  span                 = 0.9                                              # parameter for LOESS fitting
-  outlier_remove       = 0.75                                             # parameter for LOESS fitting
-  Gamma                = 0.9                                              # parameter for clustering
-  diff.cutoff          = 1                                                # MAST analysis, filter gene dont have high log2_foldchange to reduce gene num
-  lr.p_value_cutoff    = 1e-5                                             # MAST analysis, pvalue cutoff to identify differential expressed gene
+  Gini.pvalue_cutoff   = 0.0001                                          
+  Norm.Gini.cutoff     = 1                                               
+  span                 = 0.9                                             
+  outlier_remove       = 0.75                                             
+  Gamma                = 0.9                                              
+  diff.cutoff          = 1                                                
+  lr.p_value_cutoff    = 1e-5                                             
   CountsForNormalized  = 100000                                           
-  rare_p               = 0.05                                             # propostion of cell number < this value will be considered as rare cell clusters.
+  rare_p               = 0.05                                             
   perplexity           = 30
-  eps                  = 0.5                                              # parameter for DBSCAN
-  MinPts               = 3                                                # parameter for DBSCAN
+  eps                  = 0.5                                              
+  MinPts               = 3                                               
   
   #gene selection
   source("~/projects/def-cdesouza/Lab/GiniClust/Rfunction/GiniClust_Fitting.R")
