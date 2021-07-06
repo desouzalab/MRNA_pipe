@@ -1,100 +1,112 @@
-#======================================================================================================
-# CLUSTER - GiniClust
-#======================================================================================================
-​
-#======================
-# argparse library
-#======================
 
+#======================================================================================================
+# VISUALIZATION - tSNE+PCA
+#======================================================================================================
+
+#======================
+# libraries
+#======================
+# For tSNE+PCA
 suppressMessages(library(argparse))
-suppressMessages(library(scater))
-suppressMessages(library(cowplot))
-suppressMessages(library(ggplot2))
-suppressMessages(library(hydroGOF))
-suppressMessages(library(glmnet))
-suppressMessages(library(StatMatch))
 suppressMessages(library(Rtsne))
-suppressMessages(library(fpc))
-suppressMessages(library(GA))
-suppressMessages(library(MASS))
-suppressMessages(library(session))
-suppressMessages(library(Matrix))
-suppressMessages(library(vegan))
-suppressMessages(library(data.table))
-suppressMessages(library(reshape))
-suppressMessages(library(abind))
-suppressMessages(library(drc))
+suppressMessages(library(ggplot2))
+suppressMessages(library(cowplot))
+suppressMessages(library(openxlsx))
+suppressMessages(library(M3C))
+library(data.table)
 
-​
+
+RSCRIPT <- "Rscript"
+
 #======================
 # arguments
 #======================
-​print("tests")
 
 # create parser object
 parser <- ArgumentParser()
-​
+
 parser$add_argument("--name_dataset", type="character", help="name of the dataset")
-parser$add_argument("--input_directory", default="None", type="character", help="path to directory containing preprocessed ssRNASeq data")
-parser$add_argument("--data_output_directory", type="character", help="Path to the cluster data output directory")
-parser$add_argument("--console_output_directory", type="character", help="Path to the .out file output directory")
-​
+parser$add_argument("--preprocessed_input_directory", default="None", type="character", help="path to directory containing preprocessed ssRNASeq data")
+parser$add_argument("--true_cluster_input_directory", default="None", type="character", help="path to directory containing true cluster ssRNASeq data")
+parser$add_argument("--cluster_input_directory", default="None", type="character", help="path to directory containing clustered ssRNASeq data")
+parser$add_argument("--output_directory", type="character", help="Path to the output directory")
+
 args <- parser$parse_args()
 print(args)
-​
-data_outdir <- args$data_output_directory
-dir.create(file.path(data_outdir), showWarnings=FALSE, recursive=TRUE)
-​
-console_outdir <- args$console_output_directory
-dir.create(file.path(console_outdir), showWarnings=FALSE, recursive=TRUE)
-​
-all_preprocessed_ssRNASeq_files <- list.files(args$input_directory, pattern="*.csv*")
+
+outdir <- args$output_directory
+dir.create(file.path(outdir), showWarnings=FALSE, recursive=TRUE)
+
+all_preprocessed_ssRNASeq_files <- list.files(args$preprocessed_input_directory, pattern = "*.csv*")
 print(all_preprocessed_ssRNASeq_files)
-​
-for (c in 1:length(all_preprocessed_ssRNASeq_files)){
-  print(c)
-  print(all_preprocessed_ssRNASeq_files)
-  ### Create data frame
-  data=read.csv(file.path(args$input_directory, all_preprocessed_ssRNASeq_files[c]),row.names = 1)
-  print("  ...read")
-  
-  #parameters
-  Gini.pvalue_cutoff   = 0.0001                                           # fiting, Pvalue, control how many gene finally used.
-  Norm.Gini.cutoff     = 1                                                # fiting, NomGini, control how many gene finally used, 1 means not used.
-  span                 = 0.9                                              # parameter for LOESS fitting
-  outlier_remove       = 0.75                                             # parameter for LOESS fitting
-  Gamma                = 0.9                                              # parameter for clustering
-  diff.cutoff          = 1                                                # MAST analysis, filter gene dont have high log2_foldchange to reduce gene num
-  lr.p_value_cutoff    = 1e-5                                             # MAST analysis, pvalue cutoff to identify differential expressed gene
-  CountsForNormalized  = 100000                                           
-  rare_p               = 0.05                                             # propostion of cell number < this value will be considered as rare cell clusters.
-  perplexity           = 30
-  eps                  = 0.5                                              # parameter for DBSCAN
-  MinPts               = 3                                                # parameter for DBSCAN
-  
-  #gene selection
-  source("~/projects/def-cdesouza/Lab/GiniClust/Rfunction/GiniClust_Fitting.R")
-  GeneList.final = GiniClust_Fitting(data.type = 'RNA-seq',ExprM.RawCounts.filter = data,out.folder=data_outdir,exprimentID=c)
-  
-  #clustering
-  source("~/projects/def-cdesouza/Lab/GiniClust/Rfunction/GiniClust_Clustering.R")
-  Cluster.Results = GiniClust_Clustering(data.type = 'RNA-seq',ExprM.RawCounts.filter = data,GeneList.final,eps,MinPts=5,out.folder=data_outdir,exprimentID=c)
-  cell.cell.distance = Cluster.Results$cell_cell_dist
-  c_membership = Cluster.Results$c_membership
-  clustering_membership_r = Cluster.Results$clustering_membership_r
-  rare.cells.list.all = Cluster.Results$rare.cell
-  
-  #tSNE visualzation
-  source("~/projects/def-cdesouza/Lab/GiniClust/Rfunction/GiniClust_tSNE.R")
-  GiniClust_tSNE(data.type = 'RNA-seq',c_membership,cell.cell.distance,perplexity,out.folder=data_outdir,exprimentID=c)
-  
-  #check the clustering results
-  table(c_membership)
-  print(rare.cells.list.all)
-  
-  
+
+all_true_cluster_ssRNASeq_files <- list.files(args$true_cluster_input_directory, pattern = "*.csv*")
+print(all_true_cluster_ssRNASeq_files)
+
+all_clustered_ssRNASeq_files <- list.files(args$cluster_input_directory, pattern = "*.csv*")
+print(all_clustered_ssRNASeq_files)
+
+
+if (length(all_preprocessed_ssRNASeq_files)==length(all_true_cluster_ssRNASeq_files) & length(all_true_cluster_ssRNASeq_files)==length(all_clustered_ssRNASeq_files)) {
+  for (c in 1:length(all_preprocessed_ssRNASeq_files)){
+    print(c)
+    #=====================READ DATA=====================#
+    clusters=read.csv(file.path(args$cluster_input_directory,all_clustered_ssRNASeq_files[c]))[,2]
+    clusters=as.factor(clusters)
+    clusters_filtered<-read.csv(file.path(args$cluster_input_directory,all_clustered_ssRNASeq_files[c]))[,1]
+    data=read.csv(file.path(args$preprocessed_input_directory, all_preprocessed_ssRNASeq_files[c]),row.names=1)
+    data=na.omit(data)
+    data = data[,clusters_filtered]
+    TrueClusters=read.csv(file.path(args$true_cluster_input_directory, all_true_cluster_ssRNASeq_files[c]))  
+    TrueClusters=as.data.frame(setDT(TrueClusters)[TrueClusters$GSM.ID %chin% colnames(data)])[,3]
+    print(head(TrueClusters))
+    TrueClusters=as.factor(TrueClusters)
+    print("  ...read")
+    data = na.omit(data)
+    data=as.matrix(data)
+    #=====================FORMAT DATA=====================#
+    set.seed(123)
+    tsnepca=Rtsne(X=t(data), dims=2, perplexity=30, theta=0, check_duplicates=F, pca=TRUE, partial_pca=FALSE, max_iter=1000, verbose=T, is_distance=FALSE, Y_init=NULL, pca_center=TRUE, pca_scale=F, normalize=F) 
+    tsneX=tsnepca$Y[,1]
+    tsneY=tsnepca$Y[,2]
+    #tsneX=as.vector(read.csv("/home/emiliano/projects/def-cdesouza/Lab/data/tsneX.csv",row.names = 1))
+    #tsneY=as.vector(read.csv("/home/emiliano/projects/def-cdesouza/Lab/data/tsneY.csv",row.names = 1))
+    hommat=data.frame(tsneX,tsneY,TrueClusters,clusters)
+    Method=c("Seurat","SC3")
+    #=====================PLOT DATA=====================#
+    #tsnepca=ggplot(hommat, aes(y=tsneY,x=tsneX, color=clusters)) + scale_colour_gradientn(colours = terrain.colors(10)) + geom_point(aes(shape=TrueClusters),size=1) + scale_shape_manual(values=seq(0,length(labels(TrueClusters))))
+    #save_plot(paste0(outdir,"/TSNE+PCA_Colour_",c,"_",args$name_dataset,".pdf"),tsnepca)
+    print("  ...plot tSNE+PCA colour")
+   # dev.off()
+
+    tsnepca=ggplot(hommat, aes(y=tsneY,x=tsneX)) + geom_point(aes(shape=TrueClusters),size=1) + scale_shape_manual(values=seq(0,length(levels(TrueClusters))))
+    save_plot(paste0(outdir,"/TSNE+PCA_Black_",c,"_",args$name_dataset,".pdf"),tsnepca)
+    print("  ...plot tSNE+PCA black and white")
+    dev.off()
+
+    tsnepca=ggplot(hommat, aes(y=tsneY,x=tsneX,color = TrueClusters))+ geom_point(size=1)
+    save_plot(paste0(outdir,"/TSNE+PCA_Colour_noShapes_",c,"_",args$name_dataset,".pdf"),tsnepca)
+    print("  ...plot tSNE+PCA colour")
+    dev.off()
+
+    tsnePlot=tsne(data,labels=TrueClusters,perplex=30 ,seed=123,dotsize=1,axistextsize=12, legendtextsize=10)
+    save_plot(paste0(outdir,"/tSNE_",c,"_",args$name_dataset,".pdf"),tsnePlot)
+    dev.off()
+    print("  ...tSNE")
+    #=====================CLEAR MEMORY=====================#
+    rm(dat)
+    rm(data)
+    rm(tsneX)
+    rm(tsneY)
+    rm(TrueClusters)
+    rm(clusters)
+    rm(hommat)
+    rm(tsnepca)
+    
+  }
 }
-​
+
 print("DONE")
-​
+
 #======================================================================================================
+
