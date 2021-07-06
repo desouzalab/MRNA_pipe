@@ -30,7 +30,7 @@ RSCRIPT <- "Rscript"
 #======================
 # arguments
 #======================
-​
+​print("tests")
 # create parser object
 parser <- ArgumentParser()
 ​
