@@ -1,2 +1,1 @@
-Error: unexpected input in "​"
-Execution halted
+Rscript ../../rnaSeq/code/cluster/sc3/sc3.R --data_output_directory ../../rnaSeq/output/cluster/sc3/GSE98816+58 --console_output_directory ../../rnaSeq/output/cluster/sc3/GSE98816+58 --input_directory /home/emiliano/projects/def-cdesouza/Lab/data/preprocessed/GSE98816+58 --name_dataset GSE98816+58
