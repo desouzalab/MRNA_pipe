@@ -5,7 +5,7 @@
 #======================
 # argparse library
 #======================
-"
+
 suppressMessages(library(argparse))
 suppressMessages(library(scater))
 suppressMessages(library(cowplot))
@@ -24,10 +24,7 @@ suppressMessages(library(data.table))
 suppressMessages(library(reshape))
 suppressMessages(library(abind))
 suppressMessages(library(drc))
-​
 
-"
-​"
 ​
 #======================
 # arguments
@@ -67,7 +64,7 @@ for (c in 1:length(all_preprocessed_ssRNASeq_files)){
   span                 = 0.9                                              # parameter for LOESS fitting
   outlier_remove       = 0.75                                             # parameter for LOESS fitting
   Gamma                = 0.9                                              # parameter for clustering
-  diff.cutoff          = 1                                                # MAST analysis, filter gene don't have high log2_foldchange to reduce gene num
+  diff.cutoff          = 1                                                # MAST analysis, filter gene dont have high log2_foldchange to reduce gene num
   lr.p_value_cutoff    = 1e-5                                             # MAST analysis, pvalue cutoff to identify differential expressed gene
   CountsForNormalized  = 100000                                           
   rare_p               = 0.05                                             # propostion of cell number < this value will be considered as rare cell clusters.
@@ -99,5 +96,5 @@ for (c in 1:length(all_preprocessed_ssRNASeq_files)){
 }
 ​
 print("DONE")
-​"
+​
 #======================================================================================================
