@@ -1,5 +1,3 @@
-
-
 suppressMessages(library(argparse))
 suppressMessages(library(scater))
 suppressMessages(library(cowplot))
@@ -19,32 +17,32 @@ suppressMessages(library(reshape))
 suppressMessages(library(abind))
 suppressMessages(library(drc))
 
-​
+
 #======================
 # arguments
 #======================
-​print("tests")
+print("tests")
 
 # create parser object
 parser <- ArgumentParser()
-​
+
 parser$add_argument("--name_dataset", type="character", help="name of the dataset")
 parser$add_argument("--input_directory", default="None", type="character", help="path to directory containing preprocessed ssRNASeq data")
 parser$add_argument("--data_output_directory", type="character", help="Path to the cluster data output directory")
 parser$add_argument("--console_output_directory", type="character", help="Path to the .out file output directory")
-​
+
 args <- parser$parse_args()
 print(args)
-​
+
 data_outdir <- args$data_output_directory
 dir.create(file.path(data_outdir), showWarnings=FALSE, recursive=TRUE)
-​
+
 console_outdir <- args$console_output_directory
 dir.create(file.path(console_outdir), showWarnings=FALSE, recursive=TRUE)
-​
+
 all_preprocessed_ssRNASeq_files <- list.files(args$input_directory, pattern="*.csv*")
 print(all_preprocessed_ssRNASeq_files)
-​
+
 for (c in 1:length(all_preprocessed_ssRNASeq_files)){
   print(c)
   print(all_preprocessed_ssRNASeq_files)
@@ -88,7 +86,7 @@ for (c in 1:length(all_preprocessed_ssRNASeq_files)){
   
   
 }
-​
+
 print("DONE")
-​
+
 #======================================================================================================
