@@ -55,13 +55,12 @@ if (length(all_preprocessed_ssRNASeq_files)==length(all_true_cluster_ssRNASeq_fi
     clusters=as.factor(clusters)
     clusters_filtered<-read.csv(file.path(args$cluster_input_directory,all_clustered_ssRNASeq_files[c]))[,1]
     data=read.csv(file.path(args$preprocessed_input_directory, all_preprocessed_ssRNASeq_files[c]),row.names=1)
-   
     data=na.omit(data)
     data = data[,clusters_filtered]
     print(head(data[,1:10]))
     TrueClusters=read.csv(file.path(args$true_cluster_input_directory, all_true_cluster_ssRNASeq_files[c]))
     print(head(TrueClusters$GSM.ID))    
-    TrueClusters=as.data.frame(setDT(TrueClusters)[TrueClusters$GSM.ID %chin% colnames(data)])
+    TrueClusters=as.data.frame(setDT(TrueClusters)[TrueClusters$GSM.ID %chin% colnames(data)])[,2]
     print(head(TrueClusters))
     TrueClusters=as.factor(TrueClusters)
     print(colnames(TrueClusters))
