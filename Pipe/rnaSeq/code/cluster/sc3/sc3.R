@@ -5,7 +5,7 @@
 #======================
 # argparse library
 #======================
-'suppressMessages(library(argparse))
+suppressMessages(library(argparse))
 suppressMessages(library(scater))
 suppressMessages(library(cowplot))
 suppressMessages(library(ggplot2))
@@ -22,7 +22,7 @@ suppressMessages(library(vegan))
 suppressMessages(library(data.table))
 suppressMessages(library(reshape))
 suppressMessages(library(abind))
-suppressMessages(library(drc))'
+suppressMessages(library(drc))
 ​
 RSCRIPT <- "Rscript"
 ​
