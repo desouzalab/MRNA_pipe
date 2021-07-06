@@ -1,1 +1,1 @@
-Fatal error: cannot open file '../../rnaSeq/code/cluster/seurat/seurat.R': No such file or directory
+Rscript ../../rnaSeq/code/cluster/seurat/seurat.R --data_output_directory ../../rnaSeq/output/cluster/seurat/GSE98816+58 --console_output_directory ../../rnaSeq/output/cluster/seurat/GSE98816+58 --input_directory /home/emiliano/projects/def-cdesouza/Lab/data/preprocessed/GSE98816+58 --name_dataset GSE98816+58
