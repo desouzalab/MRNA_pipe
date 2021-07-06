@@ -68,7 +68,7 @@ if (length(all_preprocessed_ssRNASeq_files)==length(all_true_cluster_ssRNASeq_fi
     print("  ...read")
     data = na.omit(data)
 
-    #data=as.matrix(data)
+    data=as.matrix(data)
 
     #=====================FORMAT DATA=====================#
     set.seed(123)
