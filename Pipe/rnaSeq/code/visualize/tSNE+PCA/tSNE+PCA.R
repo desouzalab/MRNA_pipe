@@ -78,18 +78,18 @@ if (length(all_preprocessed_ssRNASeq_files)==length(all_true_cluster_ssRNASeq_fi
     #save_plot(paste0(outdir,"/TSNE+PCA_Colour_",c,"_",args$name_dataset,".pdf"),tsnepca)
     print("  ...plot tSNE+PCA colour")
    # dev.off()
-'
+
     tsnepca=ggplot(hommat, aes(y=tsneY,x=tsneX)) + geom_point(aes(shape=TrueClusters),size=1) + scale_shape_manual(values=seq(0,length(levels(TrueClusters))))
     save_plot(paste0(outdir,"/TSNE+PCA_Black_",c,"_",args$name_dataset,".pdf"),tsnepca)
     print("  ...plot tSNE+PCA black and white")
     dev.off()
-'
+
     tsnepca=ggplot(hommat, aes(y=tsneY,x=tsneX,color = TrueClusters))+ geom_point(size=1)
     save_plot(paste0(outdir,"/TSNE+PCA_Colour_noShapes_",c,"_",args$name_dataset,".pdf"),tsnepca)
     print("  ...plot tSNE+PCA colour")
     dev.off()
 
-  '  tsnePlot=tsne(data,labels=TrueClusters,perplex=30 ,seed=123,dotsize=1,axistextsize=12, legendtextsize=10)
+    tsnePlot=tsne(data,labels=TrueClusters,perplex=30 ,seed=123,dotsize=1,axistextsize=12, legendtextsize=10)
     save_plot(paste0(outdir,"/tSNE_",c,"_",args$name_dataset,".pdf"),tsnePlot)
     dev.off()
     print("  ...tSNE")
@@ -102,7 +102,7 @@ if (length(all_preprocessed_ssRNASeq_files)==length(all_true_cluster_ssRNASeq_fi
     rm(clusters)
     rm(hommat)
     rm(tsnepca)
-    '
+    
   }
 }
 
