@@ -63,7 +63,7 @@ if (length(all_preprocessed_ssRNASeq_files)==length(all_true_cluster_ssRNASeq_fi
     TrueClusters=as.data.frame(setDT(TrueClusters)[TrueClusters$GSM.ID %chin% colnames(data)])[,3]
     print(head(TrueClusters))
     TrueClusters=as.factor(TrueClusters)
-    print(colnames(TrueClusters))
+  
 
     print("  ...read")
     data = na.omit(data)
