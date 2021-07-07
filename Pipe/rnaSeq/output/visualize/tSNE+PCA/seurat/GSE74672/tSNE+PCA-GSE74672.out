@@ -13,7 +13,49 @@ $preprocessed_input_directory
 $true_cluster_input_directory
 [1] "/home/emiliano/projects/def-cdesouza/Lab/data/true/GSE74672/"
 
-[1] "GSE74672.csv"                "preprocessed_1_GSE74672.csv"
+[1] "GSE74672.csv"
 [1] "true_GSE74672.csv"
-[1] "clustersSeurat_1_GSE74672.csv" "clustersSeurat_2_GSE74672.csv"
+[1] "clustersSeurat_1_GSE74672.csv"
+[1] 1
+[1] "oligos" "oligos" "oligos" "oligos" "oligos" "oligos"
+[1] "  ...read"
+Performing PCA
+Consider setting partial_pca=TRUE for large matrices
+Read the 2866 x 50 data matrix successfully!
+OpenMP is working. 1 threads.
+Using no_dims = 2, perplexity = 30.000000, and theta = 0.000000
+Computing input similarities...
+Symmetrizing...
+Done in 4.24 seconds!
+Learning embedding...
+Iteration 50: error is 80.514353 (50 iterations in 3.93 seconds)
+Iteration 100: error is 70.378017 (50 iterations in 3.90 seconds)
+Iteration 150: error is 69.714917 (50 iterations in 3.90 seconds)
+Iteration 200: error is 69.582060 (50 iterations in 3.92 seconds)
+Iteration 250: error is 69.532829 (50 iterations in 3.91 seconds)
+Iteration 300: error is 1.672348 (50 iterations in 3.92 seconds)
+Iteration 350: error is 1.321013 (50 iterations in 3.89 seconds)
+Iteration 400: error is 1.168200 (50 iterations in 3.94 seconds)
+Iteration 450: error is 1.083603 (50 iterations in 3.91 seconds)
+Iteration 500: error is 1.030577 (50 iterations in 3.88 seconds)
+Iteration 550: error is 0.994696 (50 iterations in 3.89 seconds)
+Iteration 600: error is 0.968541 (50 iterations in 3.88 seconds)
+Iteration 650: error is 0.949280 (50 iterations in 3.88 seconds)
+Iteration 700: error is 0.934641 (50 iterations in 3.88 seconds)
+Iteration 750: error is 0.923074 (50 iterations in 3.90 seconds)
+Iteration 800: error is 0.913515 (50 iterations in 3.91 seconds)
+Iteration 850: error is 0.905860 (50 iterations in 3.90 seconds)
+Iteration 900: error is 0.899662 (50 iterations in 3.92 seconds)
+Iteration 950: error is 0.894450 (50 iterations in 3.89 seconds)
+Iteration 1000: error is 0.890095 (50 iterations in 3.89 seconds)
+Fitting performed in 78.04 seconds.
+[1] "  ...plot tSNE+PCA colour"
+[1] "  ...plot tSNE+PCA black and white"
+[1] "  ...plot tSNE+PCA colour"
+***t-SNE wrapper function***
+running...
+done.
+[1] "  ...tSNE"
+Warning message:
+In rm(dat) : object 'dat' not found
 [1] "DONE"
