@@ -43,6 +43,7 @@ for (c in 1:length(all_preprocessed_ssRNASeq_files)){
   print("  ...read")
   
   data=na.omit(data)
+  print(head(data[,1:10]))
   ### Set row names for the data frame. Exclude the first column from the data frame.
 
 
