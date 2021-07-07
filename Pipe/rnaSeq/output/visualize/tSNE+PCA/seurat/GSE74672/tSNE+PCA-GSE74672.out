@@ -10,16 +10,10 @@ $output_directory
 $preprocessed_input_directory
 [1] "/home/emiliano/projects/def-cdesouza/Lab/data/preprocessed/GSE74672/"
 
-$trueCluster_input_directory
-[1] "/home/emiliano/projects/def-cdesouza/Lab/data/raw/GSE74672/"
+$true_cluster_input_directory
+[1] "/home/emiliano/projects/def-cdesouza/Lab/data/true/GSE74672/"
 
-[1] "preprocessed_1_GSE74672.csv"
-[1] "Levels_GSE74672.xlsx"
+[1] "GSE74672.csv"                "preprocessed_1_GSE74672.csv"
+[1] "true_GSE74672.csv"
 [1] "clustersSeurat_1_GSE74672.csv"
-[1] 1
-[1] "  ...read"
-[1] "  ...plot tSNE+PCA colour"
-[1] "  ...plot tSNE+PCA black and white"
-Error in FUN(X[[i]], ...) : object 'Method' not found
-Calls: save_plot ... <Anonymous> -> f -> scales_add_defaults -> lapply -> FUN
-Execution halted
+[1] "DONE"
