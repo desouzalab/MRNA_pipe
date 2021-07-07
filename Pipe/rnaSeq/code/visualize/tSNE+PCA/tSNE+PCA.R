@@ -69,16 +69,10 @@ if (length(all_preprocessed_ssRNASeq_files)==length(all_true_cluster_ssRNASeq_fi
     tsnepca=Rtsne(X=t(data), dims=2, perplexity=30, theta=0, check_duplicates=F, pca=TRUE, partial_pca=FALSE, max_iter=1000, verbose=T, is_distance=FALSE, Y_init=NULL, pca_center=TRUE, pca_scale=F, normalize=F) 
     tsneX=tsnepca$Y[,1]
     tsneY=tsnepca$Y[,2]
-    #tsneX=as.vector(read.csv("/home/emiliano/projects/def-cdesouza/Lab/data/tsneX.csv",row.names = 1))
-    #tsneY=as.vector(read.csv("/home/emiliano/projects/def-cdesouza/Lab/data/tsneY.csv",row.names = 1))
+
     hommat=data.frame(tsneX,tsneY,TrueClusters,clusters)
     Method=c("Seurat","SC3")
     #=====================PLOT DATA=====================#
-    #tsnepca=ggplot(hommat, aes(y=tsneY,x=tsneX, color=clusters)) + scale_colour_gradientn(colours = terrain.colors(10)) + geom_point(aes(shape=TrueClusters),size=1) + scale_shape_manual(values=seq(0,length(labels(TrueClusters))))
-    #save_plot(paste0(outdir,"/TSNE+PCA_Colour_",c,"_",args$name_dataset,".pdf"),tsnepca)
-    print("  ...plot tSNE+PCA colour")
-   # dev.off()
-
     tsnepca=ggplot(hommat, aes(y=tsneY,x=tsneX)) + geom_point(aes(shape=TrueClusters),size=1) + scale_shape_manual(values=seq(0,length(levels(TrueClusters))))
     save_plot(paste0(outdir,"/TSNE+PCA_Black_",c,"_",args$name_dataset,".pdf"),tsnepca)
     print("  ...plot tSNE+PCA black and white")
