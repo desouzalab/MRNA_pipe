@@ -43,18 +43,16 @@ for (c in 1:length(all_preprocessed_ssRNASeq_files)){
   print("  ...read")
   
   data=na.omit(data)
-  print(head(data[,1:10]))
+  print(ncol(data))
   ### Set row names for the data frame. Exclude the first column from the data frame.
 
 
   ### Run Seurat
   pbmc <- CreateSeuratObject(counts = data, project = "data3k", min.cells = 3, min.features = 100)
-
+  print(ncol(pbmc))
   # focus on MT features: Low-quality / dying cells often exhibit extensive mitochondrial contamination
   pbmc[["percent.mt"]] <- PercentageFeatureSet(pbmc, pattern = "^MT-")
-  cat("pbmc\n")
-  print(head(pbmc[,1:10]))  
-  print(nrow(pbmc))
+
   vlnplot <- VlnPlot(pbmc, features = c("nFeature_RNA", "nCount_RNA", "percent.mt"), ncol = 3)
   save_plot(paste0(args$console_output_directory,"/VlnPlot",c,"_",args$name_dataset,".pdf"),vlnplot)
   print("  ...plot tSNE+PCA colour")
@@ -69,8 +67,7 @@ for (c in 1:length(all_preprocessed_ssRNASeq_files)){
   save_plot(paste0(args$console_output_directory,"/FeatureScatter_2",c,"_",args$name_dataset,".pdf"),plot2)
   print("  ...plot tSNE+PCA colour")
   dev.off()
-  cat("pbmc\n")
-  print(nrow(pbmc))
+
   # based on figures, filtering (choose the threshold based on plots)
   if(args$name_dataset == "GSE74672"){
     print("worked")
@@ -79,12 +76,10 @@ for (c in 1:length(all_preprocessed_ssRNASeq_files)){
   else{
   pbmc <- subset(pbmc, subset = nFeature_RNA>1700 & nFeature_RNA <3600 & nCount_RNA>49700)
   }
-  cat("pbmc\n")
-  print(ncol(pbmc))
+
   # Normalize the data
   pbmc <- NormalizeData(pbmc, normalization.method="LogNormalize", scale.factor=10000)
-  cat("pbmc\n")
-  print(nrow(pbmc))
+
 
 
   print(head(pbmc[,1:10]))  
