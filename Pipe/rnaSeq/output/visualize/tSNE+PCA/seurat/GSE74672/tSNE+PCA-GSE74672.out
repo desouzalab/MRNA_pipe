@@ -15,5 +15,5 @@ $true_cluster_input_directory
 
 [1] "GSE74672.csv"                "preprocessed_1_GSE74672.csv"
 [1] "true_GSE74672.csv"
-[1] "clustersSeurat_1_GSE74672.csv"
+[1] "clustersSeurat_1_GSE74672.csv" "clustersSeurat_2_GSE74672.csv"
 [1] "DONE"
