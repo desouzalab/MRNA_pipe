@@ -53,6 +53,7 @@ if (length(all_preprocessed_ssRNASeq_files)==length(all_true_cluster_ssRNASeq_fi
     #=====================READ DATA=====================#
     clusters=read.csv(file.path(args$cluster_input_directory,all_clustered_ssRNASeq_files[c]))[,2]
     clusters=as.factor(clusters)
+    print(clusters)
     clusters_filtered<-read.csv(file.path(args$cluster_input_directory,all_clustered_ssRNASeq_files[c]))[,1]
     data=read.csv(file.path(args$preprocessed_input_directory, all_preprocessed_ssRNASeq_files[c]),row.names=1)
     data=na.omit(data)
