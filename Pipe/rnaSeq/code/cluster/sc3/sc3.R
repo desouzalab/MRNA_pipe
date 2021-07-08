@@ -59,6 +59,7 @@ for (c in 1:length(all_preprocessed_ssRNASeq_files)){
   print(all_preprocessed_ssRNASeq_files)
   ### Create data frame
   data=read.csv(file.path(args$input_directory, all_preprocessed_ssRNASeq_files[c]),row.names = 1)
+  data=na.omit(data)
   print("  ...read")
   
   #parameters
@@ -79,15 +80,15 @@ for (c in 1:length(all_preprocessed_ssRNASeq_files)){
   perplexity           = 30
   eps                  = 0.5                                              # parameter for DBSCAN
   MinPts               = 3                                                # parameter for DBSCAN
+  ExprM.RawCounts.filter <- data
   
 
-  
   source("~/projects/def-cdesouza/Lab/GiniClust/Rfunction/GiniClust_Fitting.R")#Upload the function files and give the right path to call them
-  GeneList.final = GiniClust_Fitting(data.type = 'RNA-seq',ExprM.RawCounts.filter = data,out.folder=data_outdir,exprimentID=c)
-  
+  GeneList.final = GiniClust_Fitting(data.type = 'RNA-seq',ExprM.RawCounts.filter=data,out.folder=data_outdir,exprimentID=c)
+  print("done fitting")
   #clustering
-  source("~/projects/def-cdesouza/Lab/GiniClust/Rfunction/GiniClust_tSNE.R")
-  Cluster.Results = GiniClust_Clustering(data.type = 'RNA-seq',ExprM.RawCounts.filter = data,GeneList.final,eps,MinPts,out.folder=data_outdir,exprimentID=c)
+  source("~/projects/def-cdesouza/Lab/GiniClust/Rfunction/GiniClust_Clustering.R")
+  Cluster.Results = GiniClust_Clustering(data.type = 'RNA-seq',ExprM.RawCounts.filter=data,GeneList.final=GeneList.final,eps=eps,MinPts=MinPts,out.folder=data_outdir,exprimentID=c)
   cell.cell.distance = Cluster.Results$cell_cell_dist
   c_membership = Cluster.Results$c_membership # group of each column(cells) 
   clustering_membership_r = Cluster.Results$clustering_membership_r # clusters of each cells with cells' name
