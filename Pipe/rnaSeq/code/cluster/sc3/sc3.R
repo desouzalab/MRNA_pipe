@@ -1,3 +1,12 @@
+
+#======================================================================================================
+#======================================================================================================
+# CLUSTER - GiniClust
+#======================================================================================================
+
+#======================
+# argparse library
+#======================
 suppressMessages(library(argparse))
 suppressMessages(library(scater))
 suppressMessages(library(cowplot))
@@ -17,11 +26,12 @@ suppressMessages(library(reshape))
 suppressMessages(library(abind))
 suppressMessages(library(drc))
 
+RSCRIPT <- "Rscript"
+
 
 #======================
 # arguments
 #======================
-print("tests")
 
 # create parser object
 parser <- ArgumentParser()
@@ -43,38 +53,44 @@ dir.create(file.path(console_outdir), showWarnings=FALSE, recursive=TRUE)
 all_preprocessed_ssRNASeq_files <- list.files(args$input_directory, pattern="*.csv*")
 print(all_preprocessed_ssRNASeq_files)
 
+
 for (c in 1:length(all_preprocessed_ssRNASeq_files)){
   print(c)
   print(all_preprocessed_ssRNASeq_files)
   ### Create data frame
   data=read.csv(file.path(args$input_directory, all_preprocessed_ssRNASeq_files[c]),row.names = 1)
-  data=na.omit(data)
   print("  ...read")
   
   #parameters
-  Gini.pvalue_cutoff   = 0.0001                                          
-  Norm.Gini.cutoff     = 1                                               
-  span                 = 0.9                                             
-  outlier_remove       = 0.75                                             
-  Gamma                = 0.9                                              
-  diff.cutoff          = 1                                                
-  lr.p_value_cutoff    = 1e-5                                             
+  minCellNum           = 3                                                # filtering, for at least expressed in how many cells
+  minGeneNum           = 2000                                             # filtering, for at least expressed in how many genes
+  expressed_cutoff     = 1                                                # filtering, for raw counts
+  log2.expr.cutoffl    = 0                                                # cutoff for range of gene expression   
+  log2.expr.cutoffh    = 20                                               # cutoff for range of gene expression 
+  Gini.pvalue_cutoff   = 0.0001                                           # fiting, Pvalue, control how many gene finally used.
+  Norm.Gini.cutoff     = 1                                                # fiting, NomGini, control how many gene finally used, 1 means not used.
+  span                 = 0.9                                              # parameter for LOESS fitting
+  outlier_remove       = 0.75                                             # parameter for LOESS fitting
+  Gamma                = 0.9                                              # parameter for clustering
+  diff.cutoff          = 1                                                # MAST analysis, filter gene don't have high log2_foldchange to reduce gene num
+  lr.p_value_cutoff    = 1e-5                                             # MAST analysis, pvalue cutoff to identify differential expressed gene
   CountsForNormalized  = 100000                                           
-  rare_p               = 0.05                                             
+  rare_p               = 0.05                                             # propostion of cell number < this value will be considered as rare cell clusters.
   perplexity           = 30
-  eps                  = 0.5                                              
-  MinPts               = 3                                               
+  eps                  = 0.5                                              # parameter for DBSCAN
+  MinPts               = 3                                                # parameter for DBSCAN
   
-  #gene selection
-  source("~/projects/def-cdesouza/Lab/GiniClust/Rfunction/GiniClust_Fitting.R")
+
+  
+  source("~/projects/def-cdesouza/Lab/GiniClust/Rfunction/GiniClust_Fitting.R")#Upload the function files and give the right path to call them
   GeneList.final = GiniClust_Fitting(data.type = 'RNA-seq',ExprM.RawCounts.filter = data,out.folder=data_outdir,exprimentID=c)
   
   #clustering
-  source("~/projects/def-cdesouza/Lab/GiniClust/Rfunction/GiniClust_Clustering.R")
-  Cluster.Results = GiniClust_Clustering(data.type = 'RNA-seq',ExprM.RawCounts.filter = data,GeneList.final,eps,MinPts=5,out.folder=data_outdir,exprimentID=c)
+  source("~/projects/def-cdesouza/Lab/GiniClust/Rfunction/GiniClust_tSNE.R")
+  Cluster.Results = GiniClust_Clustering(data.type = 'RNA-seq',ExprM.RawCounts.filter = data,GeneList.final,eps,MinPts,out.folder=data_outdir,exprimentID=c)
   cell.cell.distance = Cluster.Results$cell_cell_dist
-  c_membership = Cluster.Results$c_membership
-  clustering_membership_r = Cluster.Results$clustering_membership_r
+  c_membership = Cluster.Results$c_membership # group of each column(cells) 
+  clustering_membership_r = Cluster.Results$clustering_membership_r # clusters of each cells with cells' name
   rare.cells.list.all = Cluster.Results$rare.cell
   
   #tSNE visualzation
@@ -84,7 +100,8 @@ for (c in 1:length(all_preprocessed_ssRNASeq_files)){
   #check the clustering results
   table(c_membership)
   print(rare.cells.list.all)
-  
+  # final clustering of GiniClust
+  write.csv(clustering_membership_r, file=paste0(data_outdir,"/clustersGiniCLust_",c,"_",args$name_dataset,".csv"))
   
 }
 
