@@ -43,20 +43,20 @@ for (c in 1:length(all_raw_ssRNASeq_files)){
   ### Create data frame
   data=read.csv(file.path(args$input_directory, all_raw_ssRNASeq_files[c]),row.names = 1)
   print("  ...read")
-  print(head(data[,1:10]))
-
-  seurat_object <- CreateSeuratObject(counts = data, project = "data3k", min.cells = 3, min.features = 200)
-  seurat_object
+  data=na.omit(data)
+  pbmc <- CreateSeuratObject(counts = data, project = "data3k", min.cells = 3, min.features = 100)
   # focus on MT features: Low-quality / dying cells often exhibit extensive mitochondrial contamination
-  seurat_object[["percent.mt"]] <- PercentageFeatureSet(seurat_object, pattern = "^MT-")
-  # Visualize QC metrics as a violin plot
-  vlnplot <- VlnPlot(seurat_object, features = c("nFeature_RNA", "nCount_RNA", "percent.mt"), ncol = 3)
+  pbmc[["percent.mt"]] <- PercentageFeatureSet(pbmc, pattern = "^MT-")
+  
+  #Cutoff Plots
+  vlnplot <- VlnPlot(pbmc, features = c("nFeature_RNA", "nCount_RNA", "percent.mt"), ncol = 3)
   save_plot(paste0(args$console_output_directory,"/VlnPlot",c,"_",args$name_dataset,".pdf"),vlnplot)
   print("  ...plot tSNE+PCA colour")
   dev.off()
+
   # FeatureScatter to visualize feature-feature relationships
-  plot1 <- FeatureScatter(seurat_object, feature1 = "nCount_RNA", feature2 = "percent.mt")
-  plot2 <- FeatureScatter(seurat_object, feature1 = "nCount_RNA", feature2 = "nFeature_RNA")
+  plot1 <- FeatureScatter(pbmc, feature1 = "nCount_RNA", feature2 = "percent.mt")
+  plot2 <- FeatureScatter(pbmc, feature1 = "nCount_RNA", feature2 = "nFeature_RNA")
   plot1 + plot2
   save_plot(paste0(args$console_output_directory,"/FeatureScatter",c,"_",args$name_dataset,".pdf"),plot1)
   print("  ...plot tSNE+PCA colour")
@@ -64,24 +64,21 @@ for (c in 1:length(all_raw_ssRNASeq_files)){
   save_plot(paste0(args$console_output_directory,"/FeatureScatter_2",c,"_",args$name_dataset,".pdf"),plot2)
   print("  ...plot tSNE+PCA colour")
   dev.off()
+
   # based on figures, filtering (choose the threshold based on plots)
-  seurat_object <- subset(seurat_object, subset = nFeature_RNA > 200 & nFeature_RNA < 2500 & percent.mt < 5)
-  #Normalization
-  pbmc <- NormalizeData(seurat_object, normalization.method = "LogNormalize", scale.factor = 10000)
-  ### Set row names for the data frame. 
-  #row.names(data)=data[,1]
+  if(args$name_dataset == "GSE74672"){
+    print("worked")
+    pbmc <- subset(pbmc, subset = nFeature_RNA <7250 & nCount_RNA<38000)
+  }
+  else{
+    pbmc <- subset(pbmc, subset = nFeature_RNA>1700 & nFeature_RNA <3600 & nCount_RNA>49800)
+    print("other")
+  }
 
-  ### Exclude the first column from the data frame.
-  #data=data[,-1]
-
-  ### Exclude records where rowsum is less than 50
-  #data=data[!rowSums(data)<50,]
-
-  ### Exclude records that have less than or equal to 864 zero's
-  #data=data[!apply(data==0, 1, sum) <= 864, ]
-  ### Export preprocessed data frame to CSV file
+  # Normalize the data
+  pbmc <- NormalizeData(pbmc, normalization.method="LogNormalize", scale.factor=10000)
   outFilename <- paste0(data_outdir,"/preprocessed_",c,"_",args$name_dataset,".csv")
-  write.csv(data, file=outFilename,row.names=TRUE)
+  write.csv(as.matrix(GetAssayData(pbmc, slot = "counts")), file=outFilename,row.names=TRUE)
   print("  ...export to .csv")
 
   rm(data)
