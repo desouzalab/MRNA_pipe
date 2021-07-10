@@ -41,6 +41,8 @@ parser$add_argument("--input_directory", default="None", type="character", help=
 parser$add_argument("--data_output_directory", type="character", help="Path to the cluster data output directory")
 parser$add_argument("--console_output_directory", type="character", help="Path to the .out file output directory")
 
+parser$add_argument("--input_raw", type="character", help="Path to the .out file output directory")
+
 args <- parser$parse_args()
 print(args)
 
@@ -53,6 +55,9 @@ dir.create(file.path(console_outdir), showWarnings=FALSE, recursive=TRUE)
 all_preprocessed_ssRNASeq_files <- list.files(args$input_directory, pattern="*.csv*")
 print(all_preprocessed_ssRNASeq_files)
 
+raw_data <- list.files(args$input_raw, pattern="*.csv*")
+print(raw_data)
+
 
 for (c in 1:length(all_preprocessed_ssRNASeq_files)){
   print(c)
@@ -60,8 +65,8 @@ for (c in 1:length(all_preprocessed_ssRNASeq_files)){
   ### Create data frame
   data=read.csv(file.path(args$input_directory, all_preprocessed_ssRNASeq_files[c]),row.names = 1)
   data=na.omit(data)
+  ExprM.RawCounts=na.omit(read.csv(file.path(args$input_raw, raw_data[c]),row.names = 1))
   print("  ...read")
-  
   #parameters
   minCellNum           = 3                                                # filtering, for at least expressed in how many cells
   minGeneNum           = 2000                                             # filtering, for at least expressed in how many genes
