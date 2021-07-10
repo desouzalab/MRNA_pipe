@@ -1,0 +1,14 @@
+sbatch --job-name=test --output=/home/emiliano/projects/def-cdesouza/Lab/MRNA_pipe/Pipe/rnaSeq/output/cluster/backspin/GSE74672/console.out /home/emiliano/projects/def-cdesouza/Lab/MRNA_pipe/Pipe/rnaSeq/code/cluster/backspin/call_spin.sh
+
+Loading file.
+There was an error
+Traceback (most recent call last):
+  File "/home/emiliano/miniconda3/bin/backspin", line 201, in <module>
+    input_cef.readCEF(input_path)
+  File "/home/emiliano/miniconda3/lib/python3.9/site-packages/backspinpy/Cef_tools.py", line 98, in readCEF
+    with open(filepath, 'rU') as fin:
+FileNotFoundError: [Errno 2] No such file or directory: '/home/emiliano/projects/def-cdesouza/Lab/data/preprocessed/GSE74672/ceftype_0_GSE74672_inputforBackSpin.cef'
+
+Error occurred in parsing the input file.
+Please check that your input file is a correctly formatted cef file.
+
