@@ -1,0 +1,33 @@
+$backspin_cluster_input_directory
+[1] "/home/emiliano/projects/def-cdesouza/Lab/MRNA_pipe/Pipe/rnaSeq/output/cluster/backspin/GSE74672"
+
+$giniclust_cluster_input_directory
+[1] "../../rnaSeq/output/cluster/giniclust/GSE74672/"
+
+$name_dataset
+[1] "GSE74672"
+
+$output_directory
+[1] "../../rnaSeq/output/compare/chIndex/GSE74672"
+
+$preprocessed_input_directory
+[1] "/home/emiliano/projects/def-cdesouza/Lab/data/preprocessed/GSE74672/"
+
+$sc3_cluster_input_directory
+[1] "../../rnaSeq/output/cluster/sc3/GSE74672/"
+
+$seurat_cluster_input_directory
+[1] "../../rnaSeq/output/cluster/seurat/GSE74672/"
+
+$true_cluster_input_directory
+[1] "/home/emiliano/projects/def-cdesouza/Lab/data/true/GSE74672/"
+
+[1] "preprocessed_1_GSE74672.csv"
+[1] "true_GSE74672.csv"
+[1] "clustersSC3_1_GSE74672.csv"
+[1] "clustersSeurat_1_GSE74672.csv"
+[1] "clustersGiniCLust_1_GSE74672.csv"
+[1] "clustersBackSpin6_1_GSE74672.csv"
+[1] 1
+/var/spool/slurmd/job50017925/slurm_script: line 7:  4208 Killed                  Rscript ../../rnaSeq/code/compare/${COMPAREMETHOD}/${COMPAREMETHOD}.R --output_directory ../../rnaSeq/output/compare/${COMPAREMETHOD}/${DATASET} --preprocessed_input_directory ~/projects/def-cdesouza/Lab/data/preprocessed/${DATASET}/ --true_cluster_input_directory ~/projects/def-cdesouza/Lab/data/true/${DATASET}/ --sc3_cluster_input_directory ../../rnaSeq/output/cluster/sc3/${DATASET}/ --seurat_cluster_input_directory ../../rnaSeq/output/cluster/seurat/${DATASET}/ --giniclust_cluster_input_directory ../../rnaSeq/output/cluster/giniclust/${DATASET}/ --backspin_cluster_input_directory /home/emiliano/projects/def-cdesouza/Lab/MRNA_pipe/Pipe/rnaSeq/output/cluster/backspin/${DATASET} --name_dataset ${DATASET}
+slurmstepd: error: Detected 1 oom-kill event(s) in step 50017925.batch cgroup. Some of your processes may have been killed by the cgroup out-of-memory handler.
