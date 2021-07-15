@@ -73,6 +73,10 @@ for (c in 1:length(all_preprocessed_ssRNASeq_files)){
     print("worked")
     pbmc <- subset(pbmc, subset = nFeature_RNA <7250 & nCount_RNA<38000)
     }
+  else if (args$name_dataset == "LaManno") {
+    pbmc <- subset(pbmc, subset = nFeature_RNA > 2000 & nFeature_RNA <6000 & nCount_RNA<30000)
+    print("manno") 
+  }
   else{
   pbmc <- subset(pbmc, subset = nFeature_RNA>1700 & nFeature_RNA <3600 & nCount_RNA>49700)
   }

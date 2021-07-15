@@ -29,7 +29,6 @@ RSCRIPT <- "Rscript"
 
 # create parser object
 parser <- ArgumentParser()
-
 parser$add_argument("--name_dataset", type="character", help="name of the dataset")
 parser$add_argument("--input_directory", default="None", type="character", help="path to directory containing what")
 parser$add_argument("--data_output_directory", type="character", help="Path to the cluster data output directory")

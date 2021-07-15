@@ -37,17 +37,18 @@ dir.create(file.path(console_outdir), showWarnings=FALSE)
 
 all_raw_ssRNASeq_files <- list.files(args$input_directory, pattern="*.csv*")
 print(all_raw_ssRNASeq_files)
-
+print("hi")
 for (c in 1:length(all_raw_ssRNASeq_files)){
   cat(c)
   ### Create data frame
-  data=read.csv(file.path(args$input_directory, all_raw_ssRNASeq_files[c]),row.names = 1)
+  data=read.csv(file.path(args$input_directory, all_raw_ssRNASeq_files[c]),row.names=1)
   print("  ...read")
   data=na.omit(data)
+  #print(head(data[1:10]))
   pbmc <- CreateSeuratObject(counts = data, project = "data3k", min.cells = 3, min.features = 100)
   # focus on MT features: Low-quality / dying cells often exhibit extensive mitochondrial contamination
   pbmc[["percent.mt"]] <- PercentageFeatureSet(pbmc, pattern = "^MT-")
-  
+  Idents(object=pbmc) <- "data3k"
   #Cutoff Plots
   vlnplot <- VlnPlot(pbmc, features = c("nFeature_RNA", "nCount_RNA", "percent.mt"), ncol = 3)
   save_plot(paste0(args$console_output_directory,"/VlnPlot",c,"_",args$name_dataset,".pdf"),vlnplot)
@@ -64,21 +65,26 @@ for (c in 1:length(all_raw_ssRNASeq_files)){
   save_plot(paste0(args$console_output_directory,"/FeatureScatter_2",c,"_",args$name_dataset,".pdf"),plot2)
   print("  ...plot tSNE+PCA colour")
   dev.off()
-
+  
   # based on figures, filtering (choose the threshold based on plots)
   if(args$name_dataset == "GSE74672"){
-    print("worked")
+  
     pbmc <- subset(pbmc, subset = nFeature_RNA <7250 & nCount_RNA<38000)
   }
+  else if (args$name_dataset == "LaManno") {
+    pbmc <- subset(pbmc, subset = nFeature_RNA > 2000 & nFeature_RNA <6000 & nCount_RNA<30000)
+    print("manno") 
+  }
   else{
+    
     pbmc <- subset(pbmc, subset = nFeature_RNA>1700 & nFeature_RNA <3600 & nCount_RNA>49800)
     print("other")
   }
-
   # Normalize the data
   pbmc <- NormalizeData(pbmc, normalization.method="LogNormalize", scale.factor=10000)
+  
   outFilename <- paste0(data_outdir,"/preprocessed_",c,"_",args$name_dataset,".csv")
-  write.csv(as.matrix(GetAssayData(pbmc, slot = "counts")), file=outFilename,row.names=TRUE)
+  write.csv(as.matrix(GetAssayData(pbmc, slot = "counts")), file='/home/emiliano/projects/def-cdesouza/Lab/LaManno.csv',row.names=TRUE)
   print("  ...export to .csv")
 
   rm(data)

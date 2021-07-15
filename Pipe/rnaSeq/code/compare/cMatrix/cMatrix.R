@@ -62,12 +62,20 @@ if (length(all_preprocessed_ssRNASeq_files)==length(all_true_cluster_ssRNASeq_fi
     print("  ...read")
     data=na.omit(data)
     data=as.matrix(data)
+    if(args$name_dataset == "LaManno"){
+    true=read.csv(file.path(args$true_cluster_input_directory, all_true_cluster_ssRNASeq_files[c]))
+    apply_paste<-function(x){
+      paste("X",x,sep="")
+    } 
+    true$GSM.ID<- sapply(true$GSM.ID, apply_paste)
+    true=as.data.frame(setDT(true)[true$GSM.ID %chin% colnames(data)])[,2]
     
-    ### Load data
-    # Read .xlsx file containing true cluster data
+    }
+    else{
     true=read.csv(file.path(args$true_cluster_input_directory, all_true_cluster_ssRNASeq_files[c]))
     true=as.data.frame(setDT(true)[true$GSM.ID %chin% colnames(data)])[,3]
-    # Read .csv file containing sc3 cluster data
+    }
+    #  Read .csv file containing sc3 cluster data
     sc3=read.csv(file.path(args$sc3_cluster_input_directory, all_sc3_cluster_ssRNASeq_files[c]))[,2]
     # Read .csv file containing seurat cluster data
     seurat=read.csv(file.path(args$seurat_cluster_input_directory, all_seurat_cluster_ssRNASeq_files[c]))[,2]
