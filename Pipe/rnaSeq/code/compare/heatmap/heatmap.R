@@ -69,14 +69,15 @@ if (length(all_preprocessed_ssRNASeq_files)==length(all_true_cluster_ssRNASeq_fi
     
     ### Load data
     # Read .xlsx file containing true cluster data
-    if(args$name_dataset == "LaManno"){
+    if(args$name_dataset == "LaManno" | args$name_dataset == "zeisel" ){
     true=read.csv(file.path(args$true_cluster_input_directory, all_true_cluster_ssRNASeq_files[c]))
     apply_paste<-function(x){
       paste("X",x,sep="")
     } 
+      
     true$GSM.ID<- sapply(true$GSM.ID, apply_paste)
-    true=as.data.frame(setDT(true)[true$GSM.ID %chin% colnames(data)])[,2]
-    
+    true=true[true$GSM.ID %in% colnames(data),]
+    true=true[,2]
     }
     else{
     true=read.csv(file.path(args$true_cluster_input_directory, all_true_cluster_ssRNASeq_files[c]))

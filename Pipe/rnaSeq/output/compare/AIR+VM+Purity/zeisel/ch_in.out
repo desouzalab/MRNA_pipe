@@ -1,0 +1,76 @@
+$backspin_cluster_input_directory
+[1] "/home/emiliano/projects/def-cdesouza/Lab/MRNA_pipe/Pipe/rnaSeq/output/cluster/backspin/zeisel"
+
+$giniclust_cluster_input_directory
+[1] "../../rnaSeq/output/cluster/giniclust/zeisel/"
+
+$name_dataset
+[1] "zeisel"
+
+$output_directory
+[1] "../../rnaSeq/output/compare/AIR+VM+Purity/zeisel"
+
+$preprocessed_input_directory
+[1] "/home/emiliano/projects/def-cdesouza/Lab/data/preprocessed/zeisel/"
+
+$sc3_cluster_input_directory
+[1] "../../rnaSeq/output/cluster/sc3/zeisel/"
+
+$seurat_cluster_input_directory
+[1] "../../rnaSeq/output/cluster/seurat/zeisel/"
+
+$true_cluster_input_directory
+[1] "/home/emiliano/projects/def-cdesouza/Lab/data/true/zeisel/"
+
+[1] "zeisel.csv"
+[1] "zeisel_true.csv"
+[1] "clustersSC3_1_zeisel.csv"
+[1] "clustersSeurat_1_zeisel.csv"
+[1] "clustersGiniCLust_1_zeisel.csv"
+[1] "clustersBackSpin6_1_zeisel.csv"
+[1] 1
+[1] "  ...read"
+                X x
+1 X1772060224_B09 0
+2 X1772067096_G07 0
+3 X1772062113_G08 0
+4 X1772063070_F03 0
+5 X1772062114_G09 0
+6 X1772063079_A09 0
+                   X  x
+2465 X1772063078_G01 28
+742  X1772067058_H04 13
+2481 X1772063074_B06 28
+339  X1772071040_D01  5
+626  X1772063063_C12  9
+2478 X1772060226_H04 28
+[1] 0 3 3 0 1 0
+[1] "AIR SC3:"
+[1] 0.3582996
+[1] "AIR SEURAT:"
+[1] 0.3829805
+[1] "AIR giniclust:"
+[1] 0.201015
+[1] "AIR backspin:"
+[1] 0.1132004
+[1] "v_measure SC3:"
+[1] 0.6181506
+[1] "\nv_measure SEURAT:"
+[1] 0.635074
+[1] "\nv_measure BACKSPIN:"
+[1] 0.3204264
+[1] "\nv_measure GINICLUST:"
+[1] 0.635074
+[1] "PURITY SC3:"
+[1] 0.4785886
+[1] "\nPURITY SEURAT:"
+[1] 0.486468
+[1] "\nPURITY backspin:"
+[1] 0.2997602
+[1] "\nPURITY giniclust:"
+[1] 0.874272
+[1] "  ...plot purity"
+[1] "  ...plot v measure"
+Warning message:
+In rm(Vsc3) : object 'Vsc3' not found
+[1] "DONE"

@@ -1,6 +1,6 @@
 #!/bin/bash
 
-DATASET=LaManno
+DATASET=zeisel
 module load r/4.0.0
 
 #rest

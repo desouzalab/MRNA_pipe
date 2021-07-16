@@ -67,14 +67,15 @@ if (length(all_preprocessed_ssRNASeq_files)==length(all_true_cluster_ssRNASeq_fi
     
     ### Load data
     # Read .xlsx file containing true cluster data
-    if(args$name_dataset == "LaManno"){
+    if(args$name_dataset == "LaManno" | args$name_dataset == "zeisel" ){
     true=read.csv(file.path(args$true_cluster_input_directory, all_true_cluster_ssRNASeq_files[c]))
     apply_paste<-function(x){
       paste("X",x,sep="")
     } 
+      
     true$GSM.ID<- sapply(true$GSM.ID, apply_paste)
-    true=as.data.frame(setDT(true)[true$GSM.ID %chin% colnames(data)])[,2]
-    
+    true=true[true$GSM.ID %in% colnames(data),]
+    true=true[,2]
     }
     else{
     true=read.csv(file.path(args$true_cluster_input_directory, all_true_cluster_ssRNASeq_files[c]))
@@ -174,7 +175,7 @@ if (length(all_preprocessed_ssRNASeq_files)==length(all_true_cluster_ssRNASeq_fi
     
     hommat=data.frame(Method,hom,clusters)
     
-    homplot=ggplot(hommat, aes(y=hom,x=clusters,color=Method))+geom_point(aes(color=Method))+theme(legend.position = "none")+expand_limits(x=c(0,50), y=c(0, 1))+ labs(x = "Number of Clusters", y = "Purity")+geom_text(aes(label=Method),hjust=0, vjust=2)
+    homplot=ggplot(hommat, aes(y=hom,x=clusters,color=Method))+geom_point(aes(color=Method))+theme(legend.position = "none")+expand_limits(x=c(0,50), y=c(0, 1))+ labs(x = "Number of Clusters", y = "Purity")+geom_text(aes(label=Method),hjust=0, vjust=2)+geom_vline(xintercept=length(levels(as.factor(true))), linetype="dashed", color = "green")
     save_plot(paste0(outdir,"/purity_",c,"_",args$name_dataset,".pdf"),homplot)
     dev.off()
     print("  ...plot purity")
@@ -186,7 +187,7 @@ if (length(all_preprocessed_ssRNASeq_files)==length(all_true_cluster_ssRNASeq_fi
     
     hommat=data.frame(Method,hom,clusters)
     
-    homplot=ggplot(hommat, aes(y=hom,x=clusters,color=Method))+geom_point(aes(color=Method))+theme(legend.position = "none")+expand_limits(x=c(0,50), y=c(0, 1))+ labs(x = "Number of Clusters", y = "V index")+geom_text(aes(label=Method),hjust=0, vjust=2)
+    homplot=ggplot(hommat, aes(y=hom,x=clusters,color=Method))+geom_point(aes(color=Method))+theme(legend.position = "none")+expand_limits(x=c(0,50), y=c(0, 1))+ labs(x = "Number of Clusters", y = "V index")+geom_text(aes(label=Method),hjust=0, vjust=2)+geom_vline(xintercept=length(levels(as.factor(true))), linetype="dashed", color = "green")
     save_plot(paste0(outdir,"/v_measure_",c,"_",args$name_dataset,".pdf"),homplot)
     dev.off()
     print("  ...plot v measure")

@@ -37,13 +37,13 @@ print(args)
 outdir <- args$output_directory
 dir.create(file.path(outdir), showWarnings=FALSE, recursive=TRUE)
 
-all_preprocessed_ssRNASeq_files <- list.files(args$preprocessed_input_directory, pattern = "*.csv*")
+all_preprocessed_ssRNASeq_files <- list.files(args$preprocessed_input_directory, pattern = "*.csv")
 print(all_preprocessed_ssRNASeq_files)
 
-all_true_cluster_ssRNASeq_files <- list.files(args$true_cluster_input_directory, pattern = "*.csv*")
+all_true_cluster_ssRNASeq_files <- list.files(args$true_cluster_input_directory, pattern = "*.csv")
 print(all_true_cluster_ssRNASeq_files)
 
-all_clustered_ssRNASeq_files <- list.files(args$cluster_input_directory, pattern = "*.csv*")
+all_clustered_ssRNASeq_files <- list.files(args$cluster_input_directory, pattern = "*.csv")
 print(all_clustered_ssRNASeq_files)
 
 
@@ -62,6 +62,7 @@ if (length(all_preprocessed_ssRNASeq_files)==length(all_true_cluster_ssRNASeq_fi
     apply_paste<-function(x){
       paste("X",x,sep="")
     } 
+    print(TrueClusters)
     TrueClusters$GSM.ID<- sapply(TrueClusters$GSM.ID, apply_paste)
 
 

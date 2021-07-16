@@ -75,16 +75,21 @@ for (c in 1:length(all_raw_ssRNASeq_files)){
     pbmc <- subset(pbmc, subset = nFeature_RNA > 2000 & nFeature_RNA <6000 & nCount_RNA<30000)
     print("manno") 
   }
-  else{
+  else if(args$name_dataset == "GSM98816+58"){
     
     pbmc <- subset(pbmc, subset = nFeature_RNA>1700 & nFeature_RNA <3600 & nCount_RNA>49800)
+    print("other")
+  }
+    else if(args$name_dataset == "zeisel"){
+    
+    pbmc <- subset(pbmc, subset = nFeature_RNA <7000 & nCount_RNA<40000)
     print("other")
   }
   # Normalize the data
   pbmc <- NormalizeData(pbmc, normalization.method="LogNormalize", scale.factor=10000)
   
   outFilename <- paste0(data_outdir,"/preprocessed_",c,"_",args$name_dataset,".csv")
-  write.csv(as.matrix(GetAssayData(pbmc, slot = "counts")), file='/home/emiliano/projects/def-cdesouza/Lab/LaManno.csv',row.names=TRUE)
+  write.csv(as.matrix(GetAssayData(pbmc, slot = "counts")), file='/home/emiliano/projects/def-cdesouza/Lab/zeisel.csv',row.names=TRUE)
   print("  ...export to .csv")
 
   rm(data)
