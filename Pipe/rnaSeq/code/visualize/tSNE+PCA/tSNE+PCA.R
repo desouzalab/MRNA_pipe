@@ -22,13 +22,21 @@ RSCRIPT <- "Rscript"
 # arguments
 #======================
 
+#======================
+# arguments
+#======================
+
 # create parser object
 parser <- ArgumentParser()
 
 parser$add_argument("--name_dataset", type="character", help="name of the dataset")
 parser$add_argument("--preprocessed_input_directory", default="None", type="character", help="path to directory containing preprocessed ssRNASeq data")
 parser$add_argument("--true_cluster_input_directory", default="None", type="character", help="path to directory containing true cluster ssRNASeq data")
-parser$add_argument("--cluster_input_directory", default="None", type="character", help="path to directory containing clustered ssRNASeq data")
+parser$add_argument("--sc3_cluster_input_directory", default="None", type="character", help="path to directory containing sc3 clustered ssRNASeq data")
+parser$add_argument("--seurat_cluster_input_directory", default="None", type="character", help="path to directory containing seurat clustered ssRNASeq data")
+parser$add_argument("--backspin_cluster_input_directory", default="None", type="character", help="path to directory containing backspin clustered ssRNASeq data")
+parser$add_argument("--giniclust_cluster_input_directory", default="None", type="character", help="path to directory containing giniclust clustered ssRNASeq data")
+
 parser$add_argument("--output_directory", type="character", help="Path to the output directory")
 
 args <- parser$parse_args()
@@ -37,38 +45,67 @@ print(args)
 outdir <- args$output_directory
 dir.create(file.path(outdir), showWarnings=FALSE, recursive=TRUE)
 
-all_preprocessed_ssRNASeq_files <- list.files(args$preprocessed_input_directory, pattern = "*.csv")
+all_preprocessed_ssRNASeq_files <- list.files(args$preprocessed_input_directory, pattern = "*.csv*")
 print(all_preprocessed_ssRNASeq_files)
 
-all_true_cluster_ssRNASeq_files <- list.files(args$true_cluster_input_directory, pattern = "*.csv")
+all_true_cluster_ssRNASeq_files <- list.files(args$true_cluster_input_directory, pattern = "*.csv*")
 print(all_true_cluster_ssRNASeq_files)
 
-all_clustered_ssRNASeq_files <- list.files(args$cluster_input_directory, pattern = "*.csv")
-print(all_clustered_ssRNASeq_files)
+all_sc3_cluster_ssRNASeq_files <- list.files(args$sc3_cluster_input_directory, pattern = "*.csv*")
+print(all_sc3_cluster_ssRNASeq_files)
 
+all_seurat_cluster_ssRNASeq_files <- list.files(args$seurat_cluster_input_directory, pattern = "*.csv*")
+print(all_seurat_cluster_ssRNASeq_files)
 
-if (length(all_preprocessed_ssRNASeq_files)==length(all_true_cluster_ssRNASeq_files) & length(all_true_cluster_ssRNASeq_files)==length(all_clustered_ssRNASeq_files)) {
-  for (c in 1:length(all_preprocessed_ssRNASeq_files)){
+all_giniclust_cluster_ssRNASeq_files <- list.files(args$giniclust_cluster_input_directory, pattern = "*.csv*")
+print(all_giniclust_cluster_ssRNASeq_files)
+
+all_backspin_cluster_ssRNASeq_files <- list.files(args$backspin_cluster_input_directory, pattern = "*.csv*")
+print(all_backspin_cluster_ssRNASeq_files)
+
+if (length(all_preprocessed_ssRNASeq_files)==length(all_true_cluster_ssRNASeq_files) & length(all_sc3_cluster_ssRNASeq_files)==length(all_seurat_cluster_ssRNASeq_files) & length(all_giniclust_cluster_ssRNASeq_files)==length(all_backspin_cluster_ssRNASeq_files)) {
+  for (c in 1:length(all_true_cluster_ssRNASeq_files)){
     print(c)
-    #=====================READ DATA=====================#
-    clusters=read.csv(file.path(args$cluster_input_directory,all_clustered_ssRNASeq_files[c]))[,2]
-    clusters=as.factor(clusters)
-    clusters_filtered<-read.csv(file.path(args$cluster_input_directory,all_clustered_ssRNASeq_files[c]))[,1]
+    
+    ### Create data frame
+    # Read .csv file containing preprocessed data
     data=read.csv(file.path(args$preprocessed_input_directory, all_preprocessed_ssRNASeq_files[c]),row.names=1)
+    print("  ...read")
+    int=quantile(rowSums(data),probs = c(0.05,0.95))
+    data=data[rowSums(data)>int[1]&rowSums(data)<int[2],]
     data=na.omit(data)
-
-    data = data[,clusters_filtered]
-    TrueClusters=read.csv(file.path(args$true_cluster_input_directory, all_true_cluster_ssRNASeq_files[c]))
+    data=as.matrix(data)
+    ### Load data
+    # Read .xlsx file containing true cluster data
+    if(args$name_dataset == "LaManno" | args$name_dataset == "zeisel" ){
+    true=read.csv(file.path(args$true_cluster_input_directory, all_true_cluster_ssRNASeq_files[c]))
     apply_paste<-function(x){
       paste("X",x,sep="")
     } 
-    print(TrueClusters)
-    TrueClusters$GSM.ID<- sapply(TrueClusters$GSM.ID, apply_paste)
+      
+    true$GSM.ID<- sapply(true$GSM.ID, apply_paste)
+    true=true[true$GSM.ID %in% colnames(data),]
+    true=true[,2]
+    }
+    else{
+    true=read.csv(file.path(args$true_cluster_input_directory, all_true_cluster_ssRNASeq_files[c]))
+    true=as.factor(true)
+    # Read .csv file containing sc3 cluster data
+    sc3=read.csv(file.path(args$sc3_cluster_input_directory, all_sc3_cluster_ssRNASeq_files[c]))[,2]
+    sc3=as.factor(sc3)
+    
+    # Read .csv file containing seurat cluster data
+    seurat=read.csv(file.path(args$seurat_cluster_input_directory, all_seurat_cluster_ssRNASeq_files[c]))[,2]
+    seurat=as.factor(seurat)
+    # Read .csv file containing giniclust cluster data
+    giniclust=read.csv(file.path(args$giniclust_cluster_input_directory, all_giniclust_cluster_ssRNASeq_files[c]))[,3]
+    giniclust=as.factor(giniclust)
+    # Read .csv file containing backspin cluster data
+    backspin=read.csv(file.path(args$backspin_cluster_input_directory, all_backspin_cluster_ssRNASeq_files[c]))[,2]
+    backspin=as.factor(backspin)
+    #Extract 100 most variable genes
+    #synthesise example data matrix
 
-
-    TrueClusters=as.data.frame(setDT(TrueClusters)[TrueClusters$GSM.ID %chin% colnames(data)])[,2]
-    print(head(TrueClusters)) 
-    TrueClusters=as.factor(TrueClusters)
     print("  ...read")
     data = na.omit(data)
     data=as.matrix(data)
@@ -78,13 +115,39 @@ if (length(all_preprocessed_ssRNASeq_files)==length(all_true_cluster_ssRNASeq_fi
     tsneX=tsnepca$Y[,1]
     tsneY=tsnepca$Y[,2]
 
-    hommat=data.frame(tsneX,tsneY,TrueClusters,clusters)
-    Method=c("Seurat","SC3")
+    hommat_sc3=data.frame(tsneX,tsneY,true,sc3)
+    hommat_spin=data.frame(tsneX,tsneY,true,backspin)
+    hommat_seurat=data.frame(tsneX,tsneY,true,seurat)
+    hommat_ginilust=data.frame(tsneX,tsneY,true,giniclust)
+    
     #=====================PLOT DATA=====================#
+
+    tsnepca=ggplot(hommat_sc3, aes(y=tsneY,x=tsneX,color=sc3) ) + geom_point(aes(shape=true),size=1) + scale_shape_manual(values=seq(0,length(levels(TrueClusters)))) +theme(axis.text=element_text(size=3))
+    save_plot(paste0(outdir,"/TSNE+PCA_true_and_method+sc3",c,"_",args$name_dataset,".pdf"),tsnepca)
+    print("  ...plot tSNE+PCA black and white")
+    dev.off()
+
+    tsnepca=ggplot(hommat_spin, aes(y=tsneY,x=tsneX,color=spin) ) + geom_point(aes(shape=true),size=1) + scale_shape_manual(values=seq(0,length(levels(TrueClusters))))  +theme(axis.text=element_text(size=3))
+    save_plot(paste0(outdir,"/TSNE+PCA_true_and_method+spin",c,"_",args$name_dataset,".pdf"),tsnepca)
+    print("  ...plot tSNE+PCA black and white")
+    dev.off()
+
+    tsnepca=ggplot(hommat_ginilust, aes(y=tsneY,x=tsneX,color=giniclust) ) + geom_point(aes(shape=true),size=1) + scale_shape_manual(values=seq(0,length(levels(TrueClusters))))  +theme(axis.text=element_text(size=3))
+    save_plot(paste0(outdir,"/TSNE+PCA_true_and_method+giniclust",c,"_",args$name_dataset,".pdf"),tsnepca)
+    print("  ...plot tSNE+PCA black and white")
+    dev.off()
+
+    tsnepca=ggplot(hommat_seurat, aes(y=tsneY,x=tsneX,color=seurat) ) + geom_point(aes(shape=true),size=1) + scale_shape_manual(values=seq(0,length(levels(TrueClusters))))  +theme(axis.text=element_text(size=3))
+    save_plot(paste0(outdir,"/TSNE+PCA_true_and_method+seurat",c,"_",args$name_dataset,".pdf"),tsnepca)
+    print("  ...plot tSNE+PCA black and white")
+    dev.off()
+    
+
     tsnepca=ggplot(hommat, aes(y=tsneY,x=tsneX)) + geom_point(aes(shape=TrueClusters),size=1) + scale_shape_manual(values=seq(0,length(levels(TrueClusters))))
     save_plot(paste0(outdir,"/TSNE+PCA_Black_",c,"_",args$name_dataset,".pdf"),tsnepca)
     print("  ...plot tSNE+PCA black and white")
     dev.off()
+
 
     tsnepca=ggplot(hommat, aes(y=tsneY,x=tsneX,color = TrueClusters))+ geom_point(size=1)
     save_plot(paste0(outdir,"/TSNE+PCA_Colour_noShapes_",c,"_",args$name_dataset,".pdf"),tsnepca)

@@ -64,9 +64,11 @@ if (length(all_preprocessed_ssRNASeq_files)==length(all_true_cluster_ssRNASeq_fi
     # Read .csv file containing preprocessed data
     data=read.csv(file.path(args$preprocessed_input_directory, all_preprocessed_ssRNASeq_files[c]),row.names=1)
     print("  ...read")
+    int=quantile(rowSums(data),probs = c(0.05,0.95))
+    data=data[rowSums(data)>int[1]&rowSums(data)<int[2],]
     data=na.omit(data)
     data=as.matrix(data)
-    
+    #data[data == 0]<- NA
     ### Load data
     # Read .xlsx file containing true cluster data
     if(args$name_dataset == "LaManno" | args$name_dataset == "zeisel" ){
@@ -97,10 +99,6 @@ if (length(all_preprocessed_ssRNASeq_files)==length(all_true_cluster_ssRNASeq_fi
     backspin=as.data.frame(backspin)
     #Extract 100 most variable genes
     #synthesise example data matrix
-    if(args$name_dataset == "GSE74672"){
-      data=data[rowSums(data)<6000 & rowSums(data)>200,]
-      # NROW BEFORE 18548
-    }
 
 
     print(nrow(data))
@@ -108,7 +106,13 @@ if (length(all_preprocessed_ssRNASeq_files)==length(all_true_cluster_ssRNASeq_fi
       data.var <- apply(data, 1, stats::var)
       data[order(data.var, decreasing = i_want_most_var)[1:n],] 
     }
-    mv_100 <- mostVar(data, n = 100)
+    if(args$name_dataset == 'zeisel'){
+      mv_101 <- mostVar(data, n = 101,i_want_most_var = TRUE)
+      mv_100 <- mostVar(mv_101, n = 100,i_want_most_var = FALSE)
+      }
+    else{
+      mv_100 <- mostVar(data, n = 100)
+      }
     ### Plots
     print(rowSums(mv_100))
     forhm = data.frame(TrueClusters=true,Seurat=seurat,SC3=sc3,GiniClust=giniclust,Backspin=backspin)
@@ -119,10 +123,13 @@ if (length(all_preprocessed_ssRNASeq_files)==length(all_true_cluster_ssRNASeq_fi
     #HMTrueFirst=pheatmap(t(mv_100),cluster_rows=F,cluster_cols=F,scale="none",show_rownames=FALSE, show_colnames=FALSE, annotation_row=labelsforhm,fontsize=5,height=10,width=10) 
     data_plus=data[row.names(data) %in% row.names(mv_100),]
     cat(rowSums(data_plus),"this is plus :)")
-    HMTrueFirst=pheatmap(t(data_plus),cluster_rows=F,cluster_cols=F,scale="row",show_rownames=FALSE, show_colnames=FALSE, annotation_row=labelsforhm,fontsize =5) 
 
-    save_plot(paste0(outdir,"/heatmapTrueFirst_",c,"_",args$name_dataset,".png"),HMTrueFirst)
-    print(rownames(data)[1:10])
+    HMTrueFirst=pheatmap(t(data_plus),cluster_rows=F,cluster_cols=F,show_rownames=FALSE, show_colnames=FALSE, annotation_row=labelsforhm,fontsize =5) 
+    save_plot(paste0(outdir,"/heatmapTrueFirst_no_row_scale",c,"_",args$name_dataset,".png"),HMTrueFirst)
+   
+    HMTrueFirst=pheatmap(t(data_plus),scale ="row",cluster_rows=F,cluster_cols=F,show_rownames=FALSE, show_colnames=FALSE, annotation_row=labelsforhm,fontsize =5) 
+    save_plot(paste0(outdir,"/heatmapTrueFirst_ROW_SCALE",c,"_",args$name_dataset,".png"),HMTrueFirst)
+'
     data_minus=data[!(row.names(data) %in% row.names(mv_100)),]
 
     #HMTrueFirst=pheatmap(t(mv_100),cluster_rows=F,cluster_cols=F,scale="none",show_rownames=FALSE, show_colnames=FALSE, annotation_row=labelsforhm,fontsize=5,height=10,width=10) 
@@ -131,7 +138,7 @@ if (length(all_preprocessed_ssRNASeq_files)==length(all_true_cluster_ssRNASeq_fi
     save_plot(paste0(outdir,"/heatmapTrueFirst_no_var_genes",c,"_",args$name_dataset,".png"),HMTrueFirst)
     
     print("  ...plot heatmapTrueFirst")
-
+'
 
     rm(dat)
     rm(data)
