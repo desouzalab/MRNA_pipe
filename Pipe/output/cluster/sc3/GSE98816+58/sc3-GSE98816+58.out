@@ -1,0 +1,22 @@
+$console_output_directory
+[1] "../../rnaSeq/output/cluster/sc3/GSE98816+58"
+
+$data_output_directory
+[1] "../../rnaSeq/output/cluster/sc3/GSE98816+58"
+
+$input_directory
+[1] "/home/emiliano/projects/def-cdesouza/Lab/data/preprocessed/GSE98816+58"
+
+$name_dataset
+[1] "GSE98816+58"
+
+[1] "preprocessed_1_GSE98816+58.csv"
+[1] 1
+[1] "preprocessed_1_GSE98816+58.csv"
+[1] "  ...read"
+[1] "  ...plot PCA"
+Estimating k...
+Error in eigen(sigmaHatNaive, symmetric = TRUE, only.values = TRUE) : 
+  infinite or missing values in 'x'
+Calls: sc3_estimate_k -> sc3_estimate_k -> estkTW -> eigen
+Execution halted

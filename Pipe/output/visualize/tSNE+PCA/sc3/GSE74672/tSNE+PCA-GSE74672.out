@@ -1,0 +1,19 @@
+$cluster_input_directory
+[1] "../../rnaSeq/output/cluster/sc3/GSE74672/"
+
+$name_dataset
+[1] "GSE74672"
+
+$output_directory
+[1] "../../rnaSeq/output/visualize/tSNE+PCA/sc3/GSE74672/"
+
+$preprocessed_input_directory
+[1] "/home/emiliano/projects/def-cdesouza/Lab/data/preprocessed/GSE74672/"
+
+$true_cluster_input_directory
+[1] "/home/emiliano/projects/def-cdesouza/Lab/data/true/GSE74672/"
+
+[1] "GSE74672.csv"
+[1] "true_GSE74672.csv"
+[1] "clustersSC3_1_GSE74672.csv" "clustersSC3_2_GSE74672.csv"
+[1] "DONE"

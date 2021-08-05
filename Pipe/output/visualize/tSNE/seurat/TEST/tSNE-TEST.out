@@ -1,0 +1,24 @@
+$cluster_input_directory
+[1] "rnaSeq/output/cluster/seurat/TEST/"
+
+$name_dataset
+[1] "TEST"
+
+$output_directory
+[1] "rnaSeq/output/visualize/tSNE/seurat/TEST"
+
+$preprocessed_input_directory
+[1] "rnaSeq/data/preprocessed/TEST/"
+
+$trueCluster_input_directory
+[1] "rnaSeq/data/raw/TEST/"
+
+[1] "preprocessed_1_TEST.csv"
+[1] "clustersSeurat_1_TEST.csv"
+[1] 1
+[1] "  ...read"
+***t-SNE wrapper function***
+running...
+done.
+[1] "  ...tSNE"
+[1] "DONE"

@@ -1,0 +1,25 @@
+Building DAG of jobs...
+Using shell: /cvmfs/soft.computecanada.ca/gentoo/2020/bin/bash
+Provided cores: 1
+Rules claiming more threads will be scaled down.
+Job counts:
+	count	jobs
+	1	preprocess_data
+	1
+
+[Wed Aug  4 15:44:33 2021]
+rule preprocess_data:
+    output: /home/emiliano/projects/def-cdesouza/Lab/LaManno_pre.csv
+    jobid: 0
+
+[Wed Aug  4 15:44:33 2021]
+Error in rule preprocess_data:
+    jobid: 0
+    output: /home/emiliano/projects/def-cdesouza/Lab/LaManno_pre.csv
+    shell:
+        Rscript /home/emiliano/projects/def-cdesouza/Lab/MRNA_pipe/Pipe/code/preprocess/preprocess.R --data_output_directory /home/emiliano/projects/def-cdesouza/Lab --console_output_directory /home/emiliano/projects/def-cdesouza/Lab//cef_conv.out --input_directory /home/emiliano/projects/def-cdesouza/Lab/data/raw/LaManno --name_dataset LaManno
+        (exited with non-zero exit code)
+
+Shutting down, this might take some time.
+Exiting because a job execution failed. Look above for error message
+Complete log: /project/6052548/Lab/MRNA_pipe/.snakemake/log/2021-08-04T154433.251655.snakemake.log

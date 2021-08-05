@@ -1,0 +1,27 @@
+Building DAG of jobs...
+Using shell: /cvmfs/soft.computecanada.ca/gentoo/2020/bin/bash
+Provided cores: 1
+Rules claiming more threads will be scaled down.
+Job counts:
+	count	jobs
+	1	preprocess
+	1
+
+[Wed Aug  4 15:07:10 2021]
+rule preprocess:
+    output: /home/emiliano/projects/def-cdesouza/Lab/data/preprocessed/LaManno/ceftype_1_LaManno_inputforBackSpin.cef
+    jobid: 0
+
+[Wed Aug  4 15:07:13 2021]
+Error in rule preprocess:
+    jobid: 0
+    output: /home/emiliano/projects/def-cdesouza/Lab/data/preprocessed/LaManno/ceftype_1_LaManno_inputforBackSpin.cef
+    shell:
+        Rscript /home/emiliano/projects/def-cdesouza/Lab/MRNA_pipe/Pipe/code/preprocess/Cef_convert.R --data_output_directory /home/emiliano/projects/def-cdesouza/Lab/data/preprocessed/LaManno --console_output_directory /home/emiliano/projects/def-cdesouza/Lab//cef_conv.out --input_directory /home/emiliano/projects/def-cdesouza/Lab/data/raw/LaManno --name_dataset LaManno
+        (exited with non-zero exit code)
+
+Removing output files of failed job preprocess since they might be corrupted:
+/home/emiliano/projects/def-cdesouza/Lab/data/preprocessed/LaManno/ceftype_1_LaManno_inputforBackSpin.cef
+Shutting down, this might take some time.
+Exiting because a job execution failed. Look above for error message
+Complete log: /project/6052548/Lab/MRNA_pipe/.snakemake/log/2021-08-04T150710.812325.snakemake.log

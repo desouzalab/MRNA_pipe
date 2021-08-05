@@ -1,0 +1,24 @@
+$cluster_input_directory
+[1] "../../rnaSeq/output/cluster/sc3/GSE98816/"
+
+$name_dataset
+[1] "GSE98816"
+
+$output_directory
+[1] "../../rnaSeq/output/visualize/tSNE/sc3/GSE98816/"
+
+$preprocessed_input_directory
+[1] "/home/emiliano/projects/def-cdesouza/Lab/data/preprocessed/GSE98816/"
+
+$true_cluster_input_directory
+[1] "/home/emiliano/projects/def-cdesouza/Lab/data/true/GSE98816/"
+
+[1] "preprocessed_1_GSE98816.csv"
+[1] "labels_GSE98816.csv"
+[1] "clustersSC3_1_GSE98816.csv"
+[1] 1
+[1] "  ...read"
+Error in `[.data.frame`(read.csv(file.path(args$true_cluster_input_directory,  : 
+  undefined columns selected
+Calls: [ -> [.data.frame
+Execution halted

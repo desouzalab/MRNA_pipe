@@ -1,0 +1,2 @@
+SyntaxError in line 14 of /project/6052548/Lab/MRNA_pipe/Snakefile:
+Unexpected keyword print in rule definition (Snakefile, line 14)

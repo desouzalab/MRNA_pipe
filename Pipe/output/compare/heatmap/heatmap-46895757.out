@@ -1,0 +1,28 @@
+$name_dataset
+[1] "GSE74672"
+
+$output_directory
+[1] "rnaSeq/output/compare/heatmap/GSE74672"
+
+$preprocessed_input_directory
+[1] "rnaSeq/data/preprocessed/GSE74672/"
+
+$sc3_cluster_input_directory
+[1] "rnaSeq/output/cluster/sc3/GSE74672/"
+
+$seurat_cluster_input_directory
+[1] "rnaSeq/output/cluster/seurat/GSE74672/"
+
+$true_cluster_input_directory
+[1] "rnaSeq/data/raw/GSE74672/"
+
+[1] "preprocessed_1_GSE74672.csv"
+[1] "Levels_GSE74672.xlsx"
+[1] "clustersSC3_1_GSE74672.csv"
+[1] "clustersSeurat_1_GSE74672.csv"
+[1] 1
+[1] "  ...read"
+[1] "  ...read"
+[1] "  ...plot heatmapTrueFirst"
+[1] "  ...plot heatmapSeuratFirst"
+[1] "DONE"

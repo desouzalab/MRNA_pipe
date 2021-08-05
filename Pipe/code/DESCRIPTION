@@ -1,0 +1,13 @@
+Package: tbd
+Type: Package
+Title: R package for pipeline
+Version: 1.0
+Date: 2019-09-19
+Author: Emiliano Penaloza
+Maintainer: Emiliano Penaloza <epenaloz@uwo.ca>
+Description: Non-probabilistic clustering methods to cluster methylation data. Used by the epiclomal workflow. Clustering methods include EuclideanClust, HammingClust (PBAL), PearsonClust, DensityCut
+License: GPL (>= 2)
+Imports: dplyr, Seurat, patchwork,cowplot
+
+LinkingTo: Rcpp
+RoxygenNote: 6.1.1

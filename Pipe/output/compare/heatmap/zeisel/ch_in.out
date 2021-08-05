@@ -1,0 +1,34 @@
+$backspin_cluster_input_directory
+[1] "/home/emiliano/projects/def-cdesouza/Lab/MRNA_pipe/Pipe/rnaSeq/output/cluster/backspin/zeisel"
+
+$giniclust_cluster_input_directory
+[1] "../../rnaSeq/output/cluster/giniclust/zeisel/"
+
+$name_dataset
+[1] "zeisel"
+
+$output_directory
+[1] "../../rnaSeq/output/compare/heatmap/zeisel"
+
+$preprocessed_input_directory
+[1] "/home/emiliano/projects/def-cdesouza/Lab/data/preprocessed/zeisel/"
+
+$sc3_cluster_input_directory
+[1] "../../rnaSeq/output/cluster/sc3/zeisel/"
+
+$seurat_cluster_input_directory
+[1] "../../rnaSeq/output/cluster/seurat/zeisel/"
+
+$true_cluster_input_directory
+[1] "/home/emiliano/projects/def-cdesouza/Lab/data/true/zeisel/"
+
+[1] "zeisel.csv"
+[1] "zeisel_true.csv"
+[1] "clustersSC3_1_zeisel.csv"
+[1] "clustersSeurat_1_zeisel.csv"
+[1] "clustersGiniCLust_1_zeisel.csv"
+[1] "clustersBackSpin6_1_zeisel.csv"
+[1] 1
+[1] "  ...read"
+Error: $ operator is invalid for atomic vectors
+Execution halted

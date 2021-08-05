@@ -1,0 +1,594 @@
+
+Loading file.
+Performing feature selection
+Selected 500 genes
+backSPIN started
+----------------
+
+Input file:
+/home/emiliano/projects/def-cdesouza/Lab/data/preprocessed/GSE74672/ceftype_1_GSE74672_inputforBackSpin.cef
+
+Output file:
+/home/emiliano/projects/def-cdesouza/Lab/MRNA_pipe/Pipe/rnaSeq/output/cluster/backspin/GSE74672/backspin.cef
+
+numLevels: 6
+first_run_iters: 10
+first_run_step: 0.100
+runs_iters: 8
+runs_step: 0.300
+split_limit_g: 2
+split_limit_c: 2
+stop_const: 1.150
+low_thrs: 0.200
+
+
+Preparatory SPIN
+
+Sorting cells.
+Neighbourood=1871, 1700, 1544, 1402, 1273, 1156, 1050, 953, 865, 785, 712, 646, 586, 531, 481, 436, 395, 358, 324, 293, 265, 240, 217, 196, 177, 160, 144, 130, 117, 105, 94, 84, 75, 67, 60, 53, 47, 41, 36, 31, 27, 23, 20, 17, 14, 11, 9, 7, 5, 3, 1, 
+Splitting (500, 2866) 
+in (84,1062) 
+and (416,1804)
+Sorting cells.
+Neighbourood=671, 515, 395, 303, 232, 177, 135, 103, 78, 59, 44, 33, 24, 17, 12, 8, 5, 3, 1, 
+Sorting cells.
+Neighbourood=1138, 874, 671, 515, 395, 303, 232, 177, 135, 103, 78, 59, 44, 33, 24, 17, 12, 8, 5, 3, 1, 
+Splitting (84, 1062) 
+in (27,413) 
+and (57,649)
+Sorting cells.
+Neighbourood=303, 232, 177, 135, 103, 78, 59, 44, 33, 24, 17, 12, 8, 5, 3, 1, 
+Sorting cells.
+Neighbourood=395, 303, 232, 177, 135, 103, 78, 59, 44, 33, 24, 17, 12, 8, 5, 3, 1, 
+Splitting (416, 1804) 
+in (147,897) 
+and (269,907)
+Sorting cells.
+Neighbourood=671, 515, 395, 303, 232, 177, 135, 103, 78, 59, 44, 33, 24, 17, 12, 8, 5, 3, 1, 
+Sorting cells.
+Neighbourood=671, 515, 395, 303, 232, 177, 135, 103, 78, 59, 44, 33, 24, 17, 12, 8, 5, 3, 1, 
+Splitting (27, 413) 
+in (5,110) 
+and (22,303)
+Sorting cells.
+Neighbourood=78, 59, 44, 33, 24, 17, 12, 8, 5, 3, 1, 
+Sorting cells.
+Neighbourood=232, 177, 135, 103, 78, 59, 44, 33, 24, 17, 12, 8, 5, 3, 1, 
+Splitting (57, 649) 
+in (8,397) 
+and (49,252)
+Sorting cells.
+Neighbourood=303, 232, 177, 135, 103, 78, 59, 44, 33, 24, 17, 12, 8, 5, 3, 1, 
+Sorting cells.
+Neighbourood=177, 135, 103, 78, 59, 44, 33, 24, 17, 12, 8, 5, 3, 1, 
+Splitting (147, 897) 
+in (22,412) 
+and (125,485)
+Sorting cells.
+Neighbourood=303, 232, 177, 135, 103, 78, 59, 44, 33, 24, 17, 12, 8, 5, 3, 1, 
+Sorting cells.
+Neighbourood=303, 232, 177, 135, 103, 78, 59, 44, 33, 24, 17, 12, 8, 5, 3, 1, 
+Splitting (269, 907) 
+in (148,609) 
+and (121,298)
+Sorting cells.
+Neighbourood=395, 303, 232, 177, 135, 103, 78, 59, 44, 33, 24, 17, 12, 8, 5, 3, 1, 
+Sorting cells.
+Neighbourood=232, 177, 135, 103, 78, 59, 44, 33, 24, 17, 12, 8, 5, 3, 1, 
+Splitting (5, 110) 
+in (3,63) 
+and (2,47)
+Sorting cells.
+Neighbourood=44, 33, 24, 17, 12, 8, 5, 3, 1, 
+Sorting cells.
+Neighbourood=33, 24, 17, 12, 8, 5, 3, 1, 
+Splitting (22, 303) 
+in (6,158) 
+and (16,145)
+Sorting cells.
+Neighbourood=103, 78, 59, 44, 33, 24, 17, 12, 8, 5, 3, 1, 
+Sorting cells.
+Neighbourood=103, 78, 59, 44, 33, 24, 17, 12, 8, 5, 3, 1, 
+Splitting (8, 397) 
+in (1,197) 
+and (7,200)
+Sorting cells.
+Neighbourood=135, 103, 78, 59, 44, 33, 24, 17, 12, 8, 5, 3, 1, 
+Splitting (49, 252) 
+in (45,54) 
+and (4,198)
+Sorting cells.
+Neighbourood=33, 24, 17, 12, 8, 5, 3, 1, 
+Sorting cells.
+Neighbourood=135, 103, 78, 59, 44, 33, 24, 17, 12, 8, 5, 3, 1, 
+Splitting (22, 412) 
+in (8,142) 
+and (14,270)
+Sorting cells.
+Neighbourood=103, 78, 59, 44, 33, 24, 17, 12, 8, 5, 3, 1, 
+Sorting cells.
+Neighbourood=177, 135, 103, 78, 59, 44, 33, 24, 17, 12, 8, 5, 3, 1, 
+Splitting (125, 485) 
+in (58,248) 
+and (67,237)
+Sorting cells.
+Neighbourood=177, 135, 103, 78, 59, 44, 33, 24, 17, 12, 8, 5, 3, 1, 
+Sorting cells.
+Neighbourood=177, 135, 103, 78, 59, 44, 33, 24, 17, 12, 8, 5, 3, 1, 
+Splitting (148, 609) 
+in (40,295) 
+and (108,314)
+Sorting cells.
+Neighbourood=177, 135, 103, 78, 59, 44, 33, 24, 17, 12, 8, 5, 3, 1, 
+Sorting cells.
+Neighbourood=232, 177, 135, 103, 78, 59, 44, 33, 24, 17, 12, 8, 5, 3, 1, 
+Splitting (121, 298) 
+in (76,191) 
+and (45,107)
+Sorting cells.
+Neighbourood=135, 103, 78, 59, 44, 33, 24, 17, 12, 8, 5, 3, 1, 
+Sorting cells.
+Neighbourood=78, 59, 44, 33, 24, 17, 12, 8, 5, 3, 1, 
+Splitting (3, 63) 
+in (2,54) 
+and (1,9)
+Sorting cells.
+Neighbourood=33, 24, 17, 12, 8, 5, 3, 1, 
+Splitting (6, 158) 
+in (1,60) 
+and (5,98)
+Sorting cells.
+Neighbourood=59, 44, 33, 24, 17, 12, 8, 5, 3, 1, Low splitting score was : 1.1407
+
+Splitting (7, 200) 
+in (6,126) 
+and (1,74)
+Sorting cells.
+Neighbourood=78, 59, 44, 33, 24, 17, 12, 8, 5, 3, 1, 
+Splitting (45, 54) 
+in (9,22) 
+and (36,32)
+Sorting cells.
+Neighbourood=17, 12, 8, 5, 3, 1, 
+Sorting cells.
+Neighbourood=24, 17, 12, 8, 5, 3, 1, Low splitting score was : 1.1195
+
+Splitting (8, 142) 
+in (3,76) 
+and (5,66)
+Sorting cells.
+Neighbourood=59, 44, 33, 24, 17, 12, 8, 5, 3, 1, 
+Sorting cells.
+Neighbourood=44, 33, 24, 17, 12, 8, 5, 3, 1, 
+Splitting (14, 270) 
+in (6,157) 
+and (8,113)
+Sorting cells.
+Neighbourood=103, 78, 59, 44, 33, 24, 17, 12, 8, 5, 3, 1, 
+Sorting cells.
+Neighbourood=78, 59, 44, 33, 24, 17, 12, 8, 5, 3, 1, 
+Splitting (58, 248) 
+in (18,105) 
+and (40,143)
+Sorting cells.
+Neighbourood=78, 59, 44, 33, 24, 17, 12, 8, 5, 3, 1, 
+Sorting cells.
+Neighbourood=103, 78, 59, 44, 33, 24, 17, 12, 8, 5, 3, 1, 
+Splitting (67, 237) 
+in (13,110) 
+and (54,127)
+Sorting cells.
+Neighbourood=78, 59, 44, 33, 24, 17, 12, 8, 5, 3, 1, 
+Sorting cells.
+Neighbourood=78, 59, 44, 33, 24, 17, 12, 8, 5, 3, 1, Low splitting score was : 1.1432
+
+Splitting (108, 314) 
+in (101,210) 
+and (7,104)
+Sorting cells.
+Neighbourood=135, 103, 78, 59, 44, 33, 24, 17, 12, 8, 5, 3, 1, 
+Sorting cells.
+Neighbourood=78, 59, 44, 33, 24, 17, 12, 8, 5, 3, 1, 
+Splitting (76, 191) 
+in (8,75) 
+and (68,116)
+Sorting cells.
+Neighbourood=44, 33, 24, 17, 12, 8, 5, 3, 1, 
+Sorting cells.
+Neighbourood=78, 59, 44, 33, 24, 17, 12, 8, 5, 3, 1, 
+Splitting (45, 107) 
+in (20,69) 
+and (25,38)
+Sorting cells.
+Neighbourood=44, 33, 24, 17, 12, 8, 5, 3, 1, 
+Sorting cells.
+Neighbourood=24, 17, 12, 8, 5, 3, 1, 
+Splitting (5, 98) 
+in (1,33) 
+and (4,65)
+Sorting genes.
+Neighbourood=3, 
+1, 
+
+Sorting cells.
+Neighbourood=44, 
+33, 
+24, 
+17, 
+12, 
+8, 
+5, 
+3, 
+1, 
+Low splitting score was : 1.1407
+
+Sorting genes.
+Neighbourood=12, 8, 5, 3, 1, 
+Splitting (6, 126) 
+in (1,39) 
+and (5,87)
+Sorting genes.
+Neighbourood=3, 
+1, 
+
+Sorting cells.
+Neighbourood=59, 
+44, 
+33, 
+24, 
+17, 
+12, 
+8, 
+5, 
+3, 
+1, 
+
+Splitting (9, 22) 
+in (8,15) 
+and (1,7)
+Sorting genes.
+Neighbourood=5, 
+3, 
+1, 
+
+Sorting cells.
+Neighbourood=8, 
+5, 
+3, 
+1, 
+
+Splitting (36, 32) 
+in (1,17) 
+and (35,15)
+Sorting genes.
+Neighbourood=24, 
+17, 
+12, 
+8, 
+5, 
+3, 
+1, 
+
+Sorting cells.
+Neighbourood=8, 
+5, 
+3, 
+1, 
+Low splitting score was : 1.1195
+
+Sorting genes.
+Neighbourood=3, 1, 
+Splitting (3, 76) 
+in (1,65) 
+and (2,11)
+Sorting genes.
+Neighbourood=1, 
+
+Sorting cells.
+Neighbourood=8, 
+5, 
+3, 
+1, 
+
+Splitting (5, 66) 
+in (3,29) 
+and (2,37)
+Sorting genes.
+Neighbourood=1, 
+
+Sorting cells.
+Neighbourood=17, 
+12, 
+8, 
+5, 
+3, 
+1, 
+
+Sorting genes.
+Neighbourood=1, 
+
+Sorting cells.
+Neighbourood=24, 
+17, 
+12, 
+8, 
+5, 
+3, 
+1, 
+
+Splitting (6, 157) 
+in (2,24) 
+and (4,133)
+Sorting genes.
+Neighbourood=1, 
+
+Sorting cells.
+Neighbourood=17, 
+12, 
+8, 
+5, 
+3, 
+1, 
+
+Sorting genes.
+Neighbourood=3, 
+1, 
+
+Sorting cells.
+Neighbourood=103, 
+78, 
+59, 
+44, 
+33, 
+24, 
+17, 
+12, 
+8, 
+5, 
+3, 
+1, 
+
+Splitting (8, 113) 
+in (3,60) 
+and (5,53)
+Sorting genes.
+Neighbourood=1, 
+
+Sorting cells.
+Neighbourood=44, 
+33, 
+24, 
+17, 
+12, 
+8, 
+5, 
+3, 
+1, 
+
+Sorting genes.
+Neighbourood=3, 
+1, 
+
+Sorting cells.
+Neighbourood=33, 
+24, 
+17, 
+12, 
+8, 
+5, 
+3, 
+1, 
+
+Splitting (18, 105) 
+in (15,81) 
+and (3,24)
+Sorting genes.
+Neighbourood=8, 
+5, 
+3, 
+1, 
+
+Sorting cells.
+Neighbourood=59, 
+44, 
+33, 
+24, 
+17, 
+12, 
+8, 
+5, 
+3, 
+1, 
+
+Sorting genes.
+Neighbourood=1, 
+
+Sorting cells.
+Neighbourood=17, 
+12, 
+8, 
+5, 
+3, 
+1, 
+
+Splitting (40, 143) 
+in (35,107) 
+and (5,36)
+Sorting genes.
+Neighbourood=24, 
+17, 
+12, 
+8, 
+5, 
+3, 
+1, 
+
+Sorting cells.
+Neighbourood=78, 
+59, 
+44, 
+33, 
+24, 
+17, 
+12, 
+8, 
+5, 
+3, 
+1, 
+
+Sorting genes.
+Neighbourood=3, 
+1, 
+
+Sorting cells.
+Neighbourood=24, 
+17, 
+12, 
+8, 
+5, 
+3, 
+1, 
+
+Splitting (13, 110) 
+in (6,55) 
+and (7,55)
+Sorting genes.
+Neighbourood=3, 
+1, 
+
+Sorting cells.
+Neighbourood=33, 
+24, 
+17, 
+12, 
+8, 
+5, 
+3, 
+1, 
+
+Sorting genes.
+Neighbourood=5, 
+3, 
+1, 
+
+Sorting cells.
+Neighbourood=33, 
+24, 
+17, 
+12, 
+8, 
+5, 
+3, 
+1, 
+
+Splitting (54, 127) 
+in (2,43) 
+and (52,84)
+Sorting genes.
+Neighbourood=1, 
+
+Sorting cells.
+Neighbourood=33, 
+24, 
+17, 
+12, 
+8, 
+5, 
+3, 
+1, 
+
+Sorting genes.
+Neighbourood=33, 
+24, 
+17, 
+12, 
+8, 
+5, 
+3, 
+1, 
+
+Sorting cells.
+Neighbourood=59, 
+44, 
+33, 
+24, 
+17, 
+12, 
+8, 
+5, 
+3, 
+1, 
+Low splitting score was : 1.1432
+
+Sorting genes.
+Neighbourood=24, 17, 12, 8, 5, 3, 1, Low splitting score was : 1.1060
+
+Sorting genes.
+Neighbourood=78, 59, 44, 33, 24, 17, 12, 8, 5, 3, 1, 
+Splitting (7, 104) 
+in (3,98) 
+and (4,6)
+Sorting genes.
+Neighbourood=1, 
+
+Sorting cells.
+Neighbourood=59, 
+44, 
+33, 
+24, 
+17, 
+12, 
+8, 
+5, 
+3, 
+1, 
+
+Sorting genes.
+Neighbourood=3, 
+1, 
+
+Sorting cells.
+Neighbourood=3, 
+1, 
+Low splitting score was : 1.1472
+
+Sorting genes.
+Neighbourood=5, 3, 1, Low splitting score was : 1.1340
+
+Sorting genes.
+Neighbourood=44, 33, 24, 17, 12, 8, 5, 3, 1, Low splitting score was : 1.1303
+
+Sorting genes.
+Neighbourood=12, 8, 5, 3, 1, 
+Splitting (25, 38) 
+in (23,19) 
+and (2,19)
+Sorting genes.
+Neighbourood=17, 
+12, 
+8, 
+5, 
+3, 
+1, 
+
+Sorting cells.
+Neighbourood=12, 
+8, 
+5, 
+3, 
+1, 
+
+Sorting genes.
+Neighbourood=1, 
+
+Sorting cells.
+Neighbourood=12, 
+8, 
+5, 
+3, 
+1, 
+/home/emiliano/miniconda3/bin/backspin:259: DeprecationWarning: Calling np.sum(generator) is deprecated, and in the future will give a different result. Use np.sum(np.fromiter(generator)) or the python sum builtin instead.
+  if sum(type(i)==float for i in input_cef.matrix[0]) + sum(type(i)==float for i in input_cef.matrix[-1]) == 0:
+
+Writing output.
+

@@ -1,0 +1,18 @@
+Building DAG of jobs...
+Using shell: /cvmfs/soft.computecanada.ca/gentoo/2020/bin/bash
+Provided cores: 1
+Rules claiming more threads will be scaled down.
+Job counts:
+	count	jobs
+	1	preprocess
+	1
+
+[Wed Aug  4 15:23:04 2021]
+rule preprocess:
+    output: /home/emiliano/projects/def-cdesouza/Lab/ceftype_LaManno.cef
+    jobid: 0
+
+[Wed Aug  4 15:23:08 2021]
+Finished job 0.
+1 of 1 steps (100%) done
+Complete log: /project/6052548/Lab/MRNA_pipe/.snakemake/log/2021-08-04T152304.369831.snakemake.log

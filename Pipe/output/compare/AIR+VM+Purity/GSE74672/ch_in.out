@@ -1,0 +1,76 @@
+$backspin_cluster_input_directory
+[1] "/home/emiliano/projects/def-cdesouza/Lab/MRNA_pipe/Pipe/rnaSeq/output/cluster/backspin/GSE74672"
+
+$giniclust_cluster_input_directory
+[1] "../../rnaSeq/output/cluster/giniclust/GSE74672/"
+
+$name_dataset
+[1] "GSE74672"
+
+$output_directory
+[1] "../../rnaSeq/output/compare/AIR+VM+Purity/GSE74672"
+
+$preprocessed_input_directory
+[1] "/home/emiliano/projects/def-cdesouza/Lab/data/preprocessed/GSE74672/"
+
+$sc3_cluster_input_directory
+[1] "../../rnaSeq/output/cluster/sc3/GSE74672/"
+
+$seurat_cluster_input_directory
+[1] "../../rnaSeq/output/cluster/seurat/GSE74672/"
+
+$true_cluster_input_directory
+[1] "/home/emiliano/projects/def-cdesouza/Lab/data/true/GSE74672/"
+
+[1] "preprocessed_1_GSE74672.csv"
+[1] "true_GSE74672.csv"
+[1] "clustersSC3_1_GSE74672.csv"
+[1] "clustersSeurat_1_GSE74672.csv"
+[1] "clustersGiniCLust_1_GSE74672.csv"
+[1] "clustersBackSpin6_1_GSE74672.csv"
+[1] 1
+[1] "  ...read"
+                X x
+1   GSM1772084021 0
+2   GSM1772058147 0
+3 GSM1772096141.6 0
+4 GSM1772089187.1 0
+5   GSM1772096144 0
+6   GSM1772096102 0
+                  X x
+26  GSM1772084014.2 0
+1     GSM1772084021 0
+152 GSM1772096171.2 3
+15  GSM1772096165.2 0
+3   GSM1772096141.6 0
+20  GSM1772096175.1 0
+[1] 0 0 0 0 0 0
+[1] "AIR SC3:"
+[1] 0.1609563
+[1] "AIR SEURAT:"
+[1] 0.3317169
+[1] "AIR giniclust:"
+[1] 0.1087718
+[1] "AIR backspin:"
+[1] 0.08953626
+[1] "v_measure SC3:"
+[1] 0.4010843
+[1] "\nv_measure SEURAT:"
+[1] 0.5882402
+[1] "\nv_measure BACKSPIN:"
+[1] 0.3381964
+[1] "\nv_measure GINICLUST:"
+[1] 0.5882402
+[1] "PURITY SC3:"
+[1] 0.3367062
+[1] "\nPURITY SEURAT:"
+[1] 0.4563852
+[1] "\nPURITY backspin:"
+[1] 0.2201675
+[1] "\nPURITY giniclust:"
+[1] 0.7466853
+[1] "  ...plot purity"
+[1] "  ...plot v measure"
+Warning message:
+In rm(Vsc3) : object 'Vsc3' not found
+[1] "DONE"

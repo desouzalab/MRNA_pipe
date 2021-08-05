@@ -1,0 +1,2 @@
+Rscript ../../rnaSeq/code/visualize/tSNE/tSNE.R --output_directory ../../rnaSeq/output/visualize/tSNE/sc3/GSE98816+58/ --preprocessed_input_directory /home/emiliano/projects/def-cdesouza/Lab/data/preprocessed/GSE98816+58/ --true_cluster_input_directory /home/emiliano/projects/def-cdesouza/Lab/data/true/GSE98816+58/ --cluster_input_directory ../../rnaSeq/output/cluster/sc3/GSE98816+58/ --name_dataset GSE98816+58
+/var/spool/slurmd/job49800538/slurm_script: line 10: ^C: command not found
