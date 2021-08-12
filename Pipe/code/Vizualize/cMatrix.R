@@ -84,21 +84,18 @@ if (length(all_preprocessed_ssRNASeq_files)==length(all_true_cluster_ssRNASeq_fi
     my_palette <- colorRampPalette(c("white","green"))(n = 299)
     
     Hmcstr=pheatmap( crosstab(true ,sc3,prop.r=T)$prop.r ,cluster_rows=F,cluster_cols=F,show_rownames=T,labels_row=levels(true), show_colnames=T,color =my_palette) 
-    save_plot(paste0(outdir,"/heatmapscrtrue_",c,"_",args$name_dataset,".jpg"),Hmcstr)
-    print("  ...plot heatmapscrtrue")
+    save_plot(paste0(outdir,"/Matrix_sc3_true_",args$name_dataset,".jpg"),Hmcstr)
 
     Hmsetr=pheatmap( crosstab(true ,backspin,prop.r=T)$prop.r ,cluster_rows=F,cluster_cols=F,show_rownames=T,labels_row=levels(true),show_colnames=T,color =my_palette) 
-    save_plot(paste0(outdir,"/heatmapbacktrue_",c,"_",args$name_dataset,".jpg"),Hmsetr)
-    print("  ...plot heatmapseutrue")
+    save_plot(paste0(outdir,"/Matrix_backspin_true_",args$name_dataset,".jpg"),Hmsetr)
     dev.off()
 
     Hmsetr=pheatmap( crosstab(true ,seurat,prop.r=T)$prop.r ,cluster_rows=F,cluster_cols=F,show_rownames=T,labels_row=levels(true),show_colnames=T,color =my_palette) 
-    save_plot(paste0(outdir,"/heatmapseurattrue_",c,"_",args$name_dataset,".jpg"),Hmsetr)
-    print("  ...plot heatmapseutrue")
+    save_plot(paste0(outdir,"/Matrix_seurat_true_",rgs$name_dataset,".jpg"),Hmsetr)
     dev.off()
+    
     Hmsetr=pheatmap( crosstab(true ,giniclust,prop.r=T)$prop.r ,cluster_rows=F,cluster_cols=F,show_rownames=T,labels_row=levels(true),show_colnames=T,color =my_palette) 
-    save_plot(paste0(outdir,"/heatmapginiclusttrue_",c,"_",args$name_dataset,".jpg"),Hmsetr)
-    print("  ...plot heatmapseutrue")
+    save_plot(paste0(outdir,"/Matri_Giniclust_true_",args$name_dataset,".jpg"),Hmsetr)
     dev.off()
 
     rm(list = ls())

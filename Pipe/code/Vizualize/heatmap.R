@@ -132,7 +132,7 @@ if (length(all_preprocessed_ssRNASeq_files)==length(all_true_cluster_ssRNASeq_fi
     save_plot(paste0(outdir,"/heatmapTrueFirst_no_row_scale",c,"_",args$name_dataset,".png"),HMTrueFirst)
    
     HMTrueFirst=pheatmap(t(data_plus),scale ="row",cluster_rows=F,cluster_cols=F,show_rownames=FALSE, show_colnames=FALSE, annotation_row=labelsforhm,fontsize =5) 
-    save_plot(paste0(outdir,"/heatmapTrueFirst_ROW_SCALE",c,"_",args$name_dataset,".png"),HMTrueFirst)
+    save_plot(paste0(outdir,"/heatmapTrueFirst_row_scale",c,"_",args$name_dataset,".png"),HMTrueFirst)
 
   rm(list = ls())
   }
