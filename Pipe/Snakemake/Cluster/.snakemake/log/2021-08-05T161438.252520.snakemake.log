@@ -1,0 +1,2 @@
+SyntaxError in line 35 of /project/6052548/Lab/MRNA_pipe/Pipe/Snakemake/Cluster/Snakefile:
+EOF in multi-line statement (Snakefile, line 35)

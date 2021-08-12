@@ -1,0 +1,17 @@
+Building DAG of jobs...
+Using shell: /cvmfs/soft.computecanada.ca/gentoo/2020/bin/bash
+Provided cores: 1
+Rules claiming more threads will be scaled down.
+Job counts:
+	count	jobs
+	1	PURITY
+	1	all
+	2
+
+[Fri Aug  6 13:49:14 2021]
+rule PURITY:
+    output: /home/emiliano/projects/def-cdesouza/Lab/AIR+VM+PURITY_LaManno.txt
+    jobid: 1
+
+RuleException in line 12 of /project/6052548/Lab/MRNA_pipe/Pipe/Snakemake/Visualize/Snakefile:
+NameError: The name 'GINICLUST_CLUSTER' is unknown in this context. Please make sure that you defined that variable. Also note that braces not used for variable access have to be escaped by repeating them, i.e. {{print $1}}

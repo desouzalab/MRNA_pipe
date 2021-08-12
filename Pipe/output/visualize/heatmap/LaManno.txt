@@ -1,0 +1,42 @@
+[1] 11826
+        S100b         Anxa1          Mobp           Mog           Cnp 
+          539           692           667           614           719 
+       Cldn11         Gpm6b        Tspan2          Car2           Mag 
+          590           737           525           409           386 
+           Qk           Gsn           Ptn          Ermn        Taldo1 
+          625           471           479           328           701 
+        Sepp1         Cryab         Pcdh9       Col25a1           Cd9 
+          265           265           613           741           234 
+         Klk6    Rps15a-ps4           Ntm           Cck          Npc2 
+          124           754           747           501           499 
+        Cyp51        Opalin         Rnf13         Tacr3         Alcam 
+          637           147           508           440           562 
+        Tomm6         Ptprd         Sparc         Nfasc 9630013A20Rik 
+          744           562           141           524            80 
+         Thy1           Grp        Dbndd2         Mrpl9          Ldha 
+          559           324           388           299           720 
+      Sparcl1           Fos           Dbi         Cadm1         Psmc6 
+          403           276           599           669           755 
+       Arpc1a      Ankrd34b         Sept4          Rgs2 1500012F01Rik 
+          750           653           198           611           756 
+       Pcdh10        Zfp931       Ndufa10         Hmgb1         Sirt2 
+          720           677           732           749           286 
+        Anxa5          Eif1          Hars 1700094D03Rik        Spock3 
+          514           745           609           141           424 
+        Lamp1   Gm1821-loc1           Esd          Chl1         Ncald 
+          570           668           719           732           605 
+        Tppp3        Klhl13       Chchd10         Cmtm5          Gad2 
+          557           713           665           182           143 
+3110047P20Rik          Ubl3          Xist        Chmp2a         Idh3a 
+          542           605           187           668           740 
+        Oxct1        Elovl7         Pdha1        Pcsk1n          Nrn1 
+          753           180           671           606           560 
+        Celf2       Lamtor2          Cd47       Serinc3         Hmgcr 
+          678           727           659           755           639 
+       Timm13 1810022K09Rik         Clip3        Ndufv1           Omg 
+          742           743           724           696           616 
+       Bnip3l         Praf2         Stx12       Col11a1          Ensa 
+          754           673           626           368           746 
+        Grb14         Gdap1          Acly       Uqcrfs1         Pdap1 
+          188           676           711           740           749 
+676 732 599 524 611 665 539 742 141 668 616 198 745 711 719 499 276 740 560 653 639 180 755 182 754 719 80 613 265 753 605 659 562 625 614 744 609 324 696 692 147 678 143 471 328 188 755 388 756 677 743 409 590 514 720 508 727 141 299 746 525 368 741 440 562 754 626 637 542 403 750 749 605 749 479 732 234 668 286 724 386 124 720 701 570 424 557 747 559 669 265 740 667 501 673 606 713 187 671 737 this is plus :)[1] "DONE"

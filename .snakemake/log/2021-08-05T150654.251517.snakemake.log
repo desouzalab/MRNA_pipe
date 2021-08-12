@@ -1,0 +1,4 @@
+Building DAG of jobs...
+MissingInputException in line 8 of /project/6052548/Lab/MRNA_pipe/Snakefile:
+Missing input files for rule all:
+test

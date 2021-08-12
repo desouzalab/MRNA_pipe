@@ -1,0 +1,14 @@
+#change to be genereic 
+DATA_NAME: 'LaManno'
+DIRECTORIES:
+  OUTPUT_DIR: '/home/emiliano/projects/def-cdesouza/Lab/MRNA_pipe/Pipe/output/cluster'
+  PREPROCESS_DIRECTORY: '/home/emiliano/projects/def-cdesouza/Lab/pre'
+  RAW_DIRECTORY: '/home/emiliano/projects/def-cdesouza/Lab/data/raw/LaManno'
+  
+SOFTWARE:
+  sc3: '/home/emiliano/projects/def-cdesouza/Lab/MRNA_pipe/Pipe/code/cluster/sc3.R'
+  seurat: '/home/emiliano/projects/def-cdesouza/Lab/MRNA_pipe/Pipe/code/cluster/seurat.R'
+  giniclust: '/home/emiliano/projects/def-cdesouza/Lab/MRNA_pipe/Pipe/code/cluster/giniclust.R'
+  spin_convert: '/home/emiliano/projects/def-cdesouza/Lab/MRNA_pipe/Pipe/code/cluster/backspin_conv.R'
+LOG:
+  CLUSTER_LOG: '/home/emiliano/projects/def-cdesouza/Lab/'

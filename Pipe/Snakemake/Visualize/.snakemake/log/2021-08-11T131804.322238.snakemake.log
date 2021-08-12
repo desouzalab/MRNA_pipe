@@ -1,0 +1,28 @@
+Building DAG of jobs...
+Using shell: /cvmfs/soft.computecanada.ca/gentoo/2020/bin/bash
+Provided cores: 1
+Rules claiming more threads will be scaled down.
+Job counts:
+	count	jobs
+	1	all
+	1	tSNE
+	2
+
+[Wed Aug 11 13:18:04 2021]
+rule tSNE:
+    output: /home/emiliano/projects/def-cdesouza/Lab/MRNA_pipe/Pipe/output/visualize/tSNE+PCA/LaManno.txt
+    jobid: 4
+
+[Wed Aug 11 13:18:11 2021]
+Finished job 4.
+1 of 2 steps (50%) done
+
+[Wed Aug 11 13:18:11 2021]
+localrule all:
+    input: /home/emiliano/projects/def-cdesouza/Lab/MRNA_pipe/Pipe/output/visualize/AIR+VM+PURITY/LaManno.txt, /home/emiliano/projects/def-cdesouza/Lab/MRNA_pipe/Pipe/output/visualize/cMatrix/LaManno.txt, /home/emiliano/projects/def-cdesouza/Lab/MRNA_pipe/Pipe/output/visualize/heatmap/LaManno.txt, /home/emiliano/projects/def-cdesouza/Lab/MRNA_pipe/Pipe/output/visualize/tSNE+PCA/LaManno.txt
+    jobid: 0
+
+[Wed Aug 11 13:18:11 2021]
+Finished job 0.
+2 of 2 steps (100%) done
+Complete log: /project/6052548/Lab/MRNA_pipe/Pipe/Snakemake/Visualize/.snakemake/log/2021-08-11T131804.322238.snakemake.log

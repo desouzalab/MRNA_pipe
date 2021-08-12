@@ -1,4 +1,0 @@
-Error in library(StatMeasures) : 
-  there is no package called ‘StatMeasures’
-Calls: suppressMessages -> withCallingHandlers -> library
-Execution halted

@@ -1,0 +1,23 @@
+Building DAG of jobs...
+Using shell: /cvmfs/soft.computecanada.ca/gentoo/2020/bin/bash
+Provided cores: 1
+Rules claiming more threads will be scaled down.
+Job counts:
+	count	jobs
+	1	all
+	1	spin
+	2
+
+[Thu Aug  5 17:01:39 2021]
+rule spin:
+    output: /home/emiliano/projects/def-cdesouza/Lab/MRNA_pipe/Pipe/output/cluster/LaManno/backspin_LaManno.cef
+    jobid: 4
+
+Waiting at most 5 seconds for missing files.
+MissingOutputException in line 46 of /project/6052548/Lab/MRNA_pipe/Pipe/Snakemake/Cluster/Snakefile:
+Missing files after 5 seconds:
+/home/emiliano/projects/def-cdesouza/Lab/MRNA_pipe/Pipe/output/cluster/LaManno/backspin_LaManno.cef
+This might be due to filesystem latency. If that is the case, consider to increase the wait time with --latency-wait.
+Shutting down, this might take some time.
+Exiting because a job execution failed. Look above for error message
+Complete log: /project/6052548/Lab/MRNA_pipe/Pipe/Snakemake/Cluster/.snakemake/log/2021-08-05T170139.672180.snakemake.log

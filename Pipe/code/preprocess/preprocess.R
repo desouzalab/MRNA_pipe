@@ -65,35 +65,15 @@ for (c in 1:length(all_raw_ssRNASeq_files)){
   save_plot(paste0(args$console_output_directory,"/FeatureScatter_2",c,"_",args$name_dataset,".pdf"),plot2)
   print("  ...plot tSNE+PCA colour")
   dev.off()
-  
-  # based on figures, filtering (choose the threshold based on plots)
-  if(args$name_dataset == "GSE74672"){
-  
-    pbmc <- subset(pbmc, subset = nFeature_RNA <7250 & nCount_RNA<38000)
-  }
-  else if (args$name_dataset == "LaManno") {
-    pbmc <- subset(pbmc, subset = nFeature_RNA > 2000 & nFeature_RNA <6000 & nCount_RNA<30000)
-    print("manno") 
-  }
-  else if(args$name_dataset == "GSM98816+58"){
-    
-    pbmc <- subset(pbmc, subset = nFeature_RNA>1700 & nFeature_RNA <3600 & nCount_RNA>49800)
-    print("other")
-  }
-    else if(args$name_dataset == "zeisel"){
-    
-    pbmc <- subset(pbmc, subset = nFeature_RNA <7000 & nCount_RNA<40000)
-    print("other")
-  }
+
   # Normalize the data
   pbmc <- NormalizeData(pbmc, normalization.method="LogNormalize", scale.factor=10000)
-  
-  outFilename <- paste0(data_outdir,"/preprocessed_",c,"_",args$name_dataset,".csv")
-  write.csv(as.matrix(GetAssayData(pbmc, slot = "counts")), file='/home/emiliano/projects/def-cdesouza/Lab/zeisel.csv',row.names=TRUE)
+  outFilename <- paste0(data_outdir,"/",args$name_dataset,"_pre",".csv")
+  write.csv(as.matrix(GetAssayData(pbmc, slot = "counts")), file=outFilename,row.names=TRUE)
   print("  ...export to .csv")
 
-  rm(data)
-  rm(outFilename)
+  rm(list = ls())
+
 }
 
 print("DONE")

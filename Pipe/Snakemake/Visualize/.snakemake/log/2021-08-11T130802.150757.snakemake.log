@@ -1,0 +1,19 @@
+Building DAG of jobs...
+Using shell: /cvmfs/soft.computecanada.ca/gentoo/2020/bin/bash
+Provided cores: 1
+Rules claiming more threads will be scaled down.
+Job counts:
+	count	jobs
+	1	all
+	1	cMATRIX
+	1	heatmap
+	1	tSNE
+	4
+
+[Wed Aug 11 13:08:02 2021]
+rule heatmap:
+    output: /home/emiliano/projects/def-cdesouza/Lab/MRNA_pipe/Pipe/output/visualize/heatmap/LaManno.txt
+    jobid: 3
+
+RuleException in line 41 of /project/6052548/Lab/MRNA_pipe/Pipe/Snakemake/Visualize/Snakefile:
+NameError: The name 'HERATMAP' is unknown in this context. Please make sure that you defined that variable. Also note that braces not used for variable access have to be escaped by repeating them, i.e. {{print $1}}

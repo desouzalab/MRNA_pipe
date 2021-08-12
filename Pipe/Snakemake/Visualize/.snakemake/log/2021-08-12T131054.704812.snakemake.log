@@ -1,0 +1,48 @@
+Building DAG of jobs...
+Using shell: /cvmfs/soft.computecanada.ca/gentoo/2020/bin/bash
+Provided cores: 1
+Rules claiming more threads will be scaled down.
+Job counts:
+	count	jobs
+	1	all
+	1	cMATRIX
+	1	heatmap
+	1	tSNE
+	4
+
+[Thu Aug 12 13:10:54 2021]
+rule cMATRIX:
+    output: /home/emiliano/projects/def-cdesouza/Lab/MRNA_pipe/Pipe/output/visualize/cMatrix/LaManno.txt
+    jobid: 2
+
+[Thu Aug 12 13:11:00 2021]
+Finished job 2.
+1 of 4 steps (25%) done
+
+[Thu Aug 12 13:11:00 2021]
+rule tSNE:
+    output: /home/emiliano/projects/def-cdesouza/Lab/MRNA_pipe/Pipe/output/visualize/tSNE+PCA/LaManno.txt
+    jobid: 4
+
+[Thu Aug 12 13:11:10 2021]
+Finished job 4.
+2 of 4 steps (50%) done
+
+[Thu Aug 12 13:11:10 2021]
+rule heatmap:
+    output: /home/emiliano/projects/def-cdesouza/Lab/MRNA_pipe/Pipe/output/visualize/heatmap/LaManno.txt
+    jobid: 3
+
+[Thu Aug 12 13:11:18 2021]
+Finished job 3.
+3 of 4 steps (75%) done
+
+[Thu Aug 12 13:11:18 2021]
+localrule all:
+    input: /home/emiliano/projects/def-cdesouza/Lab/MRNA_pipe/Pipe/output/visualize/AIR+VM+PURITY/LaManno.txt, /home/emiliano/projects/def-cdesouza/Lab/MRNA_pipe/Pipe/output/visualize/cMatrix/LaManno.txt, /home/emiliano/projects/def-cdesouza/Lab/MRNA_pipe/Pipe/output/visualize/heatmap/LaManno.txt, /home/emiliano/projects/def-cdesouza/Lab/MRNA_pipe/Pipe/output/visualize/tSNE+PCA/LaManno.txt
+    jobid: 0
+
+[Thu Aug 12 13:11:18 2021]
+Finished job 0.
+4 of 4 steps (100%) done
+Complete log: /project/6052548/Lab/MRNA_pipe/Pipe/Snakemake/Visualize/.snakemake/log/2021-08-12T131054.704812.snakemake.log

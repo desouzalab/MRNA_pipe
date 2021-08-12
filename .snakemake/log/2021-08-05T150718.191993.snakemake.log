@@ -1,0 +1,2 @@
+SyntaxError in line 10 of /project/6052548/Lab/MRNA_pipe/Snakefile:
+Unexpected keyword PREPROCESS_DIR in rule definition (Snakefile, line 10)

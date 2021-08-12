@@ -1,0 +1,27 @@
+Building DAG of jobs...
+Using shell: /cvmfs/soft.computecanada.ca/gentoo/2020/bin/bash
+Provided cores: 1
+Rules claiming more threads will be scaled down.
+Job counts:
+	count	jobs
+	1	all
+	1	giniclust
+	1	sc3
+	3
+
+[Thu Aug  5 16:11:54 2021]
+rule giniclust:
+    output: /home/emiliano/projects/def-cdesouza/Lab/MRNA_pipe/Pipe/output/cluster/giniclust_LaManno.csv
+    jobid: 3
+
+[Thu Aug  5 16:12:07 2021]
+Error in rule giniclust:
+    jobid: 3
+    output: /home/emiliano/projects/def-cdesouza/Lab/MRNA_pipe/Pipe/output/cluster/giniclust_LaManno.csv
+    shell:
+        Rscript /home/emiliano/projects/def-cdesouza/Lab/MRNA_pipe/Pipe/code/cluster/giniclust.R --data_output_directory /home/emiliano/projects/def-cdesouza/Lab/MRNA_pipe/Pipe/output/cluster --console_output_directory /home/emiliano/projects/def-cdesouza/Lab//giniclust.out --input_directory /home/emiliano/projects/def-cdesouza/Lab/pre --name_dataset LaManno
+        (exited with non-zero exit code)
+
+Shutting down, this might take some time.
+Exiting because a job execution failed. Look above for error message
+Complete log: /project/6052548/Lab/MRNA_pipe/Pipe/Snakemake/Cluster/.snakemake/log/2021-08-05T161154.507697.snakemake.log

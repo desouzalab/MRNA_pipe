@@ -1,0 +1,26 @@
+Building DAG of jobs...
+Using shell: /cvmfs/soft.computecanada.ca/gentoo/2020/bin/bash
+Provided cores: 1
+Rules claiming more threads will be scaled down.
+Job counts:
+	count	jobs
+	1	all
+	1	spin
+	2
+
+[Thu Aug  5 16:51:47 2021]
+rule spin:
+    output: /home/emiliano/projects/def-cdesouza/Lab/MRNA_pipe/Pipe/output/cluster/LaManno/backspin_LaManno.cef
+    jobid: 4
+
+[Thu Aug  5 16:51:47 2021]
+Error in rule spin:
+    jobid: 4
+    output: /home/emiliano/projects/def-cdesouza/Lab/MRNA_pipe/Pipe/output/cluster/LaManno/backspin_LaManno.cef
+    shell:
+        backspin -i /home/emiliano/projects/def-cdesouza/Lab/pre/ceftype_1_LaMannoinputforBackSpin.cef -o /home/emiliano/projects/def-cdesouza/Lab/MRNA_pipe/Pipe/output/cluster/backspin/backspin_LaManno.cef -f 500 -v -d 6
+        (exited with non-zero exit code)
+
+Shutting down, this might take some time.
+Exiting because a job execution failed. Look above for error message
+Complete log: /project/6052548/Lab/MRNA_pipe/Pipe/Snakemake/Cluster/.snakemake/log/2021-08-05T165147.573830.snakemake.log

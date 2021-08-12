@@ -1,0 +1,3 @@
+KeyError in line 3 of /project/6052548/Lab/MRNA_pipe/Pipe/Snakemake/Cluster/Snakefile:
+'DATA_DIRECTORY'
+  File "/project/6052548/Lab/MRNA_pipe/Pipe/Snakemake/Cluster/Snakefile", line 3, in <module>
