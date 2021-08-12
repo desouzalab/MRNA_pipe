@@ -65,7 +65,7 @@ print(all_backspin_cluster_ssRNASeq_files)
 
 if (length(all_preprocessed_ssRNASeq_files)==length(all_true_cluster_ssRNASeq_files) & length(all_sc3_cluster_ssRNASeq_files)==length(all_seurat_cluster_ssRNASeq_files) & length(all_giniclust_cluster_ssRNASeq_files)==length(all_backspin_cluster_ssRNASeq_files)) {
   for (c in 1:length(all_true_cluster_ssRNASeq_files)){
-    print(c)
+
     sink(paste0(outdir,"/",args$name_dataset,".txt"))
     ### Create data frame
     # Read .csv file containing preprocessed data

@@ -42,7 +42,7 @@ for (c in 1:length(all_preprocessed_ssRNASeq_files)){
   data=read.csv(file.path(args$input_directory, all_preprocessed_ssRNASeq_files[c]),row.names=1)
   print("  ...read")
   data=na.omit(data)
-  #print(head(data[1:10]))
+
   pbmc <- CreateSeuratObject(counts = data, project = "data3k", min.cells = 3, min.features = 100)
   # focus on MT features: Low-quality / dying cells often exhibit extensive mitochondrial contamination
   pbmc[["percent.mt"]] <- PercentageFeatureSet(pbmc, pattern = "^MT-")

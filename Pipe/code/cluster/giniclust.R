@@ -59,7 +59,6 @@ print(raw_data)
 
 
 for (c in 1:length(all_preprocessed_ssRNASeq_files)){
-  print(c)
   print(all_preprocessed_ssRNASeq_files)
   ### Create data frame
   data=read.csv(file.path(args$input_directory, all_preprocessed_ssRNASeq_files[c]),row.names = 1)

@@ -48,10 +48,9 @@ print(all_cef_result_files)
 
 # Results in R
 for (c in 1:length(all_cef_result_files)){
-  print(c)
+
   print(all_cef_result_files)
 
-  
   ### Read cef document
   cef=read.csv(file.path(args$input_directory, all_cef_result_files[c]), header=F, sep="\t")
   cef=as.matrix(cef)
