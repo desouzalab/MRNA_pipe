@@ -1,0 +1,12 @@
+Package: rnaPipeline
+Type: Package
+Title: rNA_Pipeline built on R
+Version: 1.0
+Date: 2021-08-12
+Author: Emiliano Penaloza
+Maintainer: Emiliano Penaloza <epenaloz@uwo.ca>
+Description: computational pipeline to produce images and analysis on rna sequences
+License: GPL (>= 2)
+imports: argparse,scater,cowplot,ggplot2,hydroGOF,glmnet,StatMatch,Rtsne,fpc,GA,MASS,session,Matrix,vegan,data.table,reshape,abind,drc,SingleCellExperiment,SC3,Seurat,cowplot,data.table,dplyr,patchwork,openxlsx,mclust,clevr,NMF,descr,pheatmap,M3C
+Encoding: UTF-8
+RoxygenNote: 7.1.1
