@@ -20,7 +20,7 @@ Install Backspin
 
 `conda install -c bioconda backspinpy`
 
-Install [Giniclust](https://github.com/lanjiangboston/GiniClust) and edit the path in /rnaPipe/giniclust.R to the corresponding Giniclust path 
+Install [Giniclust](https://github.com/lanjiangboston/GiniClust) and edit the path in /rnaPipe/giniclust.R to the corresponding Giniclust directory 
 
 Install rnaPipe package
 
@@ -35,3 +35,9 @@ run `cd /Snakemake/<PROCESS TO RUN>`
 Then execute the desired process with 
 
 `snakemake --configfile config.yaml -c1 `
+
+## Outputs
+
+All outputs are generated to the /output directory
+
+Updating any output or software path can be done within the config.yaml files for each procedure
