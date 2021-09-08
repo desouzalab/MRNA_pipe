@@ -4,7 +4,7 @@ v# MRNA_pipe
 
 <br>
 
-### Installation
+## Installation
 To make use of this Pipeline and it's functionalities please install the latest version of [Anaconda](https://www.anaconda.com/)
 
 Set up Anaconda Enviroment 
