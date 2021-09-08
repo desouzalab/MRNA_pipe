@@ -26,7 +26,7 @@ Install rnaPipe package
 
 `CMD R build rnaPipeline`
 
-`CMD INSTALL/rnaPipeline`
+`CMD INSTALL rnaPipeline`
 
 ## Execution 
 
