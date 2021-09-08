@@ -21,6 +21,11 @@ Install Backspin
 
 Install [Giniclust](https://github.com/lanjiangboston/GiniClust) and edit the path in /rnaPipe/giniclust.R to the corresponding Giniclust path 
 
+Install rnaPipe package
+
+`CMD R build /rnaPipeline`
+
+`CMD INSTALL /rnaPipeline`
 
 ## Execution 
 
