@@ -1,4 +1,4 @@
-v# MRNA_pipe
+# MRNA_pipe
 
 ## This Repository belongs to the RNA Sequence Pipeline for DR.Camila de Souza's Laboratory 
 
