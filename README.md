@@ -4,16 +4,40 @@
 
 <br>
 
-### Installation
+## Installation
 To make use of this Pipeline and it's functionalities please install the latest version of [Anaconda](https://www.anaconda.com/)
 
 Set up Anaconda Enviroment 
 
-` https://www.anaconda.com/
-<br>
+`conda install -c conda-forge mamba`
 
 
-<br>
+`mamba create -c conda-forge -c bioconda -n rnaPipeline snakemake `
 
+`conda activate rnaPipeline`
 
+Install Backspin 
 
+`conda install -c bioconda backspinpy`
+
+Install [Giniclust](https://github.com/lanjiangboston/GiniClust) and edit the path in /rnaPipe/giniclust.R to the corresponding Giniclust directory 
+
+Install rnaPipe package
+
+`CMD R build rnaPipeline`
+
+`CMD INSTALL/rnaPipeline`
+
+## Execution 
+
+run `cd /Snakemake/<PROCESS TO RUN>`
+
+Then execute the desired process with 
+
+`snakemake --configfile config.yaml -c1 `
+
+## Outputs
+
+All outputs are generated to the /output directory
+
+Updating any output or software path can be done within the config.yaml files for each procedure
