@@ -9,7 +9,7 @@ To make use of this Pipeline and it's functionalities please install the latest 
 
 Set up Anaconda Enviroment 
 
-`https://www.anaconda.com/
+` https://www.anaconda.com/
 <br>
 
 
