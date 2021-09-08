@@ -5,7 +5,7 @@
 <br>
 
 ### Installation
-To make use of this Pipeline and it's functionalities please install the latest version of ![Anaconda](https://www.anaconda.com/)
+To make use of this Pipeline and it's functionalities please install the latest version of [Anaconda](https://www.anaconda.com/)
 <br>
 
 
