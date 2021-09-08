@@ -11,9 +11,9 @@ Set up Anaconda Enviroment
 `conda install -c conda-forge mamba`
 
 
-`mamba create -c conda-forge -c bioconda -n rnaPipe snakemake `
+`mamba create -c conda-forge -c bioconda -n rnaPipeline snakemake `
 
-`conda activate rnaPipe`
+`conda activate rnaPipeline`
 
 Install Backspin 
 
@@ -23,9 +23,9 @@ Install [Giniclust](https://github.com/lanjiangboston/GiniClust) and edit the pa
 
 Install rnaPipe package
 
-`CMD R build /rnaPipeline`
+`CMD R build rnaPipeline`
 
-`CMD INSTALL /rnaPipeline`
+`CMD INSTALL/rnaPipeline`
 
 ## Execution 
 
