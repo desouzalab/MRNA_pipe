@@ -1,17 +1,17 @@
 #change to be genereic 
 DATA_NAME: 'LaManno'
 DIRECTORIES:
-  OUTPUT_DIR: '/home/emiliano/projects/def-cdesouza/Lab/Epiclomal/snakemake/synthetic_data_epiclomal'
-  DATA_DIRECTORY: '/home/emiliano/projects/def-cdesouza/Lab/data/raw/LaManno'
-  PREPROCESS_DIRECTORY: '/home/emiliano/projects/def-cdesouza/Lab'
+  OUTPUT_DIR: '../../../Epiclomal/snakemake/synthetic_data_epiclomal'
+  DATA_DIRECTORY: '../../../data/raw/LaManno'
+  PREPROCESS_DIRECTORY: '../../..'
 
 PARAMS:
   DATA_NAME: 
   
 SOFTWARE:
-  PREPROCESS_CEF_CONVERT: '/home/emiliano/projects/def-cdesouza/Lab/MRNA_pipe/Pipe/code/preprocess/Cef_convert.R'
-  PREPROCESS_DATA: '/home/emiliano/projects/def-cdesouza/Lab/MRNA_pipe/Pipe/code/preprocess/preprocess.R'
-  eval_software: '/home/emiliano/projects/def-cdesouza/Lab/Epiclomal/scripts/eval_epiclomal.R'
+  PREPROCESS_CEF_CONVERT: '../../../MRNA_pipe/rnaPipe/preprocess/Cef_convert.R'
+  PREPROCESS_DATA: '../../../MRNA_pipe/rnaPipe/preprocess/preprocess.R'
+  eval_software: '../../../Epiclomal/scripts/eval_epiclomal.R'
 
 LOG:
-  PREPROCESS_LOG: '/home/emiliano/projects/def-cdesouza/Lab/'
+  PREPROCESS_LOG: '../../../'

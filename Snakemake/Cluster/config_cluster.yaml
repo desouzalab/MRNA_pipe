@@ -1,0 +1,14 @@
+#change to be genereic 
+DATA_NAME: 'LaManno'
+DIRECTORIES:
+  OUTPUT_DIR: '../../../MRNA_pipe/output/cluster'
+  PREPROCESS_DIRECTORY: '../../../pre'
+  RAW_DIRECTORY: '../../../data/raw/LaManno'
+  
+SOFTWARE:
+  sc3: '../../../MRNA_pipe/rnaPipe/cluster/sc3.R'
+  seurat: '../../../MRNA_pipe/rnaPipe/cluster/seurat.R'
+  giniclust: '../../../MRNA_pipe/rnaPipe/cluster/giniclust.R'
+  spin_convert: '../../../MRNA_pipe/rnaPipe/cluster/backspin_conv.R'
+LOG:
+  CLUSTER_LOG: '../../../'
