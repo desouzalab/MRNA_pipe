@@ -2,7 +2,8 @@
 
 ## This Repository belongs to the RNA Sequence Pipeline for DR.Camila de Souza's Laboratory 
 
-<br>
+## This Pipeline follows the following sequential structure 
+![png](https://github.com/desouzalab/MRNA_pipe/blob/implement/rna_pipe_diagram.png?raw=true)
 
 ## Installation
 To make use of this Pipeline and it's functionalities please install the latest version of [Anaconda](https://www.anaconda.com/)
