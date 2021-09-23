@@ -2,8 +2,6 @@
 .Rhistory
 .RData
 .Ruserdata
-output/*
 .snakemake/
 .pdf
 .tar.gz
-!output/.gitkeep 
