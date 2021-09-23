@@ -1,4 +1,0 @@
-Building DAG of jobs...
-MissingInputException in line 8 of /project/6052548/Lab/MRNA_pipe/Pipe/Snakemake/Cluster/Snakefile:
-Missing input files for rule all:
-/home/emiliano/projects/def-cdesouza/Lab/MRNA_pipe/Pipe/output/cluster/LaManno/SC3_LaManno.csv

@@ -1,3 +1,0 @@
-NameError in line 5 of /project/6052548/Lab/MRNA_pipe/Snakefile:
-name 'DIRECTORIES' is not defined
-  File "/project/6052548/Lab/MRNA_pipe/Snakefile", line 5, in <module>

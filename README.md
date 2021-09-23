@@ -2,60 +2,46 @@
 
 ## This Repository belongs to the RNA Sequence Pipeline for DR.Camila de Souza's Laboratory 
 
-<br>
+## This Pipeline follows the following sequential structure 
+![png](https://github.com/desouzalab/MRNA_pipe/blob/implement/images/rna_pipe_diagram.png?raw=true)
 
-### Execution 
+## Installation
+To make use of this Pipeline and it's functionalities please install the latest version of [Anaconda](https://www.anaconda.com/)
 
-<br>
+Set up Anaconda Enviroment 
 
-Pipeline is Executed from Jenkins to have a history log of executed procedures:
+`conda install -c conda-forge mamba`
 
-<br>
 
-![Alt text](https://github.com/desouzalab/MRNA_pipe/blob/Master/docs/rna_jenkins.PNG "Title")
+`mamba create -c conda-forge -c bioconda -n rnaPipeline snakemake `
 
-This Jenkins job calls [main.sh](main.sh) with  the use of ssh to connect to sharcnet.
+`conda activate rnaPipeline`
 
-It is parameterized in order to be able to execute various tasks when desired as well as to specify desired method being worked on.
+Install Backspin 
 
-<br>
+`conda install -c bioconda backspinpy`
 
-### Pipeline Structure 
+Install [Giniclust](https://github.com/lanjiangboston/GiniClust) and edit the path in /rnaPipe/giniclust.R to the corresponding Giniclust directory 
 
-<br>
+Install rnaPipe package
 
-![Alt text](https://github.com/desouzalab/MRNA_pipe/blob/Master/docs/Pipeline_Diagram.png "Title")
+`CMD R build rnaPipeline`
 
-Pipeline tasks can be executed independantlly with the primary 4 in order being:
+`CMD INSTALL rnaPipeline`
 
-* Preprocess
-* Clustering
-* Visualization
-* Comparison
+## Execution 
 
-When processing new data all pipeline tasks should be executed in sequential order.
-<br>
+run `cd /Snakemake/<PROCESS TO RUN>`
 
-When tuning a specific task is desired without re-execution of other procedures, desired tasks can be executed in isolation.
+Then execute the desired process with 
 
-<br>
+`snakemake --configfile config.yaml -c1 `
 
-### Repo Structure
+## Outputs
 
-<br>
+All outputs are generated to the /output directory
 
-![Alt text](https://github.com/desouzalab/MRNA_pipe/blob/Master/docs/Repo_structure.png "Title")
+Updating any output or software path can be done within the config.yaml files for each procedure
 
-<br>
-
-The Repo follows a Classic version control structure 
-
-<br>
-
-Feature branches stem from Master and are merged back when all testing is complete.
-
-<br>
-
-This allows each method to be tested independantly without affecting exisitng output/methods
-
-<br>
+## Example of Analysis Produced 
+![png](https://github.com/desouzalab/MRNA_pipe/blob/implement/images/poster.PNG?raw=true)

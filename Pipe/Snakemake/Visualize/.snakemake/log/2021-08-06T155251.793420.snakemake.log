@@ -1,4 +1,0 @@
-Building DAG of jobs...
-MissingInputException in line 8 of /project/6052548/Lab/MRNA_pipe/Pipe/Snakemake/Visualize/Snakefile:
-Missing input files for rule all:
-/home/emiliano/projects/def-cdesouza/Lab/pre/AIR+VM+PURITY_LaManno.txt
