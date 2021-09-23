@@ -3,7 +3,7 @@
 ## This Repository belongs to the RNA Sequence Pipeline for DR.Camila de Souza's Laboratory 
 
 ## This Pipeline follows the following sequential structure 
-![png](https://github.com/desouzalab/MRNA_pipe/blob/implement/rna_pipe_diagram.png?raw=true)
+![png](https://github.com/desouzalab/MRNA_pipe/blob/implement/images/rna_pipe_diagram.png?raw=true)
 
 ## Installation
 To make use of this Pipeline and it's functionalities please install the latest version of [Anaconda](https://www.anaconda.com/)
@@ -42,3 +42,6 @@ Then execute the desired process with
 All outputs are generated to the /output directory
 
 Updating any output or software path can be done within the config.yaml files for each procedure
+
+## Example of Analysis Produced 
+![png](https://github.com/desouzalab/MRNA_pipe/blob/implement/images/poster.PNG?raw=true)
