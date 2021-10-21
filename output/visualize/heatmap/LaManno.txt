@@ -1,0 +1,42 @@
+[1] 11958
+        S100b           Mog         Anxa1          Mobp        Cldn11 
+          580           784           694           802           727 
+       Tspan2            Qk           Gsn          Car2           Mag 
+          649           761           581           510           446 
+          Ptn         Pcdh9          Ermn        Taldo1         Cryab 
+          556           715           379           776           314 
+        Sepp1           Cd9           Cck           Ntm         Rnf13 
+          291           271           561           805           581 
+        Ptprd          Npc2    Rps15a-ps4          Klk6        Opalin 
+          657           562           793           126           191 
+        Alcam         Cyp51         Sept4         Tacr3         Tomm6 
+          627           698           253           458           765 
+        Lamp1          Ldha         Nfasc          Thy1          Gad2 
+          671           784           573           609           186 
+       Dbndd2         Sparc      Ankrd34b           Dbi           Grp 
+          442           151           717           660           333 
+9630013A20Rik           Esd          Cd47       Sparcl1          Chl1 
+           84           796           750           434           804 
+       Pcdh10         Psmc6 3110047P20Rik         Cadm1           Vip 
+          788           822           615           718            79 
+        Mrpl9         Cops5           Fos        Anks1b      Kcnq1ot1 
+          312           797           293           762           765 
+        Sirt2       Ndufa10         Hmgb1          Rgs2        Map7d2 
+          332           796           806           652           820 
+         Acly          Btf3        Zfp931         Cmtm5 1500012F01Rik 
+          804           818           705           216           790 
+        Gdap1         Anxa5          Eif1         Ncald   Gm1821-loc1 
+          754           557           785           645           712 
+      Chchd10          Ubl3        Spock3          Hars         Psmc3 
+          716           663           466           646           811 
+         Ensa        Tgoln1        Klhl13         Pdha1         Tppp3 
+          812           771           764           725           594 
+       Rps27a         Celf2       Uqcrfs1         Cox14       Fam168a 
+          825           745           801           802           748 
+       Gm6644         Idh3a 1700094D03Rik        Ndufv1       Col11a1 
+          760           791           143           763           414 
+       Chmp2a         Hmgcr       Lamtor2        Mrpl20      Atp6v0d1 
+          706           698           777           699           774 
+         Xist         Clip3        Bnip3l          Tppp        Elovl7 
+          207           790           813           663           200 
+797 754 796 660 573 652 79 716 580 762 825 151 712 253 785 804 562 293 801 663 717 698 818 200 822 216 813 796 84 715 291 645 802 750 627 761 784 765 646 333 763 694 191 745 186 581 379 811 442 790 705 510 727 557 788 581 777 143 312 812 649 414 458 657 793 699 698 615 434 663 806 760 556 771 804 271 706 332 790 446 126 784 748 776 765 671 466 594 774 805 609 718 314 791 802 561 764 207 820 725 this is plus :)[1] "DONE"

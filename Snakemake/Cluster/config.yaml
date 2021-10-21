@@ -2,13 +2,13 @@
 DATA_NAME: 'LaManno'
 DIRECTORIES:
   OUTPUT_DIR: '../../../MRNA_pipe/output/cluster'
-  PREPROCESS_DIRECTORY: '../../../pre'
+  PREPROCESS_DIRECTORY: '../../../MRNA_pipe/output/preprocess'
   RAW_DIRECTORY: '../../../data/raw/LaManno'
   
 SOFTWARE:
-  sc3: '../../../MRNA_pipe/rnaPipe/cluster/sc3.R'
-  seurat: '../../../MRNA_pipe/rnaPipe/cluster/seurat.R'
-  giniclust: '../../../MRNA_pipe/rnaPipe/cluster/giniclust.R'
-  spin_convert: '../../../MRNA_pipe/rnaPipe/cluster/backspin_conv.R'
+  sc3: '../../../MRNA_pipe/rnaPipeline/cluster/sc3.R'
+  seurat: '../../../MRNA_pipe/rnaPipeline/cluster/seurat.R'
+  giniclust: '../../../MRNA_pipe/rnaPipeline/cluster/giniclust.R'
+  spin_convert: '../../../MRNA_pipe/rnaPipeline/cluster/backspin_conv.R'
 LOG:
   CLUSTER_LOG: '../../../'
