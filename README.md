@@ -6,6 +6,8 @@
 ![png](https://github.com/desouzalab/MRNA_pipe/blob/implement/images/rna_pipe_diagram.png?raw=true)
 
 ## Installation
+
+Please download and run on **Python version 3.9.7** and **R version 4.0.0**
 To make use of this Pipeline and it's functionalities please install the latest version of [Anaconda](https://www.anaconda.com/)
 
 Set up Anaconda Enviroment 
@@ -13,7 +15,7 @@ Set up Anaconda Enviroment
 `conda install -c conda-forge mamba`
 
 
-`mamba create -c conda-forge -c bioconda -n rnaPipeline snakemake `
+`mamba create -c conda-forge -c bioconda -n rnaPipeline snakemake --file requirements.txt `
 
 `conda activate rnaPipeline`
 
@@ -23,7 +25,7 @@ Install Backspin
 
 Install [Giniclust](https://github.com/lanjiangboston/GiniClust) and edit the path in /rnaPipe/giniclust.R to the corresponding Giniclust directory 
 
-Install rnaPipe package
+Install rnaPipe package and its dependancies 
 
 `CMD R build rnaPipeline`
 
@@ -36,6 +38,14 @@ run `cd Snakemake/<PROCESS TO RUN>`
 Then execute the desired process with 
 
 `snakemake --configfile config.yaml -c1 `
+
+## Tests
+Test for this software will be done with the LaManno dataset. 
+
+LaManno is a light weight single cell RNA sequencing datset, making it convinient for testing. 
+
+Please follow the instructions in the exectution with the `PATH TO RAW DATA` portion in the config file set to `./test/LaManno` 
+
 
 ## Outputs
 
