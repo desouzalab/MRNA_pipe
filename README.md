@@ -31,7 +31,7 @@ Install rnaPipe package
 
 ## Execution 
 
-run `cd /Snakemake/<PROCESS TO RUN>`
+run `cd Snakemake/<PROCESS TO RUN>`
 
 Then execute the desired process with 
 

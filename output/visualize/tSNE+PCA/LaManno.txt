@@ -1,0 +1,45 @@
+[1] "  ...read"
+[1] "  ...read"
+[1] 2 5 2 3 2 5
+[1] 5
+Performing PCA
+Read the 243 x 50 data matrix successfully!
+OpenMP is working. 1 threads.
+Using no_dims = 2, perplexity = 30.000000, and theta = 0.000000
+Computing input similarities...
+Symmetrizing...
+Done in 0.03 seconds!
+Learning embedding...
+Iteration 50: error is 50.742739 (50 iterations in 0.02 seconds)
+Iteration 100: error is 50.230651 (50 iterations in 0.02 seconds)
+Iteration 150: error is 50.271759 (50 iterations in 0.02 seconds)
+Iteration 200: error is 50.195156 (50 iterations in 0.02 seconds)
+Iteration 250: error is 50.055562 (50 iterations in 0.02 seconds)
+Iteration 300: error is 0.372195 (50 iterations in 0.02 seconds)
+Iteration 350: error is 0.348110 (50 iterations in 0.02 seconds)
+Iteration 400: error is 0.345093 (50 iterations in 0.02 seconds)
+Iteration 450: error is 0.344731 (50 iterations in 0.03 seconds)
+Iteration 500: error is 0.344683 (50 iterations in 0.03 seconds)
+Iteration 550: error is 0.344677 (50 iterations in 0.03 seconds)
+Iteration 600: error is 0.344676 (50 iterations in 0.03 seconds)
+Iteration 650: error is 0.344675 (50 iterations in 0.02 seconds)
+Iteration 700: error is 0.344675 (50 iterations in 0.02 seconds)
+Iteration 750: error is 0.344675 (50 iterations in 0.02 seconds)
+Iteration 800: error is 0.344675 (50 iterations in 0.02 seconds)
+Iteration 850: error is 0.344675 (50 iterations in 0.03 seconds)
+Iteration 900: error is 0.344675 (50 iterations in 0.04 seconds)
+Iteration 950: error is 0.344675 (50 iterations in 0.03 seconds)
+Iteration 1000: error is 0.344675 (50 iterations in 0.03 seconds)
+Fitting performed in 0.47 seconds.
+[1] "  ...plot SC3 "
+null device 
+          1 
+[1] "  ...plot tSNE+PCA black and white"
+null device 
+          1 
+[1] "  ...plot tSNE+PCA black and white"
+null device 
+          1 
+[1] "  ...plot tSNE+PCA black and white"
+null device 
+          1 

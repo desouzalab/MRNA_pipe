@@ -3,7 +3,7 @@ DATA_NAME: 'LaManno'
 DIRECTORIES:
   OUTPUT_DIR: '../../../MRNA_pipe/output/visualize'
   DATA_DIRECTORY: '../../../data/raw/LaManno'
-  PREPROCESS_DIRECTORY: '../../../pre'
+  PREPROCESS_DIRECTORY: '../../../MRNA_pipe/output/preprocess'
   TRUE_CLUSTER_DIR: '../../../data/true/LaManno/'
   BACKSPIN_CLUSTER: '../../../MRNA_pipe/output/cluster/backspin'
   GINICLUST_CLUSTER: '../../../MRNA_pipe/output/cluster/giniclust'

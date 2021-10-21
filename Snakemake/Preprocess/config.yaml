@@ -1,17 +1,14 @@
-#change to be genereic 
+
 DATA_NAME: 'LaManno'
 DIRECTORIES:
-  OUTPUT_DIR: '../../../Epiclomal/snakemake/synthetic_data_epiclomal'
+  OUTPUT_DIR: '../../../MRNA_pipe/output/preprocess'
   DATA_DIRECTORY: '../../../data/raw/LaManno'
   PREPROCESS_DIRECTORY: '../../..'
-
-PARAMS:
-  DATA_NAME: 
+  CEF_INPUT: '../../../MRNA_pipe/output/preprocess'
   
 SOFTWARE:
-  PREPROCESS_CEF_CONVERT: '../../../MRNA_pipe/rnaPipe/preprocess/Cef_convert.R'
-  PREPROCESS_DATA: '../../../MRNA_pipe/rnaPipe/preprocess/preprocess.R'
-  eval_software: '../../../Epiclomal/scripts/eval_epiclomal.R'
+  PREPROCESS_CEF_CONVERT: '../../../MRNA_pipe/rnaPipeline/preprocess/Cef_convert.R'
+  PREPROCESS_DATA: '../../../MRNA_pipe/rnaPipeline/preprocess/preprocess.R'
 
 LOG:
   PREPROCESS_LOG: '../../../'
