@@ -3,7 +3,7 @@
 ## This Repository belongs to the RNA Sequence Pipeline for DR.Camila de Souza's Laboratory 
 
 ## This Pipeline follows the following sequential structure 
-![png](https://github.com/desouzalab/MRNA_pipe/blob/implement/images/rna_pipe_diagram.png?raw=true)
+![png](images/rna_pipe_diagram.png)
 
 ## Installation
 
