@@ -1,4 +1,4 @@
-# MRNA_pipe
+# scRNAClust
 
 ## This Repository belongs to the RNA Sequence Pipeline for DR.Camila de Souza's Laboratory 
 
