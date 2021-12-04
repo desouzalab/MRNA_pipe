@@ -54,4 +54,4 @@ All outputs are generated to the /output directory
 Updating any output or software path can be done within the config.yaml files for each procedure
 
 ## Example of Analysis Produced 
-![png](https://github.com/desouzalab/MRNA_pipe/blob/implement/images/poster.PNG?raw=true)
+![png](images/Webp.net-resizeimage.png)
