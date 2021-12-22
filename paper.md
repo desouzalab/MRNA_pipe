@@ -17,21 +17,7 @@ bibliography: paper.bib
 
 
 references:
-- type: article-journal
-  author:
-  - family: Lou
-    given: L.
-  - family: Callaway
-    given: E.M
-  - family: Karel
-    given: S
-  issued:
-    date-parts:
-    - - 2008
-  title: 'Genetic dissection of neural circuits'
-  container-title: Nature
-  DOI: 10.1051/0004-6361/201629272
-  language: en-GB
+
 
 - type: article-journal
   id: 
