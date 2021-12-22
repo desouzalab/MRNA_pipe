@@ -35,3 +35,5 @@ The mammalian brain is a complex system composed of specialized cells that vary 
    
 - `[@Pearson:2017]` -> "(Author et al., 2001)"
 - `[@Lou:2008; @Callaway:2008; @Karel:2008]` -> "(Author1 et al., 2001; Author2 et al., 2002)"
+
+# References
