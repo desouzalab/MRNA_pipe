@@ -30,9 +30,7 @@ references:
     - - 2008
   title: 'Genetic dissection of neural circuits'
   container-title: Nature
-
   DOI: 10.1051/0004-6361/201629272
- 
   language: en-GB
 ---
 # Summary 
