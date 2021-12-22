@@ -32,6 +32,28 @@ references:
   container-title: Nature
   DOI: 10.1051/0004-6361/201629272
   language: en-GB
+
+- type: article-journal
+  id: 
+  author:
+  - family: Lou
+    given: L.
+  - family: Callaway
+    given: E.M
+  issued:
+    date-parts:
+    - - 2008
+      - 
+      - 
+  title: 'Genetic dissection of neural circuits'
+  title-short: 
+  container-title: Nature
+  volume: 
+  issue: 
+  page: 
+  DOI: 10.1051/0004-6361/201629272
+  URL: 
+  language: en-GB
 ---
 # Summary 
 
