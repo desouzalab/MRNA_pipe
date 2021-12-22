@@ -17,8 +17,6 @@ bibliography: paper.bib
 
 
 references:
-
-
 - type: article-journal
   id: McKenzieWangHauberg2018
   author:
@@ -42,7 +40,6 @@ references:
   URL: 
   language: en-GB
 
-
 - type: article-journal
   id: LouCallaway2008
   author:
@@ -65,8 +62,7 @@ references:
   URL: 
   language: en-GB
 
-
-  - type: article-journal
+- type: article-journal
   id: CiortanDefrance2021
   author:
   - family: Ciortan
@@ -87,8 +83,6 @@ references:
   DOI: 10.1186/s12859-021-04210-8
   URL: 
   language: en-GB
-
-  
 ---
 # Summary 
 
