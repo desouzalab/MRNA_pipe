@@ -1,5 +1,5 @@
 ---
-title: 'Gala: A Python package for galactic dynamics'
+title: 'scRNACLUST: An RNA Clustering Pipeline For Mammalian Brain Cells'
 tags:
   - Python
   - R
