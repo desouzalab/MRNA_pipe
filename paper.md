@@ -158,46 +158,6 @@ references:
     URL: 
     language: en-GB
   - type: article-journal
-    id: backspin
-    author:
-    - family: Zeisel 
-      given: Amit
-    - family: Munoz-Manchado
-      given: Ana B
-    - family: Codeluppi
-      given: Simone
-    - family: Lonnerberg
-      given: Peter
-    - family: La Manno
-      given: Gioele
-    - family: Jureus
-      given: Anna
-    - family: Marques
-      given: Sueli
-    - family: Munguba
-      given: Hermany
-    - family: He
-      given: Liqun
-    - family: Betsholtz
-      given: Christer
-    - family: et al
-      given: 
-    issued:
-      date-parts:
-      - - 2015
-        - 
-        - 
-    title: 'Cell types in the mouse cortex and hippocampus revealed by single-cell
-  rna-seq'
-    title-short: 
-    container-title: Science
-    volume: 
-    issue: 
-    page: 
-    DOI: 
-    URL: 
-    language: en-GB
-  - type: article-journal
     id: seurat
     author:
     - family: Satija 
