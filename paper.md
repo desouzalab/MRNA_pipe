@@ -8,13 +8,13 @@ tags:
 authors:
   - name: Emiliano Penaloza^[first author]
     affiliation: "1" 
-  - name: Camila P. E. de Souza^[second author] 
+  - name: Camila P. E. de Souza
     affiliation: "1" 
-  - name: Fatemeh Gholizadeh^[second author]
+  - name: Fatemeh Gholizadeh
     affiliation: "1" 
-  - name: Bazillah Zargar^[second author]
+  - name: Bazillah Zargar
     affiliation: "1"
-  - name:  Jiayue Tian^[second author]
+  - name:  Jiayue Tian
     affiliation: "1"
 affiliations:
  - name: University of Western Ontario
