@@ -46,7 +46,207 @@ references:
     DOI: 10.1038/s41598-018-27293-5
     URL: 
     language: en-GB
-
+  - type: article-journal
+    id: LouCallaway2008
+    author:
+    - family: Lou
+      given: L
+    - family: Callaway
+      given: E.M
+    issued:
+      date-parts:
+      - - 2008
+        - 
+        - 
+    title: 'Genetic dissection of neural circuits'
+    title-short: 
+    container-title: Nature
+    volume: 
+    issue: 
+    page: 
+    DOI: 10.1016/j.neuron.2008.01.002
+    URL: 
+    language: en-GB
+  - type: article-journal
+    id: CiortanDefrance2021
+    author:
+    - family: Ciortan
+      given: M
+    - family: Defrance
+      given: M
+    issued:
+      date-parts:
+      - - 2021
+        - 
+        - 
+    title: 'Contrastive self-supervised clustering of scRNA-seq data'
+    title-short: 
+    container-title: NCBI
+    volume: 
+    issue: 
+    page: 
+    DOI: 10.1186/s12859-021-04210-8
+    URL: 
+    language: en-GB
+  - type: article-journal
+    id: JiJi2016
+    author:
+    - family: Ji
+      given: Zhicheng
+    - family: Ji
+      given: Hongkai
+    issued:
+      date-parts:
+      - - 2016
+        - 
+        - 
+    title: 'TSCAN: Pseudo-time reconstruction and evaluation in single-cell RNA-seq analysis'
+    title-short: 
+    container-title: Nucleic Acids Research
+    volume: 44
+    issue: 13
+    page: 
+    DOI: 10.1093/nar/gkw430
+    URL: 
+    language: en-GB
+  - type: article-journal
+    id: Gini
+    author:
+    - family: Lan 
+      given: Jiang
+    - family: Chen
+      given: Huidont
+    - family: Pinello
+      given: Luca
+    - family: Yuan
+      given: geo-Cheng
+    issued:
+      date-parts:
+      - - 2016
+        - 
+        - 
+    title: 'Giniclust: detecting rare cell types from single-cell gene expression data with gini index'
+    title-short: 
+    container-title: Genome biology
+    volume: 
+    issue: 
+    page: 
+    DOI: 
+    URL: 
+    language: en-GB
+  - type: article-journal
+    id: sc3
+    author:
+    - family: Kiselev 
+      given: Vladimir Yu
+    - family: Kirshner
+      given: Kristina
+    - family: et al
+      given:
+    issued:
+      date-parts:
+      - - 2016
+        - 
+        - 
+    title: 'Sc3: consensus clustering of single-cell rna-seq data'
+    title-short: 
+    container-title: Nature methods
+    volume: 
+    issue: 
+    page: 
+    DOI: 
+    URL: 
+    language: en-GB
+  - type: article-journal
+    id: backspin
+    author:
+    - family: Zeisel 
+      given: Amit
+    - family: Munoz-Manchado
+      given: Ana B
+    - family: Codeluppi
+      given: Simone
+    - family: Lonnerberg
+      given: Peter
+    - family: La Manno
+      given: Gioele
+    - family: Jureus
+      given: Anna
+    - family: Marques
+      given: Sueli
+    - family: Munguba
+      given: Hermany
+    - family: He
+      give: Liqun
+    - family: Betsholtz
+      give: Christer
+    - family: et al
+      give: 
+    issued:
+      date-parts:
+      - - 2015
+        - 
+        - 
+    title: 'Cell types in the mouse cortex and hippocampus revealed by single-cell
+  rna-seq'
+    title-short: 
+    container-title: Science
+    volume: 
+    issue: 
+    page: 
+    DOI: 
+    URL: 
+    language: en-GB
+  - type: article-journal
+    id: seurat
+    author:
+    - family: Satija 
+      given: Rahul
+    - family: Farrell
+      given: Jeffrey A
+    - family: Gennert
+      given: David
+    - family: Schier
+      given: Alexander F
+    - family: Regev
+      given: Aviv
+    issued:
+      date-parts:
+      - - 2015
+        - 
+        - 
+    title: 'Spatial reconstruction of single-cell gene expression data'
+    title-short: 
+    container-title: Nature biotechnology
+    volume: 
+    issue: 
+    page: 
+    DOI: 
+    URL: 
+    language: en-GB
+  - type: article-journal
+    id: vmeasure
+    author:
+    - family: Rosenberg
+      given: Andrew
+    - family: Hirshberg
+      given: Julia
+    - family: Schier
+      given: Alexander F
+    issued:
+      date-parts:
+      - - 2007
+        - 
+        - 
+    title: 'V-measure: A conditional entropy-based external cluster evaluation measure'
+    title-short: 
+    container-title: 
+    volume: 
+    issue: 
+    page: 
+    DOI: 
+    URL: 
+    language: en-GB
 ---
 
 # Summary 
