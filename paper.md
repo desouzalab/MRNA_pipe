@@ -134,7 +134,140 @@ references:
     DOI: 
     URL: 
     language: en-GB
-  
+  - type: article-journal
+    id: sc3
+    author:
+    - family: Kiselev 
+      given: Vladimir Yu
+    - family: Kirshner
+      given: Kristina
+    - family: et al
+      given:
+    issued:
+      date-parts:
+      - - 2016
+        - 
+        - 
+    title: 'Sc3: consensus clustering of single-cell rna-seq data'
+    title-short: 
+    container-title: Nature methods
+    volume: 
+    issue: 
+    page: 
+    DOI: 
+    URL: 
+    language: en-GB
+  - type: article-journal
+    id: backspin
+    author:
+    - family: Zeisel 
+      given: Amit
+    - family: Munoz-Manchado
+      given: Ana B
+    - family: Codeluppi
+      given: Simone
+    - family: Lonnerberg
+      given: Peter
+    - family: La Manno
+      given: Gioele
+    - family: Jureus
+      given: Anna
+    - family: Marques
+      given: Sueli
+    - family: Munguba
+      given: Hermany
+    - family: He
+      given: Liqun
+    - family: Betsholtz
+      given: Christer
+    - family: et al
+      given: 
+    issued:
+      date-parts:
+      - - 2015
+        - 
+        - 
+    title: 'Cell types in the mouse cortex and hippocampus revealed by single-cell
+  rna-seq'
+    title-short: 
+    container-title: Science
+    volume: 
+    issue: 
+    page: 
+    DOI: 
+    URL: 
+    language: en-GB
+  - type: article-journal
+    id: seurat
+    author:
+    - family: Satija 
+      given: Rahul
+    - family: Farrell
+      given: Jeffrey A
+    - family: Gennert
+      given: David
+    - family: Schier
+      given: Alexander F
+    - family: Regev
+      given: Aviv
+    issued:
+      date-parts:
+      - - 2015
+        - 
+        - 
+    title: 'Spatial reconstruction of single-cell gene expression data'
+    title-short: 
+    container-title: Nature biotechnology
+    volume: 
+    issue: 
+    page: 
+    DOI: 
+    URL: 
+    language: en-GB
+  - type: article-journal
+    id: vmeasure
+    author:
+    - family: Rosenberg
+      given: Andrew
+    - family: Hirshberg
+      given: Julia
+    - family: Schier
+      given: Alexander F
+    issued:
+      date-parts:
+      - - 2007
+        - 
+        - 
+    title: 'V-measure: A conditional entropy-based external cluster evaluation measure'
+    title-short: 
+    container-title: 
+    volume: 
+    issue: 
+    page: 
+    DOI: 
+    URL: 
+    language: en-GB
+  - type: article-journal
+    id: ARI
+    author:
+    - family: Hubert
+      given: Lawrence
+    - family: Arabie
+      given: Phipps
+    issued:
+      date-parts:
+      - - 1985
+        - 
+        - 
+    title: 'Comparing parititions'
+    title-short: 
+    container-title: Journal of classification
+    volume: 
+    issue: 
+    page: 
+    DOI: 
+    URL: 
+    language: en-GB
 ---
 
 # Summary 
