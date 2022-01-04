@@ -134,30 +134,7 @@ references:
     DOI: 
     URL: 
     language: en-GB
-  - type: article-journal
-    id: sc3
-    author:
-    - family: Kiselev 
-      given: Vladimir Yu
-    - family: Kirshner
-      given: Kristina
-    - family: et al
-      given:
-    issued:
-      date-parts:
-      - - 2016
-        - 
-        - 
-    title: 'Sc3: consensus clustering of single-cell rna-seq data'
-    title-short: 
-    container-title: Nature methods
-    volume: 
-    issue: 
-    page: 
-    DOI: 
-    URL: 
-    language: en-GB
-
+  
 ---
 
 # Summary 
