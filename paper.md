@@ -8,9 +8,16 @@ tags:
 authors:
   - name: Emiliano Penaloza^[first author] # note this makes a footnote saying 'co-first author'
     affiliation: "1" # (Multiple affiliations must be quoted)
-
+  - name: Camila P. E. de Souza^[second author] # note this makes a footnote saying 'co-first author'
+    affiliation: "1" # (Multiple affiliations must be quoted) 
+  - name: Fatemeh Gholizadeh^[second author] # note this makes a footnote saying 'co-first author'
+    affiliation: "1" # (Multiple affiliations must be quoted)  
+  - name: Bazillah Zargar
+    affiliation: "1"
+  - name:  Jiayue Tian
+    affiliation: "1"
 affiliations:
- - name: Camila de Souza, Assistant Professor, University of Western Ontario
+ - name: University of Western Ontario
    index: 1
 date: 22 December 2021
 bibliography: paper.bib
@@ -105,12 +112,176 @@ references:
   DOI: 10.1093/nar/gkw430
   URL: 
   language: en-GB
+
+- type: article-journal
+  id: Gini
+  author:
+  - family: Lan 
+    given: Jiang
+  - family: Chen
+    given: Huidont
+  - family: Pinello
+    given: Luca
+  - family: Yuan
+    given: geo-Cheng
+  issued:
+    date-parts:
+    - - 2016
+      - 
+      - 
+  title: 'Giniclust: detecting rare cell types from single-cell gene expression data with gini index'
+  title-short: 
+  container-title: Genome biology
+  volume: 
+  issue: 
+  page: 
+  DOI: 
+  URL: 
+  language: en-GB
+  
+- type: article-journal
+  id: sc3
+  author:
+  - family: Kiselev 
+    given: Vladimir Yu
+  - family: Kirshner
+    given: Kristina
+  - family: et al
+    given:
+  issued:
+    date-parts:
+    - - 2016
+      - 
+      - 
+  title: 'Sc3: consensus clustering of single-cell rna-seq data'
+  title-short: 
+  container-title: Nature methods
+  volume: 
+  issue: 
+  page: 
+  DOI: 
+  URL: 
+  language: en-GB
+
+- type: article-journal
+  id: backspin
+  author:
+  - family: Zeisel 
+    given: Amit
+  - family: Munoz-Manchado
+    given: Ana B
+  - family: Codeluppi
+    given: Simone
+  - family: Lonnerberg
+    given: Peter
+  - family: La Manno
+    given: Gioele
+  - family: Jureus
+    given: Anna
+  - family: Marques
+    given: Sueli
+  - family: Munguba
+    given: Hermany
+  - family: He
+    give: Liqun
+  - family: Betsholtz
+    give: Christer
+  - family: et al
+    give: 
+  issued:
+    date-parts:
+    - - 2015
+      - 
+      - 
+  title: 'Cell types in the mouse cortex and hippocampus revealed by single-cell
+rna-seq'
+  title-short: 
+  container-title: Science
+  volume: 
+  issue: 
+  page: 
+  DOI: 
+  URL: 
+  language: en-GB
+
+- type: article-journal
+  id: seurat
+  author:
+  - family: Satija 
+    given: Rahul
+  - family: Farrell
+    given: Jeffrey A
+  - family: Gennert
+    given: David
+  - family: Schier
+    given: Alexander F
+  - family: Regev
+    given: Aviv
+  issued:
+    date-parts:
+    - - 2015
+      - 
+      - 
+  title: 'Spatial reconstruction of single-cell gene expression data'
+  title-short: 
+  container-title: Nature biotechnology
+  volume: 
+  issue: 
+  page: 
+  DOI: 
+  URL: 
+  language: en-GB
+
+- type: article-journal
+  id: vmeasure
+  author:
+  - family: Rosenberg
+    given: Andrew
+  - family: Hirshberg
+    given: Julia
+  - family: Schier
+    given: Alexander F
+  issued:
+    date-parts:
+    - - 2007
+      - 
+      - 
+  title: 'V-measure: A conditional entropy-based external cluster evaluation measure'
+  title-short: 
+  container-title: 
+  volume: 
+  issue: 
+  page: 
+  DOI: 
+  URL: 
+  language: en-GB
+
+- type: article-journal
+  id: ARI
+  author:
+  - family: Hubert
+    given: Lawrence
+  - family: Arabie
+    given: Phipps
+  issued:
+    date-parts:
+    - - 1985
+      - 
+      - 
+  title: 'Comparing parititions'
+  title-short: 
+  container-title: Journal of classification
+  volume: 
+  issue: 
+  page: 
+  DOI: 
+  URL: 
+  language: en-GB
 ---
+
 # Summary 
 
-Unsupervised clustering is the primary way of identifying subpopulation groups of single cells RNA-seq data sets. The presented pipeline, scRNAClust, provides a lightweight interface for preprocessing, clustering and analyzing mammalian brain single cell RNA-seq data. scRNAClust uses Python and R to implement four primary clustering algorithms, Giniclust, Sc3, Seurat and Backspin. This easy-to-use pipeline intakes single cell RNA sequence data through a preprocess step in which data is transformed into various formats digestible by the stated clustering techniques.  The following evaluation metrics are produced for each methodology: cluster purity, harmonic mean of homogeneity and Adjusted Rand Index (ARI). Furthermore, visualization of evaluation criteria, as well as visual representation of cluster groups are produced and easily retrieved for further analysis. This pipeline simply executed through Snakemake’s command line interface provides users with the necessary tools to produce powerful analysis in a swift matter.  Due to this being a popular field of research, the pipeline supports integration of new clustering algorithms. The software is easily accessible through it's GitHub repository and can be executed on any local or remote workspace. 
- 
-
+Unsupervised clustering is the primary way of identifying subpopulation groups of single cells RNA-seq data sets. The presented pipeline, scRNAClust, provides a lightweight interface for preprocessing, clustering and analyzing mammalian brain single cell RNA-seq data. scRNAClust uses Python and R to implement four primary clustering algorithms, Giniclust(@Gini), Sc3(@sc3), Seurat(@seurat) and Backspin(@backspin). This easy-to-use pipeline intakes single cell RNA sequence data through a preprocess step in which data is transformed into various formats digestible by the stated clustering techniques.  The following evaluation metrics are produced for each methodology: cluster purity, V-measure(@vmeasure) and ARI (@ARI). Furthermore, visualization of evaluation criteria, as well as visual representation of cluster groups are produced and easily retrieved for further analysis. This pipeline simply executed through Snakemake’s command line interface provides users with the necessary tools to produce powerful analysis in a swift matter.  Due to this being a popular field of research, the pipeline supports integration of new clustering algorithms. The software is easily accessible through it's GitHub repository and can be executed on any local or remote workspace. 
 
 # Statement of Need 
 
