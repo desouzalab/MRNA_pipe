@@ -6,15 +6,15 @@ tags:
   - Snakemake
   - RNA
 authors:
-  - name: Emiliano Penaloza^[first author] # note this makes a footnote saying 'co-first author'
-    affiliation: "1" # (Multiple affiliations must be quoted)
-  - name: Camila P. E. de Souza # note this makes a footnote saying 'co-first author'
-    affiliation: "1" # (Multiple affiliations must be quoted) 
-  - name: Fatemeh Gholizadeh note this makes a footnote saying 'co-first author'
-    affiliation: "1" # (Multiple affiliations must be quoted)  
-  - name: Bazillah Zargar
+  - name: Emiliano Penaloza^[first author]
+    affiliation: "1" 
+  - name: Camila P. E. de Souza^[second author] 
+    affiliation: "1" 
+  - name: Fatemeh Gholizadeh^[second author]
+    affiliation: "1" 
+  - name: Bazillah Zargar^[second author]
     affiliation: "1"
-  - name:  Jiayue Tian
+  - name:  Jiayue Tian^[second author]
     affiliation: "1"
 affiliations:
  - name: University of Western Ontario
