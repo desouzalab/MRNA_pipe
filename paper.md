@@ -12,9 +12,9 @@ authors:
     affiliation: "1" # (Multiple affiliations must be quoted) 
   - name: Fatemeh Gholizadeh^[second author] # note this makes a footnote saying 'co-first author'
     affiliation: "1" # (Multiple affiliations must be quoted)  
-  - name: Bazillah Zargar
+  - name: Bazillah Zargar^[second author]
     affiliation: "1"
-  - name:  Jiayue Tian
+  - name:  Jiayue Tian^[second author]
     affiliation: "1"
 affiliations:
  - name: University of Western Ontario
