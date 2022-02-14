@@ -1,5 +1,5 @@
 ---
-title: 'scRNACLUST: A RNA Clustering Pipeline For Mammalian Brain Cells'
+title: 'scRNAClust: A Clustering Pipeline For mammalian brain single-cell RNA-sequencing data'
 tags:
   - Python
   - R
