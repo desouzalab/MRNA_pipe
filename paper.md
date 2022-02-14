@@ -8,14 +8,14 @@ tags:
 authors:
   - name: Emiliano Penaloza^[first author]
     affiliation: "1" 
-  - name: Camila P. E. de Souza
-    affiliation: "1" 
-  - name: Fatemeh Gholizadeh
-    affiliation: "1" 
-  - name: Bazillah Zargar
-    affiliation: "1"
   - name:  Jiayue Tian
     affiliation: "1"
+  - name: Bazillah Zargar
+    affiliation: "1"
+  - name: Fatemeh Gholizadeh
+    affiliation: "1" 
+  - name: Camila P. E. de Souza
+    affiliation: "1" 
 affiliations:
  - name: University of Western Ontario
    index: 1
@@ -271,12 +271,36 @@ references:
 
 # Summary 
 
-Unsupervised clustering is the primary way of identifying subpopulation groups of single cells RNA-seq data sets. The presented pipeline, scRNAClust, provides a lightweight interface for preprocessing, clustering and analyzing mammalian brain single cell RNA-seq data. scRNAClust uses Python and R to implement four primary clustering algorithms, Giniclust(@Gini), Sc3(@sc3), Seurat(@seurat) and Backspin(@backspin). This easy-to-use pipeline intakes single cell RNA sequence data through a preprocess step in which data is transformed into various formats digestible by the stated clustering techniques.  The following evaluation metrics are produced for each methodology: cluster purity, V-measure(@vmeasure) and ARI (@ARI). Furthermore, visualization of evaluation criteria, as well as visual representation of cluster groups are produced and easily retrieved for further analysis. This pipeline simply executed through Snakemake’s command line interface provides users with the necessary tools to produce powerful analysis in a swift matter.  Due to this being a popular field of research, the pipeline supports integration of new clustering algorithms. The software is easily accessible through it's GitHub repository and can be executed on any local or remote workspace. 
+Unsupervised clustering is the primary way of identifying cell subpopulation groups in single-cell
+RNA-sequencing (RNA-seq) data sets. The presented pipeline, scRNAClust, uses Python and R and provides a lightweight interface for preprocessing, clustering, and analyzing mammalian brain single-cell RNA-seq data. scRNAClust includes four state-of-the-art single-cell RNA-seq clustering algorithms, Giniclust (Lan et al.
+(2016)), Sc3(Kiselev et al. (2016)), Seurat (Satija et al. (2015)) and Backspin (Zeisel et al.
+(2015)). This easy-to-use pipeline intakes single-cell RNA-seq data through a preprocessing
+step in which data are prepared into various formats digestible by each of the stated clustering techniques. The following clustering performance evaluation metrics are implemented: cluster purity,
+V-measure (Rosenberg et al. (2007)) and ARI (Hubert & Arabie (1985)). Furthermore, visualization of evaluation criteria and a visual representation of cluster groups are produced
+and easily retrieved for further analysis. This pipeline simply executed through Snakemake’s
+command-line interface provides users with the necessary tools to produce powerful analysis in
+a swift matter. Due to this being a popular field of research, the pipeline supports the integration
+of new clustering algorithms. The software is easily accessible through its GitHub repository
+and can be executed on any local or remote workspace.
 
 # Statement of Need 
 
-The mammalian brain is a complex system composed of specialized cells that vary in morphology and functionality. Distinct cell types in the brain play different and specialized roles in electrical signaling, metabolic coupling, axonal unsheathing, regulation of blood flow, and immune surveillance (@LouCallaway2008). Only five primary cell types have been identified: neurons, astrocytes, oligodendrocytes, microglia, and endothelial cells which are believed to be responsible for the outlined functions. However, depending on the source roughly 20-50 cell types have been identified as separate entities(@McKenzieWangHauberg2018). Over the past few years, a series of comprehensive RNA-seq experiments in different brain cell types have been published in humans and mice to try and more concretely outline the cell landscape of the brain. The main interest of single cell RNA sequencing is clustering which enables the extraction of the underlying subpopulations of various cell groups. By measuring the transcriptome of each cell, single-cell RNA-seq clustering can generate a high-resolution view of gene expression in cell populations(@JiJi2016). Often the compiled datasets are problematic as they are often zero inflated due to specific lab protocols, as well as a they have higher quantity of cells compared to the number of genes. Unfortunately, the described characteristics are not optimal for typical clustering algorithms. As such, specialized single cell RNA sequencing clustering algorithms have been engineered to compensate for the data characteristics([@CiortanDefrance2021]). This introduces the need to be able to evaluate such methods and compare them against each other. Many pipelines and workflows have been introduced to tackle this specific issue, but there is little work done addressing the need for clustering evaluation of brain cells. Generating a more concrete picture of the brain’s landscape can be crucial in solving issues related to learning, memory, and other cognitive functions. The presented software enables research to address the outlined problems and more efficiently conduct research. 
-
+The mammalian brain is a complex system composed of specialized cells that vary in morphology and functionality. Distinct cell types in the brain play different and specialized roles
+in electrical signaling, metabolic coupling, axonal unsheathing, regulation of blood flow, and
+immune surveillance (Lou & Callaway (2008)). Only five primary cell types have been identified: neurons, astrocytes, oligodendrocytes, microglia, and endothelial cells, which are believed
+to be responsible for the outlined functions. However, depending on the source, roughly 20-50
+cell types have been identified as separate entities (McKenzie et al. (2018)). Over the past
+few years, a series of comprehensive RNA-seq experiments in different brain cell types have
+been published in humans and mice to try and more concretely outline the cell landscape of
+the brain. One of the main interests in single-cell RNA sequencing is clustering, which enables the
+extraction of the underlying subpopulations of various cell groups. By considering the transcriptome of each cell, single-cell RNA-seq clustering can generate a high-resolution view of gene
+expression in cell populations (Ji & Ji (2016)). Often the compiled datasets present challenges as
+they are often zero-inflated due to specific lab protocols, as well as they have a higher quantity
+of genes than the number of cells. Unfortunately, the described characteristics are not
+optimal for typical clustering algorithms. As such, specialized single-cell RNA seq clustering algorithms have been engineered to compensate for these data characteristics ((Ciortan & Defrance, 2021)). This introduces the need to evaluate such methods and compare them against each other. Many pipelines and workflows have been introduced to tackle this
+specific issue, but there is little work done addressing the need to evaluate methods for clustering
+brain cells based on their transcriptome profiles. Generating a more concrete picture of the brain’s landscape can be crucial in solving issues related to learning, memory, and other cognitive functions. The presented software
+enables researchers to address the outlined problems and more efficiently conduct research
 
 
 # References
